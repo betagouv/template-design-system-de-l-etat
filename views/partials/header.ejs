@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>
+    <% if (locals.pageTitle) { %>
+      <%= pageTitle %> | <%= appName %>
+    <% } else { %>
+      <%= appName %>
+    <% } %>
+  </title>
+  <!-- todo(estellecomment) : import min css and js -->
+  <link rel="stylesheet" href="/~/@gouvfr/design-system/dist/css/dsfr.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+</head>
+<body>
+  <header class="rf-header">
+    <div class="rf-container">
+      <div class="rf-header__body">
+        <div class="rf-header__brand">
+          <a class="rf-logo"
+             href="/"
+             title="Direction interministérielle du numérique">
+            <span class="rf-logo__title">
+              République
+              <br>française
+            </span>
+          </a>
+        </div>
+        <div class="rf-header__navbar">
+          <div class="rf-service">
+            <a class="rf-service__title" href="/" title="<%= appName %>">
+              <%= appName %>
+            </a>
+            <p class="rf-service__tagline">
+              <%= appDescription %>
+            </p>
+          </div>
+        </div>
+        <div class="rf-header__tools">
+          <div class="rf-shortcuts">
+            <ul class="rf-shortcuts__list">
+              <li class="rf-shortcuts__item">
+                <div class="rf-checkbox-group">
+                  <input type="checkbox" id="rf-dark-mode-toggle-switch" name="rf-dark-mode-toggle-switch" class="ng-untouched ng-pristine ng-valid">
+                  <label for="rf-dark-mode-toggle-switch" class="rf-label"></label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
