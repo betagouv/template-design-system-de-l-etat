@@ -1,19 +1,17 @@
-# renforts
-Mise à disposition d'agents pour venir en renfort d'une administration qui a des besoins accrus en cas de crise. Première utilisation : contact tracing contre le Covid
+# Un site de démo du Design System de l'Etat
+Vous pouvez voir ce site en ligne là : https://beta.gouv.fr/template
 
-## Lancer en dev
+Ce site a pour but d'être un point de départ pour utiliser le Design System de l'Etat. N'hésitez pas à le copier!
+
+Doc du design system : https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476
+
+## Lancer ce site localement
+Vous devez avoir npm installé sur votre machine.
+
 ```
+git clone https://github.com/betagouv/template-design-system-de-l-etat
+cd template-design-system-de-l-etat
+npm install
 npm run dev
-```
-
-## Tester que le HTML d'un site est valide
-```
-npm run checkHTML --  <url du site à tester>
-```
-Si on veut checker pour une PR donnée, utiliser l'url de la review app de la PR (voir les checks dans la PR).
-
-Pour valider le code en local :
-```
-npm run checkHTMLLocal
 ```
 
