@@ -1,0 +1,8 @@
+.rf-bg--alt {
+  background-color: var(--bf500);
+}
+
+#advantages, #advantages h3 {
+  color: var(--g100);
+  text-align: center;
+}
