@@ -6,6 +6,15 @@ Mise à disposition d'agents pour venir en renfort d'une administration qui a de
 npm run dev
 ```
 
+## Lancer en prod
+
+```
+npm start
+```
+
+Ce repo contient tout ce qu'il faut pour tourner sur Scalingo. Il suffit de déployer la branche main sur votre instance Scalingo.
+
+
 ## Tester que le HTML d'un site est valide
 ```
 npm run checkHTML --  <url du site à tester>
