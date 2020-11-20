@@ -6,7 +6,8 @@
   "scripts": {
     "checkHTML": "site-validator --verbose --url",
     "checkHTMLLocal": "site-validator --verbose --local --url http://localhost:8080",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

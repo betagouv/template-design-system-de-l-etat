@@ -4,7 +4,7 @@ const path = require('path')
 const appName = 'Un site avec le Design System de l\'Etat'
 const appDescription = 'N\'hésitez pas à copier ce site pour votre produit, c\'est fait pour!'
 const appRepo = 'https://github.com/betagouv/template-design-system-de-l-etat'
-const port = 8080
+const port = process.env.PORT || 8080
 
 const app = express()
 
@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
   res.render('landing')
 })
 
-module.exports = app.listen(8080, () => {
+module.exports = app.listen(port, () => {
   console.log(`${appName} listening at http://localhost:${port}`)
 })
