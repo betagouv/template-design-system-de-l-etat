@@ -1,32 +1,30 @@
 {
-  "name": "renforts",
+  "name": "template-design-system-de-l-etat",
   "version": "1.0.0",
-  "description": "Mise à disposition d'agents pour venir en renfort d'une administration qui a des besoins accrus en cas de crise.",
+  "description": "Ce site a pour but d'être un point de départ pour utiliser le Design System de l'Etat. N'hésitez pas à le copier!",
   "main": "index.js",
   "scripts": {
     "checkHTML": "site-validator --verbose --url",
     "checkHTMLLocal": "site-validator --verbose --local --url http://localhost:8080",
     "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "test"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/betagouv/renforts.git"
+    "url": "git+https://github.com/betagouv/template-design-system-de-l-etat.git"
   },
   "author": "estelle.comment@beta.gouv.fr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/betagouv/renforts/issues"
+    "url": "https://github.com/betagouv/template-design-system-de-l-etat/issues"
   },
-  "homepage": "https://github.com/betagouv/renforts#readme",
+  "homepage": "https://github.com/betagouv/template-design-system-de-l-etat#readme",
   "dependencies": {
     "@gouvfr/design-system": "^0.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6",
-    "site-validator-cli": "^1.3.5"
+    "nodemon": "^2.0.6"
   }
 }
