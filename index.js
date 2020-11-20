@@ -4,7 +4,7 @@ const path = require('path')
 const appName = 'Renforts'
 const appDescription = 'Mise à disposition d\'agents pour aider au contact tracing Covid'
 const appRepo = 'https://github.com/betagouv/renforts'
-const port = 8080
+const port = process.env.PORT || 8080
 
 const app = express()
 
@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
   res.render('landing')
 })
 
-module.exports = app.listen(8080, () => {
-  console.log(`appName listening at http://localhost:${port}`)
+module.exports = app.listen(port, () => {
+  console.log(`${appName} listening at http://localhost:${port}`)
 })
