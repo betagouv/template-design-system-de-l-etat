@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 
-const appName = 'Renforts'
+const appName = "Renforts.fonction-publique.gouv.fr"
 const appDescription = 'Mise à disposition d\'agents pour aider au contact tracing Covid'
 const appRepo = 'https://github.com/betagouv/renforts'
 const port = process.env.PORT || 8080
