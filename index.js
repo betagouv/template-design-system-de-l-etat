@@ -1,9 +1,9 @@
 const express = require('express')
 const path = require('path')
 
-const appName = "Renforts.fonction-publique.gouv.fr"
-const appDescription = 'Mise à disposition d\'agents pour aider au contact tracing Covid'
-const appRepo = 'https://github.com/betagouv/renforts'
+const appName = 'Un site avec le Design System de l\'Etat'
+const appDescription = 'N\'hésitez pas à copier ce site pour votre produit, c\'est fait pour!'
+const appRepo = 'https://github.com/betagouv/template-design-system-de-l-etat'
 const port = process.env.PORT || 8080
 
 const app = express()
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
-    contactEmail: 'echanges-de-competences@beta.gouv.fr', // todo reuse the contactEmail var everywhere
+    contactEmail: 'mon-produit@beta.gouv.fr',
   })
 })
 
