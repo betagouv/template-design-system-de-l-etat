@@ -3,7 +3,6 @@ Vous pouvez voir ce site en ligne là : https://beta.gouv.fr/template
 
 Ce site a pour but d'être un point de départ pour utiliser le Design System de l'Etat. N'hésitez pas à le copier!
 
-Doc du design system : https://gouvfr.atlassian.net/wiki/spaces/DB/overview?homepageId=145359476
 
 ## Lancer en prod
 
