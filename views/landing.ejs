@@ -1,4 +1,24 @@
 <%- include('partials/header') -%>
+
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h2>Ce site est une démo</h2>
+  <p>
+    C'est un effort bénévole pour maintenir un site de démo du design system de l'Etat. Pas de garantie qu'il soit parfait!
+  </p>
+  <div class="sub-paragraph">
+    <h3>Vous voulez participer ? </h3>
+    <p>
+      Vous pouvez nous aider en signalant les problèmes.
+      Vous pouvez <a href="https://github.com/betagouv/template-design-system-de-l-etat/issues">voir les problèmes déjà signalés par d'autres</a>
+      et <a href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">signaler un nouveau problème</a>.
+    </p>
+    <p>
+      Vous pouvez aussi contribuer directement au code! Ouvrez une PR sur le repo :
+      <a href="https://github.com/betagouv/template-design-system-de-l-etat">https://github.com/betagouv/template-design-system-de-l-etat</a>
+    </p>
+  </div>
+</div>
+
 <%- include('partials/section',
   {
     section:
@@ -18,6 +38,7 @@
             text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
           },
         ],
+        cssClass: 'rf-bg--alt',
       },
   })
 -%>
@@ -40,12 +61,11 @@
             text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
           },
         ],
-        cssClass: 'rf-bg--alt',
       },
   })
 -%>
 
-<div class="rf-container rf-padding-bottom-6N rf-padding-top-2N">
+<div class="rf-container rf-pb-6w rf-pt-2w">
   <h2>Comment ça marche ?</h2>
   <div>
     <div class="sub-paragraph">
