@@ -1,5 +1,4 @@
 <%- include('partials/header') -%>
-
 <div class="rf-container rf-pb-6w rf-pt-2w">
   <h2>Ce site est une démo</h2>
   <p>
@@ -97,5 +96,20 @@
       </p>
     </div>
   </div>
+</div>
+
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h2>Changer de thème</h2>
+  <p>
+    Ca peut être utile pour l'eccessibilité ! Le js correspondant est dans /static/js/dark-mode-toggle-switch.js, n'oubliez pas de l'ajouter à la page avec un 	&lt;script&gt;.
+  </p>
+  <div class="rf-container rf-pb-6w rf-pt-2w">
+    <div class="rf-toggle rf-toggle--border-bottom">
+      <input type="checkbox" class="rf-toggle__input" id="rf-dark-mode-toggle-switch">
+      <label class="rf-toggle__label" for="rf-dark-mode-toggle-switch" data-rf-checked-label="Activé" data-rf-unchecked-label="Désactivé">Thème sombre</label>
+      <p class="rf-hint-text">Note : ce composant pour changer de thème n'est pas officiellement supporté par le DS, il est fait maison. A vos risques et périls.</p>
+    </div>
+  </div>
+
 </div>
 <%- include('partials/footer') -%>
