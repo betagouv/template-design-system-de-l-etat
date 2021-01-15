@@ -27,6 +27,10 @@ app.get('/', (req, res) => {
   res.render('landing')
 })
 
+app.get('/formulaire', (req, res) => {
+  res.render('form')
+})
+
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
     contactEmail: 'mon-produit@beta.gouv.fr',
