@@ -17,45 +17,61 @@
               <input class="rf-input" type="email" id="email" name="email" required="">
             </div>
             
-	          <div class="rf-input-group">
-	            <label class="rf-label" for="day">Date de votre conférence :</label>
+	        <div class="rf-input-group">
+	            <label class="rf-label" for="day">Exemple de menu déroulant :</label>
 	            <p class="rf-hint-text" id="day-hint">La conférence vous sera réservée pour la journée choisie.</p>
 	            <select class="rf-select" id="day" name="day" aria-describedby="day-hint">
-	              
 	                <option value="2021-01-15">Aujourd'hui</option>
-	              
 	                <option value="2021-01-16">Demain</option>
-	              
 	                <option value="2021-01-17">dimanche 17 janvier 2021</option>
-	              
-	                <option value="2021-01-18">lundi 18 janvier 2021</option>
-	              
-	                <option value="2021-01-19">mardi 19 janvier 2021</option>
-	              
-	                <option value="2021-01-20">mercredi 20 janvier 2021</option>
-	              
-	                <option value="2021-01-21">jeudi 21 janvier 2021</option>
-	              
-	                <option value="2021-01-22">vendredi 22 janvier 2021</option>
-	              
-	                <option value="2021-01-23">samedi 23 janvier 2021</option>
-	              
-	                <option value="2021-01-24">dimanche 24 janvier 2021</option>
-	              
-	                <option value="2021-01-25">lundi 25 janvier 2021</option>
-	              
-	                <option value="2021-01-26">mardi 26 janvier 2021</option>
-	              
-	                <option value="2021-01-27">mercredi 27 janvier 2021</option>
-	              
-	                <option value="2021-01-28">jeudi 28 janvier 2021</option>
-	              
+	                <option value="2021-01-18">lundi 18 janvier 2021</option> 
 	            </select>
-	          </div>
+	        </div>
             
+			<div class="rf-form-group">
+			    <fieldset class="rf-fieldset">
+			        <legend class="rf-fieldset__legend" aria-describedby="radio-hint-desc-hint">Légende pour l’ensemble de champs</legend>
+			        <p class="rf-hint-text" id="radio-hint-desc-hint">Texte de description additionnel</p>
+			        <div class="rf-fieldset__content">
+			            <div class="rf-radio-group">
+			                <input type="radio" id="radio-hint-1" name="radio-hint">
+			                <label class="rf-label" for="radio-hint-1">Label radio</label>
+			            </div>
+			            <div class="rf-radio-group">
+			                <input type="radio" id="radio-hint-2" name="radio-hint">
+			                <label class="rf-label" for="radio-hint-2">Label radio</label>
+			            </div>
+			            <div class="rf-radio-group">
+			                <input type="radio" id="radio-hint-3" name="radio-hint">
+			                <label class="rf-label" for="radio-hint-3">Label radio</label>
+			            </div>
+			        </div>
+			    </fieldset>
+			</div>
+
+			<div class="rf-form-group">
+			    <fieldset class="rf-fieldset">
+			        <legend class="rf-fieldset__legend">Légende pour l’ensemble de champs</legend>
+			        <div class="rf-fieldset__content">
+			            <div class="rf-checkbox-group">
+						    <input type="checkbox" id="checkbox" name="checkbox">
+						    <label class="rf-label" for="checkbox">Label checkbox</label>
+						</div>
+			            <div class="rf-checkbox-group">
+			                <input type="checkbox" id="checkboxes-2" name="checkboxes-2">
+			                <label class="rf-label" for="checkboxes-2">Label checkbox</label>
+			            </div>
+			            <div class="rf-checkbox-group">
+			                <input type="checkbox" id="checkboxes-3" name="checkboxes-3">
+			                <label class="rf-label" for="checkboxes-3">Label checkbox</label>
+			            </div>
+			        </div>
+			    </fieldset>
+			</div>
 
             <div class="rf-input-group">
               <button type="submit" class="rf-btn" title="Réserver ma conférence">Valider ce formulaire</button>
+              <button type="" class="rf-btn rf-btn--secondary" title="Réserver ma conférence">Annuler</button>
             </div>
           </form>
 
