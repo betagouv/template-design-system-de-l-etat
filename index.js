@@ -24,15 +24,20 @@ app.use(function(req, res, next){
 })
 
 app.get('/', (req, res) => {
-  res.render('landing')
+  res.render('landing', {
+    page: req.url,
+  })
 })
 
 app.get('/formulaire', (req, res) => {
-  res.render('form')
+  res.render('form', {
+    page: req.url,
+  })
 })
 
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
+    page: req.url,
     contactEmail: 'mon-produit@beta.gouv.fr',
   })
 })
