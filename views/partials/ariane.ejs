@@ -1,0 +1,14 @@
+<nav class="rf-breadcrumb" aria-label="vous êtes ici :">
+    <button class="rf-breadcrumb__button" hidden>Voir le fil d’Ariane</button>
+    <ol class="rf-breadcrumb__list">
+        <% for (var i = 0; i < items.length; i++) { %>
+            <li class="rf-breadcrumb__item">
+                <% if (items[i].url) { %>
+                    <a href="<%= items[i].url %>"><%= items[i].label %></a>
+                <% } else { %>
+                    <%= items[i].label %>
+                <% } %>
+            </li> 
+        <% } %>
+    </ol>
+</nav>
