@@ -78,10 +78,10 @@
     <div class="rf-container">
       <nav class="rf-nav" role="navigation" aria-label="Menu principal">
          <ul class="rf-nav__list">
-            <li class="rf-nav__item <% if (page == '/') { %>rf-nav__item--active<% } %>">
+            <li class="rf-nav__item <% if (page === '/') { %> rf-nav__item--active <% } %>">
                <a class="rf-link" href="/" target="_self">Accueil</a>
             </li>
-            <li class="rf-nav__item <% if (page == '/formulaire') { %>rf-nav__item--active<% } %>">
+            <li class="rf-nav__item <% if (page === '/formulaire') { %> rf-nav__item--active <% } %>">
                <a class="rf-link" href="/formulaire" target="_self">Un formulaire</a>
             </li>
 <!--             <li class="rf-nav__item">
