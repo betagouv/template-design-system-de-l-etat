@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/ressources', (req, res) => {
+  res.render('ressources', {
+    page: req.url,
+  })
+})
+
 app.get('/formulaire', (req, res) => {
   res.render('form', {
     page: req.url,
