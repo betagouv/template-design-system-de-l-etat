@@ -20,30 +20,24 @@ app.use(function(req, res, next){
   res.locals.appName = appName
   res.locals.appDescription = appDescription
   res.locals.appRepo = appRepo
+  res.locals.page = req.url
   next()
 })
 
 app.get('/', (req, res) => {
-  res.render('landing', {
-    page: req.url,
-  })
+  res.render('landing')
 })
 
 app.get('/ressources', (req, res) => {
-  res.render('ressources', {
-    page: req.url,
-  })
+  res.render('ressources')
 })
 
 app.get('/formulaire', (req, res) => {
-  res.render('form', {
-    page: req.url,
-  })
+  res.render('form')
 })
 
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
-    page: req.url,
     contactEmail: 'mon-produit@beta.gouv.fr',
   })
 })
