@@ -18,7 +18,7 @@
     }
   }
 
-  if (scheme === 'dark') {
+  if (modeToggle && scheme === 'dark') {
     modeToggle.checked = true
   }
 
