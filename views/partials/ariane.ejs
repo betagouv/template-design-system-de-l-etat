@@ -1,14 +1,20 @@
 <nav class="rf-breadcrumb" aria-label="vous êtes ici :">
     <button class="rf-breadcrumb__button" hidden>Voir le fil d’Ariane</button>
     <ol class="rf-breadcrumb__list">
-        <% for (var i = 0; i < items.length; i++) { %>
+        <!-- Display the parent pages, except current page -->
+        <% for (var i = 0; i < items.length -1; i++) { %>
             <li class="rf-breadcrumb__item">
                 <% if (items[i].url) { %>
                     <a href="<%= items[i].url %>"><%= items[i].label %></a>
                 <% } else { %>
                     <%= items[i].label %>
                 <% } %>
-            </li> 
+            </li>
         <% } %>
+        <!-- Display the current page-->
+        <li class="rf-breadcrumb__item rf-breadcrumb__item--current"
+            aria-current="page">
+            <%= items[items.length - 1].label %>
+        </li>
     </ol>
 </nav>
