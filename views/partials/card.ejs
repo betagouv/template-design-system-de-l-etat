@@ -1,10 +1,10 @@
 <div class="rf-col-12 rf-col-md-4">
   <a href="<%= url %>" class="rf-card">
+    <% if (img) { %>
     <div class="rf-card__img">
-      <% if (img) { %>
         <img src="<%= img %>" />
-      <% } %>
     </div>
+    <% } %>
     <div class="rf-card__body">
       <h2 class="rf-card__title"><%= title %></h2>
       <p class="rf-card__desc"><%= description %></p>
