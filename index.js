@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 
 const designSystemVersion = require('./package-lock.json').dependencies['@gouvfr/all'].version
-const appName = `Un site avec le Design System de l\'Etat - version ${designSystemVersion}`
+const appName = `Démo du Design System de l\'Etat - version ${designSystemVersion}`
 const appDescription = 'N\'hésitez pas à copier ce site pour votre produit, c\'est fait pour!'
 const appRepo = 'https://github.com/betagouv/template-design-system-de-l-etat'
 const port = process.env.PORT || 8080
