@@ -4,7 +4,32 @@
 
   <h2>Boutons</h2>
 
-  <p><button class="rf-btn">Bouton primaire</button></p>
+  <p>
+    <button class="rf-btn">Bouton primaire</button>
+    <button class="rf-btn rf-btn--secondary">Bouton secondaire</button>
+  </p>
+  <p>
+    <button class="rf-btn" disabled>Bouton primaire désactivé</button>
+    <button class="rf-btn rf-btn--secondary" disabled>Bouton secondaire désactivé</button>
+  </p>
+  <p>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--icon-left">Icône à gauche</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--icon-right">Icône à droite</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary rf-btn--icon-left">Icône à gauche</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary rf-btn--icon-right">Icône à droite</button>
+  </p>
+
+  <p>
+    <button class="rf-btn rf-fi-checkbox-line" title="Icône seule"><span class="sr-only">Icône seule</span></button>    
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary" title="Icône seule"><span class="sr-only">Icône seule</span></button>    
+  </p>
+
+  <p>
+    <button class="rf-btn rf-btn--sm">Taille SM</button>
+    <button class="rf-btn">Défaut</button>
+    <button class="rf-btn rf-btn--md">Taille MD</button>
+    <button class="rf-btn rf-btn--lg">Taille LG</button>
+  </p>
 </div>
 
 <%- include('partials/section',
