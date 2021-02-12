@@ -1,93 +1,54 @@
 <%- include('partials/header') -%>
 <div class="rf-container rf-pb-6w rf-pt-2w">
-  <h1>Ce site est une démo</h1>
+  <h1>Démo du Design System de l'État</h1>
   <p>
-    C'est un effort bénévole pour maintenir un site de démo du design system de l'Etat. Pas de garantie qu'il soit parfait!
+    Ce site est un effort bénévole pour proposer une démo au design system de l'Etat. Pas de garantie qu'il soit complet, ni parfait !
   </p>
-  <p>
-    Retrouvez l'ensemble des ressources (documentation, sites en production) sur
-    <a href="/ressources">notre page ressources.</a>
-  </p>
+
+<div class="rf-container">
+  <div class="rf-grid-row rf-grid-row--gutters">
+    <%- include('partials/card',
+    {
+      title: 'Composants',
+      description: "Cartes, boutons...",
+      url: '/components',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Formulaire',
+      description: "Exemple de formulaire",
+      url: '/formulaire',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Ressources',
+      description: "Documentation et lien vers des sites exemples en production",
+      url: '/ressources',
+      img: '',
+    })
+    -%>
+  </div>
+</div>
+
   <div class="sub-paragraph">
     <h2>Vous voulez participer ? </h2>
     <p>
       Aidez-nous en signalant les problèmes !
       <ul>
-        <li>Vous pouvez <a href="https://github.com/betagouv/template-design-system-de-l-etat/issues">voir les problèmes déjà signalés par d'autres</a></li>
-        <li>Ou <a href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">signaler un nouveau problème</a>.</li>
+        <li><a href="https://github.com/betagouv/template-design-system-de-l-etat/issues">Voir les problèmes signalés</a></li>
+        <li><a href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Signaler un nouveau problème</a>.</li>
+        <li><a href="https://github.com/betagouv/template-design-system-de-l-etat">Contribuer au code</a>
       </ul>
     </p>
-    <p>
-      Vous pouvez aussi contribuer directement au code! Ouvrez une PR sur le repo :
-      <a href="https://github.com/betagouv/template-design-system-de-l-etat">https://github.com/betagouv/template-design-system-de-l-etat</a>
-    </p>
+    <p><a class="rf-btn" href="https://github.com/betagouv/template-design-system-de-l-etat">Voir le code public</a></p>
   </div>
 </div>
-
-<%- include('partials/section',
-  {
-    section:
-      {
-        title: "Découvrez des exemples d'utilisation des composants",
-        parts: [
-          {
-            title: 'Une partie',
-            text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
-          },
-          {
-            title: 'Une autre partie',
-            text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
-          },
-          {
-            title: 'Une troisième partie',
-            text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
-          },
-        ],
-        cssClass: 'rf-bg--alt',
-      },
-  })
--%>
-
-<div class="rf-container rf-pb-6w rf-pt-2w">
-  <h2>Comment ça marche ?</h2>
-
-  <ul class="rf-accordion-group" id="rf-accordion-group-0">
-    <%- include('partials/accordion-item',
-      {
-        i: 0,
-        title: 'On peut afficher des accordéons',
-        content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
-      })
-    -%>
-    <%- include('partials/accordion-item',
-      {
-        i: 1,
-        title: 'Qui se déroulent',
-        content: "Là, on explique la deuxième étape."
-      })
-    -%>
-    <%- include('partials/accordion-item',
-      {
-        i: 2,
-        title: 'Quand on clique dessus',
-        content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
-      })
-    -%>
-  </ul>
-</div>
-
-<div class="rf-container rf-pb-6w rf-pt-2w">
-  <h2>Changer de thème</h2>
-  <p>
-    Ca peut être utile pour l'eccessibilité ! Le js correspondant est dans /static/js/dark-mode-toggle-switch.js, n'oubliez pas de l'ajouter à la page avec un 	&lt;script&gt;.
-  </p>
-  <div class="rf-container rf-pb-6w rf-pt-2w">
-    <div class="rf-toggle rf-toggle--border-bottom">
-      <input type="checkbox" class="rf-toggle__input" id="rf-dark-mode-toggle-switch">
-      <label class="rf-toggle__label" for="rf-dark-mode-toggle-switch" data-rf-checked-label="Activé" data-rf-unchecked-label="Désactivé">Thème sombre</label>
-      <p class="rf-hint-text">Note : ce composant pour changer de thème n'est pas officiellement supporté par le DS, il est fait maison. A vos risques et périls.</p>
-    </div>
-  </div>
 
 </div>
 <%- include('partials/footer') -%>

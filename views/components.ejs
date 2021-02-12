@@ -1,0 +1,120 @@
+<%- include('partials/header') -%>
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h1>Composants</h1>
+
+  <h2>Boutons</h2>
+
+  <p><button class="rf-btn">Bouton primaire</button></p>
+</div>
+
+<%- include('partials/section',
+{
+  section:
+  {
+    title: "Grilles",
+    parts: [
+    {
+      title: 'Une partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    {
+      title: 'Une autre partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    {
+      title: 'Une troisième partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    ],
+    cssClass: 'rf-bg--alt',
+  },
+})
+-%>
+
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h2>Accordéons</h2>
+
+  <ul class="rf-accordion-group" id="rf-accordion-group-0">
+    <%- include('partials/accordion-item',
+    {
+      i: 0,
+      title: 'On peut afficher des accordéons',
+      content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
+    })
+    -%>
+    <%- include('partials/accordion-item',
+    {
+      i: 1,
+      title: 'Qui se déroulent',
+      content: "Là, on explique la deuxième étape."
+    })
+    -%>
+    <%- include('partials/accordion-item',
+    {
+      i: 2,
+      title: 'Quand on clique dessus',
+      content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
+    })
+    -%>
+  </ul>
+</div>
+
+<div class="rf-container">
+  <div class="rf-grid-row rf-grid-row--gutters">
+    <div class="rf-col">
+      <h2>Cartes</h2>
+    </div>
+  </div>
+
+  <div class="rf-grid-row rf-grid-row--gutters">
+    <div class="rf-col-12 rf-col-md-4">
+      <a href="#" class="rf-card">
+        <div class="rf-card__img" style="background-image: url(&quot;https://dl.airtable.com/.attachments/abaa623d99041ffbf1a718b054cd95ea/91cdc23b/accessibility.svg&quot;);">
+        </div>
+        <div class="rf-card__body">
+          <h2 class="rf-card__title">Titre</h2>
+          <p class="rf-card__desc">Description de plusieurs lignes</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="rf-col-12 rf-col-md-4">
+      <a href="#" class="rf-card">
+        <div class="rf-card__img" style="background-image: url(&quot;https://dl.airtable.com/.attachments/abaa623d99041ffbf1a718b054cd95ea/91cdc23b/accessibility.svg&quot;);">
+        </div>
+        <div class="rf-card__body">
+          <h2 class="rf-card__title">Titre</h2>
+          <p class="rf-card__desc">Description de plusieurs lignes</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="rf-col-12 rf-col-md-4">
+      <a href="#" class="rf-card">
+        <div class="rf-card__img" style="background-image: url(&quot;https://dl.airtable.com/.attachments/abaa623d99041ffbf1a718b054cd95ea/91cdc23b/accessibility.svg&quot;);">
+        </div>
+        <div class="rf-card__body">
+          <h2 class="rf-card__title">Titre</h2>
+          <p class="rf-card__desc">Description de plusieurs lignes</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    <div class="rf-container rf-pb-6w rf-pt-2w">
+      <h2>Changer de thème</h2>
+      <p>
+        Ca peut être utile pour l'eccessibilité ! Le js correspondant est dans /static/js/dark-mode-toggle-switch.js, n'oubliez pas de l'ajouter à la page avec un 	&lt;script&gt;.
+      </p>
+      <div class="rf-container rf-pb-6w rf-pt-2w">
+        <div class="rf-toggle rf-toggle--border-bottom">
+          <input type="checkbox" class="rf-toggle__input" id="rf-dark-mode-toggle-switch">
+          <label class="rf-toggle__label" for="rf-dark-mode-toggle-switch" data-rf-checked-label="Activé" data-rf-unchecked-label="Désactivé">Thème sombre</label>
+          <p class="rf-hint-text">Note : ce composant pour changer de thème n'est pas officiellement supporté par le DS, il est fait maison. A vos risques et périls.</p>
+        </div>
+      </div>
+
+    </div>
+    <%- include('partials/footer') -%>
