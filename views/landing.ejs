@@ -39,33 +39,24 @@
   <div class="sub-paragraph">
     <h2>Vous voulez participer ? </h2>
     <div class="rf-grid-row rf-grid-row--gutters">
-      <div class="rf-col-4">
-          <div class="rf-tile">
-              <div class="rf-tile__body">
-                  <h4 class="rf-tile__title">
-                      <a class="rf-tile__link" href="https://github.com/betagouv/template-design-system-de-l-etat/issues">Voir les problèmes signalés</a>
-                  </h4>
-              </div>
-          </div>
-      </div>
-      <div class="rf-col-4">
-          <div class="rf-tile">
-              <div class="rf-tile__body">
-                  <h4 class="rf-tile__title">
-                      <a class="rf-tile__link" href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Signaler un problème</a>
-                  </h4>
-              </div>
-          </div>
-      </div>
-      <div class="rf-col-4">
-          <div class="rf-tile">
-              <div class="rf-tile__body">
-                  <h4 class="rf-tile__title">
-                      <a class="rf-tile__link" href="https://github.com/betagouv/template-design-system-de-l-etat">Contribuer</a>
-                  </h4>
-              </div>
-          </div>
-      </div>
+      <%- include('partials/tile',
+      {
+        title: 'Voir les problèmes signalés',
+        url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues',
+      })
+      -%>
+      <%- include('partials/tile',
+      {
+        title: 'Signaler un problème',
+        url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues/new',
+      })
+      -%>
+      <%- include('partials/tile',
+      {
+        title: 'Contribuer au code source',
+        url: 'https://github.com/betagouv/template-design-system-de-l-etat/',
+      })
+      -%>
     </div>
   </div>
 </div>
