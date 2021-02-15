@@ -1,0 +1,137 @@
+<%- include('partials/header') -%>
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h1>Composants</h1>
+
+  <h2>Boutons</h2>
+
+  <p>
+    <button class="rf-btn">Bouton primaire</button>
+    <button class="rf-btn rf-btn--secondary">Bouton secondaire</button>
+  </p>
+  <p>
+    <button class="rf-btn" disabled>Bouton primaire désactivé</button>
+    <button class="rf-btn rf-btn--secondary" disabled>Bouton secondaire désactivé</button>
+  </p>
+  <p>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--icon-left">Icône à gauche</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--icon-right">Icône à droite</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary rf-btn--icon-left">Icône à gauche</button>
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary rf-btn--icon-right">Icône à droite</button>
+  </p>
+
+  <p>
+    <button class="rf-btn rf-fi-checkbox-line" title="Icône seule"><span class="sr-only">Icône seule</span></button>    
+    <button class="rf-btn rf-fi-checkbox-line rf-btn--secondary" title="Icône seule"><span class="sr-only">Icône seule</span></button>    
+  </p>
+
+  <p>
+    <button class="rf-btn rf-btn--sm">Taille SM</button>
+    <button class="rf-btn">Défaut</button>
+    <button class="rf-btn rf-btn--md">Taille MD</button>
+    <button class="rf-btn rf-btn--lg">Taille LG</button>
+  </p>
+</div>
+
+<%- include('partials/section',
+{
+  section:
+  {
+    title: "Grilles",
+    parts: [
+    {
+      title: 'Une partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    {
+      title: 'Une autre partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    {
+      title: 'Une troisième partie',
+      text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
+    },
+    ],
+    cssClass: 'rf-bg--alt',
+  },
+})
+-%>
+
+<div class="rf-container rf-pb-6w rf-pt-2w">
+  <h2>Accordéons</h2>
+
+  <ul class="rf-accordion-group" id="rf-accordion-group-0">
+    <%- include('partials/accordion-item',
+    {
+      i: 0,
+      title: 'On peut afficher des accordéons',
+      content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
+    })
+    -%>
+    <%- include('partials/accordion-item',
+    {
+      i: 1,
+      title: 'Qui se déroulent',
+      content: "Là, on explique la deuxième étape."
+    })
+    -%>
+    <%- include('partials/accordion-item',
+    {
+      i: 2,
+      title: 'Quand on clique dessus',
+      content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
+    })
+    -%>
+  </ul>
+</div>
+
+<div class="rf-container">
+  <div class="rf-grid-row rf-grid-row--gutters">
+    <div class="rf-col">
+      <h2>Cartes</h2>
+    </div>
+  </div>
+  <div class="rf-grid-row rf-grid-row--gutters">
+    <%- include('partials/card',
+    {
+      title: 'Titre',
+      description: "Description",
+      url: '#',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Titre',
+      description: "Description",
+      url: '#',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Titre',
+      description: "Description",
+      url: '#',
+      img: '',
+    })
+    -%>
+  </div>
+</div>
+
+
+    <div class="rf-container rf-pb-6w rf-pt-2w">
+      <h2>Mode nuit</h2>
+      <div class="rf-container rf-pb-6w rf-pt-2w">
+                  <p>Ce composant de changement de thème n'est pas (encore) officiellement supporté par le DS. Il est fait maison (à vos risques et périls donc !). Pour l'utiliser, chargez <code>/static/js/dark-mode-toggle-switch.js</code> dans votre page.</p>
+
+
+        <div class="rf-toggle rf-toggle--border-bottom">
+          <input type="checkbox" class="rf-toggle__input" id="rf-dark-mode-toggle-switch">
+          <label class="rf-toggle__label" for="rf-dark-mode-toggle-switch" data-rf-checked-label="Activé" data-rf-unchecked-label="Désactivé">Thème sombre</label>
+        </div>
+      </div>
+
+    </div>
+    <%- include('partials/footer') -%>

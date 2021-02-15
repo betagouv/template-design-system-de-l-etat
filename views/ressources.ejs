@@ -1,28 +1,64 @@
 <%- include('partials/header') -%>
 <div class="rf-container rf-pb-6w rf-pt-2w">
-  <h1>Liste de ressources utiles</h1>
+  <h1>Ressources utiles</h1>
   <ul>
-    <li>
-        <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs">La documentation officielle du Design System</a>
-    </li>
+    <li><a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs">Documentation officielle du Design System</a></li>
 </ul>
-<h2>Autres sites utilisant déjà le Design Sytem</h2>
-<ul>
-    <li>
-        <a href="https://volontaires.fonction-publique.gouv.fr/">volontaires.fonction-publique.gouv.fr</a>
-    </li>
-    <li>
-        <a href="https://audioconf.numerique.gouv.fr/">audioconf.numerique.gouv.fr</a>
-    </li>
-    <li>
-        <a href="https://deces.matchid.io/">deces.matchid.io</a>
-    </li>
-    <li>
-        <a href="https://trackdechets.beta.gouv.fr/">trackdechets.beta.gouv.fr</a>
-    </li>
-    <li>
-        <a href="https://annuaire-entreprises.data.gouv.fr/">l'Annuaire des Entreprises</a>
-    </li>
-  </ul>
+<h2>Sites utilisant le Design Sytem de l'État</h2>
+<!-- TODO le truc sans image -->
+
+<p>Liste est non exhaustive et maintenue manuellement.</p>
+<div class="rf-grid-row rf-grid-row--gutters">
+    <%- include('partials/tile',
+    {
+      title: 'Santé Psy Étudiant',
+      url: 'https://www.santepsyetudiants.beta.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: 'Volontaires Fonction Publique',
+      url: 'https://volontaires.fonction-publique.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: 'AudioConf',
+      url: 'https://audioconf.numerique.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: 'deces.matchid.io',
+      url: 'https://deces.matchid.io/',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: "L'Annuaire des Entreprises",
+      url: 'https://annuaire-entreprises.data.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: "France Relance",
+      url: 'https://www.gouvernement.fr/france-relance',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: "Conseiller Numérique",
+      url: 'https://www.conseiller-numerique.gouv.fr/',
+    })
+    -%>
+
+</div>
+
 </div>
 <%- include('partials/footer') -%>
