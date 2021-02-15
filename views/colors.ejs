@@ -1,0 +1,131 @@
+<%- include('partials/header') -%>
+<div class="rf-container rf-pb-6w rf-pt-2w">
+
+	<div class="rf-container">
+
+		<div class="rf-grid-row rf-grid-row--gutters">
+			<div class="rf-col">
+				<h2>Palette</h2>
+				<p>Cette page liste les variables couleurs disponibles.</p>
+			</div>
+		</div>
+
+
+		<div class="rf-grid-row rf-grid-row--gutters">
+			<div class="rf-col">
+				<h2>Échelle de gris</h2>
+			</div>
+		</div>
+		<div class="rf-grid-row rf-grid-row--gutters">
+			<%- include('partials/color-card', { color_name: 'g800' }) -%>
+			<%- include('partials/color-card', { color_name: 'g700' }) -%>
+			<%- include('partials/color-card', { color_name: 'g600' }) -%>
+			<%- include('partials/color-card', { color_name: 'g500' }) -%>
+			<%- include('partials/color-card', { color_name: 'g400' }) -%>
+			<%- include('partials/color-card', { color_name: 'g300' }) -%>
+			<%- include('partials/color-card', { color_name: 'g200' }) -%>
+			<%- include('partials/color-card', { color_name: 'g100' }) -%>
+			<!--       
+			  g800-plain: $grey-800,
+			  g600-g400: $grey-600 $grey-400,
+			  g400-t: $grey-400 transparent,
+			  g100-g800: $grey-100 $grey-800,
+			  w-g750: $white $grey-750, 
+			-->
+</div>
+
+<div class="rf-grid-row rf-grid-row--gutters">
+	<div class="rf-col">
+		<h2>Bleu France</h2>
+	</div>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'bf500', comment: 'Bleu France' }) -%>
+	<%- include('partials/color-card', { color_name: 'bf500-plain' }) -%>
+	<%- include('partials/color-card', { color_name: 'bf300-plain' }) -%>
+	<%- include('partials/color-card', { color_name: 'bf200-bf300' }) -%>
+	<%- include('partials/color-card', { color_name: 'bf100-g750' }) -%>
+	<%- include('partials/color-card', { color_name: 'w-bf500' }) -%>
+</div>
+
+<div class="rf-grid-row rf-grid-row--gutters">
+	<div class="rf-col">
+		<h2>Couleurs fonctionnelles</h2>
+	</div>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'info' }) -%>
+	<%- include('partials/color-card', { color_name: 'success' }) -%>
+	<%- include('partials/color-card', { color_name: 'error' }) -%>
+</div>
+
+<!--   w: $white $grey-800,
+  beige: $beige $grey-750 $grey-100,
+  // Focus
+  focus:$color-focus $color-focus-dark-mode,
+-->
+
+<div class="rf-grid-row rf-grid-row--gutters">
+	<div class="rf-col">
+		<h2>Rouge Marianne</h2>
+	</div>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'rm500' }) -%>
+	<%- include('partials/color-card', { color_name: 'rm300' }) -%>
+</div>
+
+
+<div class="rf-grid-row rf-grid-row--gutters">
+	<div class="rf-col">
+		<h2>Couleurs illustratives</h2>
+	</div>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'b500' }) -%>
+	<%- include('partials/color-card', { color_name: 'b300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'bs500' }) -%>
+	<%- include('partials/color-card', { color_name: 'bs300' }) -%>
+	<%- include('partials/color-card', { color_name: 'bd500' }) -%>
+	<%- include('partials/color-card', { color_name: 'bd300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'gl500' }) -%>
+	<%- include('partials/color-card', { color_name: 'gl300' }) -%>
+	<%- include('partials/color-card', { color_name: 'gm500' }) -%>
+	<%- include('partials/color-card', { color_name: 'gm300' }) -%>
+	<%- include('partials/color-card', { color_name: 'gs500' }) -%>
+	<%- include('partials/color-card', { color_name: 'gs300' }) -%>
+	<%- include('partials/color-card', { color_name: 'gw500' }) -%>
+	<%- include('partials/color-card', { color_name: 'gw300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'od500' }) -%>
+	<%- include('partials/color-card', { color_name: 'od300' }) -%>
+	<%- include('partials/color-card', { color_name: 'om500' }) -%>
+	<%- include('partials/color-card', { color_name: 'om300' }) -%>
+	<%- include('partials/color-card', { color_name: 'os500' }) -%>
+	<%- include('partials/color-card', { color_name: 'os300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'p500' }) -%>
+	<%- include('partials/color-card', { color_name: 'p300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'pd500' }) -%>
+	<%- include('partials/color-card', { color_name: 'pd300' }) -%>
+	<%- include('partials/color-card', { color_name: 'pl500' }) -%>
+	<%- include('partials/color-card', { color_name: 'pl300' }) -%>
+	<%- include('partials/color-card', { color_name: 'ps500' }) -%>
+	<%- include('partials/color-card', { color_name: 'ps300' }) -%>
+</div>
+<div class="rf-grid-row rf-grid-row--gutters">
+	<%- include('partials/color-card', { color_name: 'yd500' }) -%>
+	<%- include('partials/color-card', { color_name: 'yd300' }) -%>
+	<%- include('partials/color-card', { color_name: 'ym500' }) -%>
+	<%- include('partials/color-card', { color_name: 'ym300' }) -%>
+</div> 
+
+</div>

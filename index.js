@@ -40,6 +40,10 @@ app.get('/components', (req, res) => {
   res.render('components')
 })
 
+app.get('/colors', (req, res) => {
+  res.render('colors')
+})
+
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
     contactEmail: 'mon-produit@beta.gouv.fr',
