@@ -22,6 +22,9 @@
 		                <li class="rf-sidemenu__item">
 		                    <a class="rf-sidemenu__link" href="#couleurs-illus" target="_self">Couleurs illustratives</a>
 		                </li>
+		                <li class="rf-sidemenu__item">
+		                    <a class="rf-sidemenu__link" href="#variante" target="_self">Variantes de couleurs</a>
+		                </li>
 		            </ul>
 		        </div>
 		    </div>
@@ -29,7 +32,7 @@
 		</div>
 		<div class="rf-col-xs-12 rf-col-md-9">
 			<h1>Couleurs</h1>
-			<p>Cette page liste les variables couleurs disponibles.</p>
+			<p>Liste les variables couleurs.</p>
 
 			<h2>Échelle de gris</h2>
 			<div class="rf-grid-row rf-grid-row--gutters">
@@ -80,19 +83,19 @@
 			</div>
 
 			<h2>Couleurs illustratives</h2>
+			<h3>Brun</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'b500' }) -%>
 				<%- include('partials/color-card', { color_name: 'b300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown' }) -%>
 			</div>
+			<h3>Bleu</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'bs500' }) -%>
 				<%- include('partials/color-card', { color_name: 'bs300' }) -%>
 				<%- include('partials/color-card', { color_name: 'bd500' }) -%>
 				<%- include('partials/color-card', { color_name: 'bd300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark' }) -%>
 			</div>
+			<h3>Vert</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'gl500' }) -%>
 				<%- include('partials/color-card', { color_name: 'gl300' }) -%>
@@ -102,11 +105,8 @@
 				<%- include('partials/color-card', { color_name: 'gs300' }) -%>
 				<%- include('partials/color-card', { color_name: 'gw500' }) -%>
 				<%- include('partials/color-card', { color_name: 'gw300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm' }) -%>
 			</div>
+			<h3>Orange</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'od500' }) -%>
 				<%- include('partials/color-card', { color_name: 'od300' }) -%>
@@ -114,15 +114,13 @@
 				<%- include('partials/color-card', { color_name: 'om300' }) -%>
 				<%- include('partials/color-card', { color_name: 'os500' }) -%>
 				<%- include('partials/color-card', { color_name: 'os300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft' }) -%>
 			</div>
+			<h3>Violet</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'p500' }) -%>
 				<%- include('partials/color-card', { color_name: 'p300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple' }) -%>
 			</div>
+			<h3>Rose</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'pd500' }) -%>
 				<%- include('partials/color-card', { color_name: 'pd300' }) -%>
@@ -130,18 +128,42 @@
 				<%- include('partials/color-card', { color_name: 'pl300' }) -%>
 				<%- include('partials/color-card', { color_name: 'ps500' }) -%>
 				<%- include('partials/color-card', { color_name: 'ps300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft' }) -%>
 			</div>
+			<h3>Jaune</h3>
 			<div class="rf-grid-row rf-grid-row--gutters">
 				<%- include('partials/color-card', { color_name: 'yd500' }) -%>
 				<%- include('partials/color-card', { color_name: 'yd300' }) -%>
 				<%- include('partials/color-card', { color_name: 'ym500' }) -%>
 				<%- include('partials/color-card', { color_name: 'ym300' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium' }) -%>
 			</div> 
+
+			<h2>Palettes de couleurs</h2>
+
+			<p>Des composants (seulement le composant callout actuellement) possèdent plusieurs variantes de couleurs.</p>
+
+			<h3>Brun</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
+			<h3>Bleu</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
+			<h3>Vert</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
+			<h3>Orange</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
+			<h3>Violet</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
+			<h3>Rose</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
+			<h3>Jaune</h3>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
 
 		</div>
 	</div>
