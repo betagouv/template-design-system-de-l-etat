@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<div class="rf-container rf-pb-6w rf-pt-2w">
+<div class="rf-container rf-py-6w rf-pt-2w">
   <h1>Démo du Design System de l'État</h1>
   <p>
     Ce site est un effort bénévole pour proposer une démo au design system de l'Etat. Il n'est pas maintenu par le SIG : pas de garantie qu'il soit complet, ni parfait !
@@ -12,6 +12,7 @@
       title: 'Composants',
       description: "Cartes, boutons...",
       url: '/components',
+      size: '3',
       img: '',
     })
     -%>
@@ -21,6 +22,17 @@
       title: 'Formulaire',
       description: "Input, textarea...",
       url: '/formulaire',
+      size: '3',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Couleurs',
+      description: "Palettes, combinaisons accessibles...",
+      url: '/colors',
+      size: '3',
       img: '',
     })
     -%>
@@ -30,6 +42,7 @@
       title: 'Ressources',
       description: "Documentation et lien vers des sites exemples en production",
       url: '/ressources',
+      size: '3',
       img: '',
     })
     -%>

@@ -1,0 +1,16 @@
+<% if (locals.card_type == "title+button") { %>
+<div class="rf-col-md-4 rf-mb-4v">
+	<h4 style="background-color: var(--w); color: var(--<%= color %>);">
+	    Titre de couleur <%= color %>
+	</h4>
+	<p>Texte foncé.</p>
+	<button class="rf-btn" style="background-color: var(--<%= color %>); color: var(--w);">
+	    Bouton sur fond <%= color %>
+	</button>
+</div>
+<% } else { %>
+<div class="rf-col-md-4 rf-m-4v rf-p-2v" style="background-color: var(--<%= bg_color %>); color: var(--<%= fg_color %>);">
+	<h4>Fond alternatif</h4>
+	<p>Ce texte est en <code><%= fg_color %></code> sur fond <code><%= bg_color %></code>.</p>
+</div>
+<% } %>

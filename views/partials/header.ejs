@@ -87,31 +87,19 @@
             <li class="rf-nav__item <% if (page === '/formulaire') { %> rf-nav__item--active <% } %>">
                <a class="rf-link" href="/formulaire" target="_self">Un formulaire</a>
             </li>
-
-            <li class="rf-nav__item">
-              <button class="rf-btn" aria-expanded="false" aria-controls="rf-nav-item-3">Un menu déroulant</button>
-              <div class="rf-menu rf-collapse" id="rf-nav-item-3">
-                <ul class="rf-menu__list">
-                  <li class="rf-menu__item">
-                      <a class="rf-link" href="#" target="_self">
-                          Avec des trucs
-                      </a>
-                  </li>
-                  <li class="rf-menu__item rf-menu__item">
-                      Et des machins
-                  </li>
-                  <li class="rf-menu__item">
-                      <a class="rf-link" href="#" target="_self">
-                          C'est super bien
-                      </a>
-                  </li>
-                </ul>
-              </div>
+            <li class="rf-nav__item <% if (page === '/colors') { %> rf-nav__item--active <% } %>">
+               <button class="rf-btn" aria-expanded="false" aria-controls="rf-nav-colors">Des couleurs</button>
+                <div class="rf-menu rf-collapse" id="rf-nav-colors">
+                  <ul class="rf-menu__list">
+                    <li class="rf-menu__item"><a class="rf-link" href="/colors" target="_self">Palette de couleur</a></li>
+                    <li class="rf-menu__item"><a class="rf-link" href="/colors#combinaisons" target="_self">Combinaisons accessibles</a></li>
+                    <li class="rf-menu__item"><a class="rf-link" href="/colors#variables" target="_self">Palette de couleur</a></li>
+                 </ul>
+                </div>
             </li>
-
-          <li class="rf-nav__item <% if (page === '/ressources') { %> rf-nav__item--active <% } %>">
-            <a class="rf-link" href="/ressources" target="_self">Ressources</a>
-          </li>
+            <li class="rf-nav__item <% if (page === '/ressources') { %> rf-nav__item--active <% } %>">
+              <a class="rf-link" href="/ressources" target="_self">Ressources</a>
+            </li>
          </ul>
       </nav>
     </div>
