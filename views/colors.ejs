@@ -115,16 +115,19 @@
 
 				<h2>Contrastes moyens</h2>
 
-				<p>Ces combinaisons de couleurs ont un contraste supérieur à 3. On peut les utiliser pour les titres ou pour composants colorés (comme les boutons par exemple).</p>
+				<p>Ces combinaisons de couleurs ont un contraste supérieur à 3. On peut les utiliser pour les titres ou pour composants comme les boutons.</p>
+
+				<p>Note : le changement de couleur des boutons n'est pas (encore ?) implémenté de manière officielle dans le Design System. Si vous choisissez une nouvelle couleur de boutons, veillez à définir tous les états (hover, focus...).</p>
 
 				<div class="rf-grid-row rf-grid-row--gutters">
-					<%- include('partials/contrast-card', { bg_color: 'gm500', fg_color: 'w' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'gw500', fg_color: 'w' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'w', fg_color: 'gm500' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'w', fg_color: 'gw500' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'g600', fg_color: 'g800', contrast:'3.08' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'b500', fg_color: 'g800', contrast:'3.7' }) -%>
-					<%- include('partials/contrast-card', { bg_color: 'bs500', fg_color: 'g800', contrast:'3.55' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'w', fg_color: 'gm500', card_type: 'title' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'gm500', fg_color: 'w', card_type: 'button' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'w', fg_color: 'gw500', card_type: 'title' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'gw500', fg_color: 'w', card_type: 'button' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'g600', fg_color: 'g800', card_type: 'button' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'b500', fg_color: 'g800', card_type: 'button' }) -%>
+					<%- include('partials/contrast-card', { bg_color: 'bs500', fg_color: 'g800', card_type: 'button' }) -%>
+
 				</div>
 			</div>
 
