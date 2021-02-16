@@ -1,29 +1,18 @@
 <%- include('partials/header') -%>
-<div class="rf-container rf-pb-6w rf-pt-2w">
+<div class="rf-container rf-pb-6w rf-pt-6w">
 	<div class="rf-grid-row rf-grid-row--gutters rf-b__two-col">
 		<div class="rf-col-xs-12 rf-col-md-3">
+
 			 <nav class="rf-sidemenu rf-sidemenu--sticky" aria-label="Menu latéral">
 		    <div class="rf-sidemenu__inner">
 		        <button class="rf-sidemenu__btn" hidden aria-controls="rf-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
 		        <div class="rf-collapse" id="rf-sidemenu-wrapper">
 		            <ul class="rf-sidemenu__list">
 		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#grey" target="_self">Échelle de gris</a>
+		                    <a class="rf-sidemenu__link" href="#palette" target="_self">Palette de couleurs</a>
 		                </li>
 		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#bleu" target="_self">Bleu France</a>
-		                </li>
-		              <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#Marianne" target="_self">Rouge Marianne</a>
-		                </li>
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#couleurs-fonc" target="_self">Couleurs fonctionnelles</a>
-		                </li>
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#couleurs-illus" target="_self">Couleurs illustratives</a>
-		                </li>
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#variante" target="_self">Variantes de couleurs</a>
+		                    <a class="rf-sidemenu__link" href="#variables" target="_self">Variables de couleurs</a>
 		                </li>
 		            </ul>
 		        </div>
@@ -31,8 +20,36 @@
 		</nav> 
 		</div>
 		<div class="rf-col-xs-12 rf-col-md-9">
-			<h1>Couleurs</h1>
-			<p>Liste les variables couleurs.</p>
+			<h1 id="palette">Palettes de couleurs</h1>
+
+			<p>Des composants possèdent plusieurs variantes de couleurs : callout, mise en exergue (à venir), notifications (à venir).</p>
+
+			<h2>Brun</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
+			<h2>Bleu</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
+			<h2>Vert</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
+			<h2>Orange</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
+			<h2>Violet</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
+			<h2>Rose</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
+			<h2>Jaune</h2>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
+			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
+
+
+			<h1 id="variables">Variables de couleurs</h1>
 
 			<h2>Échelle de gris</h2>
 			<div class="rf-grid-row rf-grid-row--gutters">
@@ -137,33 +154,6 @@
 				<%- include('partials/color-card', { color_name: 'ym300' }) -%>
 			</div> 
 
-			<h2>Palettes de couleurs</h2>
-
-			<p>Des composants (seulement le composant callout actuellement) possèdent plusieurs variantes de couleurs.</p>
-
-			<h3>Brun</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
-			<h3>Bleu</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
-			<h3>Vert</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
-			<h3>Orange</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
-			<h3>Violet</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
-			<h3>Rose</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
-			<h3>Jaune</h3>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
 
 		</div>
 	</div>
