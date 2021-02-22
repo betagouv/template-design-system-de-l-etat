@@ -20,6 +20,7 @@
 		            </ul>
 		        </div>
 		    </div>
+	        <%- include('partials/dark-mode-switch') -%>
 		</nav> 
 		</div>
 		<div class="rf-col-xs-12 rf-col-md-9">
@@ -30,8 +31,6 @@
 			<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
 
 			<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
-
-	        <%- include('partials/dark-mode-switch') -%>
 
 			<h2>Brun</h2>
 			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
