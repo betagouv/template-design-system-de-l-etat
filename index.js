@@ -44,6 +44,10 @@ app.get('/colors', (req, res) => {
   res.render('colors')
 })
 
+app.get('/typography', (req, res) => {
+  res.render('typography')
+})
+
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
     contactEmail: 'mon-produit@beta.gouv.fr',
