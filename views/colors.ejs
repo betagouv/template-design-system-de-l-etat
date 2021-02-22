@@ -20,6 +20,7 @@
 		            </ul>
 		        </div>
 		    </div>
+	        <%- include('partials/dark-mode-switch') -%>
 		</nav> 
 		</div>
 		<div class="rf-col-xs-12 rf-col-md-9">
@@ -30,8 +31,6 @@
 			<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
 
 			<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
-
-	        <%- include('partials/dark-mode-switch') -%>
 
 			<h2>Brun</h2>
 			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
@@ -71,6 +70,8 @@
 				            <div id="rf-tabpanel-510" class="rf-tabs__panel" role="tabpanel" tabindex="0">
 				                <div class="rf-prose">
 	                				<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
+
+	                				<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
                     				<div class="rf-grid-row rf-grid-row--gutters">
 										<!-- 7+ -->
 										<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
@@ -85,13 +86,12 @@
 				            <div id="rf-tabpanel-520" class="rf-tabs__panel" role="tabpanel" tabindex="0">
 				                <div class="rf-prose">
 					                <p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
+	                				<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
+
 									<div class="rf-grid-row rf-grid-row--gutters">
-									<%- include('partials/contrast-card', { bg_color: 'g400', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'bf300-plain', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'bf200-bf300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
@@ -103,28 +103,14 @@
 									<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'om500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'pl500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'ps500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'yd500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'ym500', fg_color: 'g800' }) -%>
 									<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
-									<!-- 4.5+ -->
-									<%- include('partials/contrast-card', { bg_color: 'g500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gl500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gm500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gs500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gw500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'od500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'os500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'pd500', fg_color: 'g800' }) -%>
 									</div>
 				                </div>
 				            </div>
@@ -135,8 +121,6 @@
 				            <div id="rf-tabpanel-530" class="rf-tabs__panel" role="tabpanel" tabindex="0">
 				                <div class="rf-prose">
 		                				<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
-
-										<p>Note : le changement de couleur des boutons n'est pas (encore ?) implémenté de manière officielle dans le Design System. Veillez à définir tous les états de vos boutons (hover, focus...).</p>
 
 										<div class="rf-grid-row rf-grid-row--gutters">
 											<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
