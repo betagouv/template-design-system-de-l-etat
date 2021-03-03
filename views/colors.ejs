@@ -1,127 +1,128 @@
 <%- include('partials/header') -%>
-<div class="rf-container rf-pb-6w rf-pt-6w">
-	<div class="rf-grid-row rf-grid-row--gutters rf-b__two-col">
-		<div class="rf-col-xs-12 rf-col-md-3">
-
-			 <nav class="rf-sidemenu rf-sidemenu--sticky" aria-label="Menu latéral">
-		    <div class="rf-sidemenu__inner">
-		        <button class="rf-sidemenu__btn" hidden aria-controls="rf-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
-		        <div class="rf-collapse" id="rf-sidemenu-wrapper">
-		            <ul class="rf-sidemenu__list">
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#palette" target="_self">Palette de couleurs</a>
-		                </li>
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#combinaisons" target="_self">Combinaisons accessibles</a>
-		                </li>
-		                <li class="rf-sidemenu__item">
-		                    <a class="rf-sidemenu__link" href="#variables" target="_self">Toutes les variables de couleurs</a>
-		                </li>
-		            </ul>
-		        </div>
-		    </div>
-	        <%- include('partials/dark-mode-switch') -%>
-		</nav> 
-		</div>
-		<div class="rf-col-xs-12 rf-col-md-9">
-	
-
-			<h1 id="palette">Palettes de couleurs</h1>
-
-			<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
-
-			<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
-
-			<h2>Brun</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
-			<h2>Bleu</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
-			<h2>Vert</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
-			<h2>Orange</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
-			<h2>Violet</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
-			<h2>Rose</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
-			<h2>Jaune</h2>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
-			<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
-
-
-
-			<div id="combinaisons">
-				<h1>Combinaisons accessibles</h1>
-
-				<p>Ces combinaisons de couleurs utilisent les variables CSS du Design System.</p>
-
-				<div class="rf-tabs">
-				    <ul class="rf-tabs__list" role="tablist">
-				        <li>
-				            <button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-510">Fonds alternatifs sombres</button>
-				            <div id="rf-tabpanel-510" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-				                <div class="rf-prose">
-	                				<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
-
-	                				<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
-                    				<div class="rf-grid-row rf-grid-row--gutters">
-										<!-- 7+ -->
-										<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
-										<%- include('partials/contrast-card', { bg_color: 'g700', fg_color: 'w' }) -%>
-										<%- include('partials/contrast-card', { bg_color: 'bf500', fg_color: 'w' }) -%>
+<main role="main" id="contenu">	
+	<div class="rf-container rf-pb-6w rf-pt-6w">
+		<div class="rf-grid-row rf-grid-row--gutters rf-b__two-col">
+			<div class="rf-col-xs-12 rf-col-md-3">
+				
+				<nav class="rf-sidemenu rf-sidemenu--sticky" aria-label="Menu latéral">
+					<div class="rf-sidemenu__inner">
+						<button class="rf-sidemenu__btn" hidden aria-controls="rf-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
+						<div class="rf-collapse" id="rf-sidemenu-wrapper">
+							<ul class="rf-sidemenu__list">
+								<li class="rf-sidemenu__item">
+									<a class="rf-sidemenu__link" href="#palette" target="_self">Palette de couleurs</a>
+								</li>
+								<li class="rf-sidemenu__item">
+									<a class="rf-sidemenu__link" href="#combinaisons" target="_self">Combinaisons accessibles</a>
+								</li>
+								<li class="rf-sidemenu__item">
+									<a class="rf-sidemenu__link" href="#variables" target="_self">Toutes les variables de couleurs</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<%- include('partials/dark-mode-switch') -%>
+				</nav> 
+			</div>
+			<div class="rf-col-xs-12 rf-col-md-9">
+				
+				
+				<h1 id="palette">Palettes de couleurs</h1>
+				
+				<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
+				
+				<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
+				
+				<h2>Brun</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
+				<h2>Bleu</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
+				<h2>Vert</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
+				<h2>Orange</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
+				<h2>Violet</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
+				<h2>Rose</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
+				<h2>Jaune</h2>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
+				<%- include('partials/scheme-cards', { scheme_classname: 'rf-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
+				
+				
+				
+				<div id="combinaisons">
+					<h1>Combinaisons accessibles</h1>
+					
+					<p>Ces combinaisons de couleurs utilisent les variables CSS du Design System.</p>
+					
+					<div class="rf-tabs">
+						<ul class="rf-tabs__list" role="tablist">
+							<li>
+								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-510">Fonds alternatifs sombres</button>
+								<div id="rf-tabpanel-510" class="rf-tabs__panel" role="tabpanel" tabindex="0">
+									<div class="rf-prose">
+										<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
+										
+										<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
+										<div class="rf-grid-row rf-grid-row--gutters">
+											<!-- 7+ -->
+											<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'g700', fg_color: 'w' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'bf500', fg_color: 'w' }) -%>
+										</div>
 									</div>
-				                </div>
-				            </div>
-				        </li>
-				        <li>
-				            <button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-520">Fonds alternatifs clairs</button>
-				            <div id="rf-tabpanel-520" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-				                <div class="rf-prose">
-					                <p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
-	                				<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
-
-									<div class="rf-grid-row rf-grid-row--gutters">
-									<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gl300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gm300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
-									<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
+								</div>
+							</li>
+							<li>
+								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-520">Fonds alternatifs clairs</button>
+								<div id="rf-tabpanel-520" class="rf-tabs__panel" role="tabpanel" tabindex="0">
+									<div class="rf-prose">
+										<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
+										<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
+										
+										<div class="rf-grid-row rf-grid-row--gutters">
+											<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'gl300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'gm300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
+											<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
+										</div>
 									</div>
-				                </div>
-				            </div>
-				        </li>
-
-				        <li>
-				            <button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-530">Contrastes moyens</button>
-				            <div id="rf-tabpanel-530" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-				                <div class="rf-prose">
-		                				<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
-
+								</div>
+							</li>
+							
+							<li>
+								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-530">Contrastes moyens</button>
+								<div id="rf-tabpanel-530" class="rf-tabs__panel" role="tabpanel" tabindex="0">
+									<div class="rf-prose">
+										<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
+										
 										<div class="rf-grid-row rf-grid-row--gutters">
 											<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
 											<%- include('partials/contrast-card', { color: 'gm500', card_type: 'title+button' }) -%>
@@ -133,128 +134,127 @@
 											<%- include('partials/contrast-card', { color: 'p500', card_type: 'title+button' }) -%>
 											<%- include('partials/contrast-card', { color: 'rm500', card_type: 'title+button' }) -%>
 										</div>		                    
-				                </div>
-				            </div>
-				        </li>
-				    </ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					
+					
 				</div>
-
-
-
-			</div>
-
-
-
-			<h1 id="variables">Variables de couleurs</h1>
-
-			<h2>Échelle de gris</h2>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'g800' }) -%>
-				<%- include('partials/color-card', { color_name: 'g700' }) -%>
-				<%- include('partials/color-card', { color_name: 'g600' }) -%>
-				<%- include('partials/color-card', { color_name: 'g500' }) -%>
-				<%- include('partials/color-card', { color_name: 'g400' }) -%>
-				<%- include('partials/color-card', { color_name: 'g300' }) -%>
-				<%- include('partials/color-card', { color_name: 'g200' }) -%>
-				<%- include('partials/color-card', { color_name: 'g100' }) -%>
-				<!--       
-				  g800-plain: $grey-800,
-				  g600-g400: $grey-600 $grey-400,
-				  g400-t: $grey-400 transparent,
-				  g100-g800: $grey-100 $grey-800,
-				  w-g750: $white $grey-750, 
+				
+				
+				
+				<h1 id="variables">Variables de couleurs</h1>
+				
+				<h2>Échelle de gris</h2>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'g800' }) -%>
+					<%- include('partials/color-card', { color_name: 'g700' }) -%>
+					<%- include('partials/color-card', { color_name: 'g600' }) -%>
+					<%- include('partials/color-card', { color_name: 'g500' }) -%>
+					<%- include('partials/color-card', { color_name: 'g400' }) -%>
+					<%- include('partials/color-card', { color_name: 'g300' }) -%>
+					<%- include('partials/color-card', { color_name: 'g200' }) -%>
+					<%- include('partials/color-card', { color_name: 'g100' }) -%>
+					<!--       
+						g800-plain: $grey-800,
+						g600-g400: $grey-600 $grey-400,
+						g400-t: $grey-400 transparent,
+						g100-g800: $grey-100 $grey-800,
+						w-g750: $white $grey-750, 
+					-->
+				</div>
+				
+				<h2>Bleu France</h2>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'bf500', comment: 'Bleu France' }) -%>
+					<%- include('partials/color-card', { color_name: 'bf300-plain' }) -%>
+					<%- include('partials/color-card', { color_name: 'bf200-bf300' }) -%>
+					<%- include('partials/color-card', { color_name: 'bf100-g750' }) -%>
+					<%- include('partials/color-card', { color_name: 'w-bf500' }) -%>
+				</div>
+				
+				<h2>Rouge Marianne</h2>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'rm500' }) -%>
+					<%- include('partials/color-card', { color_name: 'rm300' }) -%>
+				</div>
+				
+				<!-- 
+					w: $white $grey-800,
+					beige: $beige $grey-750 $grey-100,
+					focus:$color-focus $color-focus-dark-mode,
 				-->
+				
+				<h2>Couleurs fonctionnelles</h2>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'info' }) -%>
+					<%- include('partials/color-card', { color_name: 'success' }) -%>
+					<%- include('partials/color-card', { color_name: 'error' }) -%>
+				</div>
+				
+				<h2>Couleurs illustratives</h2>
+				<h3>Brun</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'b500' }) -%>
+					<%- include('partials/color-card', { color_name: 'b300' }) -%>
+				</div>
+				<h3>Bleu</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'bs500' }) -%>
+					<%- include('partials/color-card', { color_name: 'bs300' }) -%>
+					<%- include('partials/color-card', { color_name: 'bd500' }) -%>
+					<%- include('partials/color-card', { color_name: 'bd300' }) -%>
+				</div>
+				<h3>Vert</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'gl500' }) -%>
+					<%- include('partials/color-card', { color_name: 'gl300' }) -%>
+					<%- include('partials/color-card', { color_name: 'gm500' }) -%>
+					<%- include('partials/color-card', { color_name: 'gm300' }) -%>
+					<%- include('partials/color-card', { color_name: 'gs500' }) -%>
+					<%- include('partials/color-card', { color_name: 'gs300' }) -%>
+					<%- include('partials/color-card', { color_name: 'gw500' }) -%>
+					<%- include('partials/color-card', { color_name: 'gw300' }) -%>
+				</div>
+				<h3>Orange</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'od500' }) -%>
+					<%- include('partials/color-card', { color_name: 'od300' }) -%>
+					<%- include('partials/color-card', { color_name: 'om500' }) -%>
+					<%- include('partials/color-card', { color_name: 'om300' }) -%>
+					<%- include('partials/color-card', { color_name: 'os500' }) -%>
+					<%- include('partials/color-card', { color_name: 'os300' }) -%>
+				</div>
+				<h3>Violet</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'p500' }) -%>
+					<%- include('partials/color-card', { color_name: 'p300' }) -%>
+				</div>
+				<h3>Rose</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'pd500' }) -%>
+					<%- include('partials/color-card', { color_name: 'pd300' }) -%>
+					<%- include('partials/color-card', { color_name: 'pl500' }) -%>
+					<%- include('partials/color-card', { color_name: 'pl300' }) -%>
+					<%- include('partials/color-card', { color_name: 'ps500' }) -%>
+					<%- include('partials/color-card', { color_name: 'ps300' }) -%>
+				</div>
+				<h3>Jaune</h3>
+				<div class="rf-grid-row rf-grid-row--gutters">
+					<%- include('partials/color-card', { color_name: 'yd500' }) -%>
+					<%- include('partials/color-card', { color_name: 'yd300' }) -%>
+					<%- include('partials/color-card', { color_name: 'ym500' }) -%>
+					<%- include('partials/color-card', { color_name: 'ym300' }) -%>
+				</div> 
+				
+				
 			</div>
-
-			<h2>Bleu France</h2>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'bf500', comment: 'Bleu France' }) -%>
-				<%- include('partials/color-card', { color_name: 'bf300-plain' }) -%>
-				<%- include('partials/color-card', { color_name: 'bf200-bf300' }) -%>
-				<%- include('partials/color-card', { color_name: 'bf100-g750' }) -%>
-				<%- include('partials/color-card', { color_name: 'w-bf500' }) -%>
-			</div>
-
-			<h2>Rouge Marianne</h2>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'rm500' }) -%>
-				<%- include('partials/color-card', { color_name: 'rm300' }) -%>
-			</div>
-
-			<!-- 
-			  w: $white $grey-800,
-			  beige: $beige $grey-750 $grey-100,
-			  focus:$color-focus $color-focus-dark-mode,
-			-->
-
-			<h2>Couleurs fonctionnelles</h2>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'info' }) -%>
-				<%- include('partials/color-card', { color_name: 'success' }) -%>
-				<%- include('partials/color-card', { color_name: 'error' }) -%>
-			</div>
-
-			<h2>Couleurs illustratives</h2>
-			<h3>Brun</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'b500' }) -%>
-				<%- include('partials/color-card', { color_name: 'b300' }) -%>
-			</div>
-			<h3>Bleu</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'bs500' }) -%>
-				<%- include('partials/color-card', { color_name: 'bs300' }) -%>
-				<%- include('partials/color-card', { color_name: 'bd500' }) -%>
-				<%- include('partials/color-card', { color_name: 'bd300' }) -%>
-			</div>
-			<h3>Vert</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'gl500' }) -%>
-				<%- include('partials/color-card', { color_name: 'gl300' }) -%>
-				<%- include('partials/color-card', { color_name: 'gm500' }) -%>
-				<%- include('partials/color-card', { color_name: 'gm300' }) -%>
-				<%- include('partials/color-card', { color_name: 'gs500' }) -%>
-				<%- include('partials/color-card', { color_name: 'gs300' }) -%>
-				<%- include('partials/color-card', { color_name: 'gw500' }) -%>
-				<%- include('partials/color-card', { color_name: 'gw300' }) -%>
-			</div>
-			<h3>Orange</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'od500' }) -%>
-				<%- include('partials/color-card', { color_name: 'od300' }) -%>
-				<%- include('partials/color-card', { color_name: 'om500' }) -%>
-				<%- include('partials/color-card', { color_name: 'om300' }) -%>
-				<%- include('partials/color-card', { color_name: 'os500' }) -%>
-				<%- include('partials/color-card', { color_name: 'os300' }) -%>
-			</div>
-			<h3>Violet</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'p500' }) -%>
-				<%- include('partials/color-card', { color_name: 'p300' }) -%>
-			</div>
-			<h3>Rose</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'pd500' }) -%>
-				<%- include('partials/color-card', { color_name: 'pd300' }) -%>
-				<%- include('partials/color-card', { color_name: 'pl500' }) -%>
-				<%- include('partials/color-card', { color_name: 'pl300' }) -%>
-				<%- include('partials/color-card', { color_name: 'ps500' }) -%>
-				<%- include('partials/color-card', { color_name: 'ps300' }) -%>
-			</div>
-			<h3>Jaune</h3>
-			<div class="rf-grid-row rf-grid-row--gutters">
-				<%- include('partials/color-card', { color_name: 'yd500' }) -%>
-				<%- include('partials/color-card', { color_name: 'yd300' }) -%>
-				<%- include('partials/color-card', { color_name: 'ym500' }) -%>
-				<%- include('partials/color-card', { color_name: 'ym300' }) -%>
-			</div> 
-
-
 		</div>
+		
 	</div>
-
-</div>
-
-
-
+</main>
+	
 <%- include('partials/footer') -%>
