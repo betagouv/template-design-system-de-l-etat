@@ -36,6 +36,14 @@ app.get('/formulaire', (req, res) => {
   res.render('form')
 })
 
+app.get('/contact', (req, res) => {
+  res.render('contact')
+})
+
+app.get('/accessibilite', (req, res) => {
+  res.render('accessibilite')
+})
+
 app.get('/components', (req, res) => {
   res.render('components')
 })
