@@ -6,7 +6,20 @@
   background-color: var(--bf500);
   color: var(--g100);
 }
-
+p.rf-hint-text {
+  margin-bottom: 0;
+}
+.tofill {
+  background-color: #fffacd;
+  font-weight: lighter;
+  padding: .1em .2em;
+}
+span.tofill::after {
+  content: "]";
+}
+span.tofill::before {
+  content: "[";
+}  
 /* extends link on cards */
 .rf-card {
   position: relative;
