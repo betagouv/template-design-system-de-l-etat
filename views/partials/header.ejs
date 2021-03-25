@@ -36,47 +36,41 @@
         </ul>
     </nav>
 </div>
-  <header class="rf-header">
-    <div class="rf-container">
-      <div class="rf-header__body">
-        <div class="rf-header__brand">
-          <a class="rf-logo"
-             href="/"
-             title="Retour à l’accueil">
-            <span class="rf-logo__title">
-              République
-              <br>française
-            </span>
-          </a>
+
+<header role="banner" class="rf-header">
+<div class="rf-container">
+    <div class="rf-header__body">
+        <div class="rf-header__brand rf-enlarge-link">
+            <div class="rf-header__logo">
+                <p class="rf-logo">
+                République
+                <br>française
+                </p>
+            </div>
+            <div class="rf-header__service">
+                <a href="/" title="Retour à l’accueil">
+                    <p class="rf-header__service-title"><%= appName %></p>
+                </a>
+                <p class="rf-header__service-tagline"><%= appDescription %></p>
+            </div>
         </div>
         <div class="rf-header__navbar">
-          <div class="rf-service">
-            <a class="rf-service__title" href="/" title="Retour à l’accueil">
-              <%= appName %>
-            </a>
-            <p class="rf-service__tagline">
-              <%= appDescription %>
-            </p>
-          </div>
-        </div>
-
-
-        <div class="rf-header__tools">
-          <div class="rf-search-bar" id="header-search" role="search">
-            <label class="rf-label" for="header-search-input">Label de la barre de recherche</label>
-            <input class="rf-input" placeholder="Rechercher" type="search" id="header-search-input" name="header-search-input">
-            <button class="rf-btn" title="Rechercher">
-              <span>
-                Rechercher
-              </span>
+            <button class="rf-btn--menu rf-btn" data-rf-opened="false" aria-controls="navigation-733" aria-haspopup="menu" title="Ouvrir le menu">
+                Ouvrir le menu
             </button>
-          </div>
         </div>
-      </div>
+        <div class="rf-header__tools">
+            <div class="rf-shortcuts">
+                <ul class="rf-shortcuts__list">
+                    <li class="rf-shortcuts__item">
+                        <a class="rf-link rf-fi-external-link-line rf-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/" title="documentation officielle - nouvelle fenêtre" target="_blank" rel="noopener">Documentation officielle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div class="rf-container">
-      <nav  id="header-navigation" class="rf-nav rf-modal" role="navigation" aria-label="Menu principal">
+    <nav class="rf-nav rf-modal" id="navigation-733" role="navigation" aria-label="Menu principal">
+        <button class="rf-link--close rf-link" aria-controls="navigation-733">Fermer</button>
          <ul class="rf-nav__list">
             <li class="rf-nav__item <% if (page === '/') { %> rf-nav__item--active <% } %>">
                <a class="rf-nav__link" href="/" target="_self">Accueil</a>
@@ -104,6 +98,6 @@
               <a class="rf-nav__link" href="/ressources" target="_self">Ressources</a>
             </li>
          </ul>
-      </nav>
-    </div>
-  </header>
+    </nav>
+</div>
+</header>
