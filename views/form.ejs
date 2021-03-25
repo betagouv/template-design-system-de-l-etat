@@ -20,15 +20,40 @@
 
         <h1>Un formulaire</h1>
 
-
-              <div class="rf-callout rf-fi-information-line rf-callout--scheme-soft-blue-soft rf-mb-3w">
-				  <p class="rf-callout__text">On peut afficher des messages d'informations.</p>
-				</div>
+          <div class="rf-callout rf-fi-information-line rf-callout--scheme-soft-blue-soft rf-mb-3w">
+			  <p class="rf-callout__text">On peut afficher des messages d'informations.</p>
+			</div>
 
           <form action="/" method="POST">
             <div class="rf-input-group">
-              <label class="rf-label" for="email">Champ email :</label>
-              <input class="rf-input" type="email" id="email" name="email" required="">
+              <label class="rf-label" for="text-input-text">Champ texte :</label>
+              <input class="rf-input" type="text" id="text-input-text" name="text-input-text">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-number">Champ nombre :
+                </label>
+                <input class="rf-input" pattern="[0-9]*" inputmode="numeric" type="number" id="text-input-number" name="text-input-number">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-calendar">Champ date :
+                </label>
+                <div class="rf-input-wrap rf-fi-calendar-line">
+                    <input class="rf-input" type="date" id="text-input-calendar" name="text-input-calendar">
+                </div>
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-password">Champ mot de passe :
+                </label>
+                <input class="rf-input" type="password" id="text-input-password" name="text-input-password">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="textarea">Champ texte long :
+                </label>
+                <textarea class="rf-input" id="textarea" name="textarea"></textarea>
             </div>
 
 	        <div class="rf-input-group">
