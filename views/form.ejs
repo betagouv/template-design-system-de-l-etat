@@ -68,23 +68,29 @@
             </div>
 
 			<div class="rf-form-group">
-			    <fieldset class="rf-fieldset">
-			        <legend class="rf-fieldset__legend">Légende pour l’ensemble de champs</legend>
-			        <div class="rf-fieldset__content">
-			            <div class="rf-checkbox-group">
-						    <input type="checkbox" id="checkbox" name="checkbox">
-						    <label class="rf-label" for="checkbox">Label checkbox</label>
-						</div>
-			            <div class="rf-checkbox-group">
-			                <input type="checkbox" id="checkboxes-2" name="checkboxes-2">
-			                <label class="rf-label" for="checkboxes-2">Label checkbox</label>
-			            </div>
-			            <div class="rf-checkbox-group">
-			                <input type="checkbox" id="checkboxes-3" name="checkboxes-3">
-			                <label class="rf-label" for="checkboxes-3">Label checkbox</label>
-			            </div>
-			        </div>
-			    </fieldset>
+                <fieldset class="rf-fieldset" role="group">
+                    <legend class="rf-fieldset__legend rf-text--regular" id='checkboxes-hint-legend'>
+                        Légende pour l’ensemble de champs
+                        <span class="rf-hint-text" id="checkboxes-hint-desc-hint">Texte de description additionnel</span>
+                    </legend>
+                    <div class="rf-fieldset__content">
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-1" name="checkboxes-hint-1">
+                            <label class="rf-label" for="checkboxes-hint-1">Label checkbox
+                            </label>
+                        </div>
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-2" name="checkboxes-hint-2">
+                            <label class="rf-label" for="checkboxes-hint-2">Label checkbox
+                            </label>
+                        </div>
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-3" name="checkboxes-hint-3">
+                            <label class="rf-label" for="checkboxes-hint-3">Label checkbox
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
 			</div>
 
             <div class="rf-input-group">
