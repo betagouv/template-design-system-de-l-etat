@@ -57,15 +57,19 @@
             </div>
 
 	        <div class="rf-input-group">
-	            <label class="rf-label" for="day">Exemple de menu déroulant :</label>
-	            <p class="rf-hint-text" id="day-hint">La conférence vous sera réservée pour la journée choisie.</p>
-	            <select class="rf-select" id="day" name="day" aria-describedby="day-hint">
-	                <option value="2021-01-15">Aujourd'hui</option>
-	                <option value="2021-01-16">Demain</option>
-	                <option value="2021-01-17">dimanche 17 janvier 2021</option>
-	                <option value="2021-01-18">lundi 18 janvier 2021</option>
-	            </select>
-	        </div>
+                <div class="rf-select-group">
+                    <label class="rf-label" for="select-hint">Liste déroulante :
+                        <span class="rf-hint-text" id="select-hint-desc-hint">Texte de description additionnel</span>
+                    </label>
+                    <select class="rf-select" id="select-hint" name="select-hint">
+                        <option value="" selected disabled hidden>Selectionnez une option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="rf-form-group">
                 <fieldset class="rf-fieldset" role="group">
