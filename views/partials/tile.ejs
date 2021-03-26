@@ -1,9 +1,12 @@
 <div class="rf-col-4">
-  <div class="rf-tile">
+  <div class="rf-tile rf-enlarge-link">
       <div class="rf-tile__body">
           <h3 class="rf-tile__title rf-h4">
               <a class="rf-tile__link" href="<%= url %>"><%= title %></a>
           </h3>
+	      <% if (locals.desc) { %>
+          <p class="rf-tile__desc"><%= desc %></p>
+	      <% } %>
       </div>
   </div>
 </div>
