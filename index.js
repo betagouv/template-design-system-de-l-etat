@@ -29,35 +29,50 @@ app.get('/', (req, res) => {
 })
 
 app.get('/ressources', (req, res) => {
-  res.render('ressources')
+  res.render('ressources', {
+    pageTitle: 'Ressources'
+  })
 })
 
 app.get('/formulaire', (req, res) => {
-  res.render('form')
+  res.render('form', {
+    pageTitle: 'Formulaire'
+  })
 })
 
 app.get('/contact', (req, res) => {
-  res.render('contact')
+  res.render('contact', {
+    pageTitle: 'Contact'
+  })
 })
 
 app.get('/accessibilite', (req, res) => {
-  res.render('accessibilite')
+  res.render('accessibilite', {
+    pageTitle: 'Accessibilité'
+  })
 })
 
 app.get('/components', (req, res) => {
-  res.render('components')
+  res.render('components', {
+    pageTitle: 'Composants'
+  })
 })
 
 app.get('/colors', (req, res) => {
-  res.render('colors')
+  res.render('colors', {
+    pageTitle: 'Couleurs'
+  })
 })
 
 app.get('/typography', (req, res) => {
-  res.render('typography')
+  res.render('typography', {
+    pageTitle: 'Typographie'
+  })
 })
 
 app.get('/mentions-legales', (req, res) => {
   res.render('legalNotice', {
+    pageTitle: "Mentions légales",
     contactEmail: 'mon-produit@beta.gouv.fr',
   })
 })
