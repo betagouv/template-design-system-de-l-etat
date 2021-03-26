@@ -65,83 +65,73 @@
 					<p>Ces combinaisons de couleurs utilisent les variables CSS du Design System.</p>
 					
 					<div class="rf-tabs">
-						<ul class="rf-tabs__list" role="tablist">
-							<li>
-								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-510">Fonds alternatifs sombres</button>
-								<div id="rf-tabpanel-510" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-									<div class="rf-prose">
-										<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
-										
-										<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
-										<div class="rf-grid-row rf-grid-row--gutters">
-											<!-- 7+ -->
-											<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'g700', fg_color: 'w' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'bf500', fg_color: 'w' }) -%>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-520">Fonds alternatifs clairs</button>
-								<div id="rf-tabpanel-520" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-									<div class="rf-prose">
-										<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
-										<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
-										
-										<div class="rf-grid-row rf-grid-row--gutters">
-											<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'gl300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'gm300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
-											<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
-										</div>
-									</div>
-								</div>
-							</li>
+                        <ul class="rf-tabs__list" role="tablist" aria-label="Combinaisons de couleurs accessibles">
+					        <li role="presentation">
+					            <button id="tabpanel-404" class="rf-tabs__tab rf-fi-checkbox-line rf-tabs__tab--icon-left" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-404-panel">Fonds alternatifs sombres</button>
+					        </li>
+					        <li role="presentation">
+					            <button id="tabpanel-405" class="rf-tabs__tab rf-fi-checkbox-line rf-tabs__tab--icon-left" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-405-panel">Fonds alternatifs clairs</button>
+					        </li>
+					        <li role="presentation">
+					            <button id="tabpanel-406" class="rf-tabs__tab rf-fi-checkbox-line rf-tabs__tab--icon-left" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-406-panel">Couleurs accents contrastés</button>
+					        </li>
+					    </ul>
+					    <div id="tabpanel-404-panel" class="rf-tabs__panel rf-tabs__panel--selected" role="tabpanel" aria-labelledby="tabpanel-404" tabindex="0">
+							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
 							
-							<li>
-								<button class="rf-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="rf-tabpanel-530">Contrastes moyens</button>
-								<div id="rf-tabpanel-530" class="rf-tabs__panel" role="tabpanel" tabindex="0">
-									<div class="rf-prose">
-										<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
-										
-										<div class="rf-grid-row rf-grid-row--gutters">
-											<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'gm500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'gw500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'g600', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'b500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'bs500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'bd500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'p500', card_type: 'title+button' }) -%>
-											<%- include('partials/contrast-card', { color: 'rm500', card_type: 'title+button' }) -%>
-										</div>		                    
-									</div>
-								</div>
-							</li>
-						</ul>
+							<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
+							<div class="rf-grid-row rf-grid-row--gutters">
+								<!-- 7+ -->
+								<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'g700', fg_color: 'w' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'bf500', fg_color: 'w' }) -%>
+							</div>
+					    </div>
+					    <div id="tabpanel-405-panel" class="rf-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-405" tabindex="0">
+							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
+							<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
+							
+							<div class="rf-grid-row rf-grid-row--gutters">
+								<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'gl300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'gm300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
+								<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
+							</div>
+					    </div>
+					    <div id="tabpanel-406-panel" class="rf-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-406" tabindex="0">
+							<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
+							<div class="rf-grid-row rf-grid-row--gutters">
+								<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'gm500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'gw500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'g600', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'b500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'bs500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'bd500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'p500', card_type: 'title+button' }) -%>
+								<%- include('partials/contrast-card', { color: 'rm500', card_type: 'title+button' }) -%>
+							</div>
+					    </div>
 					</div>
-					
-					
-					
+
 				</div>
 				
 				
