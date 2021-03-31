@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="rf-container">
+<div class="rf-container rf-mb-8w">
   <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutters">
     <div class="rf-col rf-col-lg-8">
       <div id="je-cree-une-conf" class="main-paragraph">
@@ -20,67 +20,106 @@
 
         <h1>Un formulaire</h1>
 
-
-              <div class="rf-callout rf-fi-information-line rf-callout--scheme-soft-blue-soft rf-mb-3w">
-				  <p class="rf-callout__text">On peut afficher des messages d'informations.</p>
-				</div>
+          <div class="rf-callout rf-fi-information-line rf-callout--scheme-soft-blue-soft rf-mb-3w">
+			  <p class="rf-callout__text">On peut afficher des messages d'informations.</p>
+			</div>
 
           <form action="/" method="POST">
             <div class="rf-input-group">
-              <label class="rf-label" for="email">Champ email :</label>
-              <input class="rf-input" type="email" id="email" name="email" required="">
+              <label class="rf-label" for="text-input-text">Champ texte :</label>
+              <input class="rf-input" type="text" id="text-input-text" name="text-input-text">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-number">Champ nombre :
+                </label>
+                <input class="rf-input" pattern="[0-9]*" inputmode="numeric" type="number" id="text-input-number" name="text-input-number">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-calendar">Champ date :
+                </label>
+                <div class="rf-input-wrap rf-fi-calendar-line">
+                    <input class="rf-input" type="date" id="text-input-calendar" name="text-input-calendar">
+                </div>
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="text-input-password">Champ mot de passe :
+                </label>
+                <input class="rf-input" type="password" id="text-input-password" name="text-input-password">
+            </div>
+
+            <div class="rf-input-group">
+                <label class="rf-label" for="textarea">Champ texte long :
+                </label>
+                <textarea class="rf-input" id="textarea" name="textarea"></textarea>
             </div>
 
 	        <div class="rf-input-group">
-	            <label class="rf-label" for="day">Exemple de menu déroulant :</label>
-	            <p class="rf-hint-text" id="day-hint">La conférence vous sera réservée pour la journée choisie.</p>
-	            <select class="rf-select" id="day" name="day" aria-describedby="day-hint">
-	                <option value="2021-01-15">Aujourd'hui</option>
-	                <option value="2021-01-16">Demain</option>
-	                <option value="2021-01-17">dimanche 17 janvier 2021</option>
-	                <option value="2021-01-18">lundi 18 janvier 2021</option>
-	            </select>
-	        </div>
+                <div class="rf-select-group">
+                    <label class="rf-label" for="select-hint">Liste déroulante :
+                        <span class="rf-hint-text" id="select-hint-desc-hint">Texte de description additionnel</span>
+                    </label>
+                    <select class="rf-select" id="select-hint" name="select-hint">
+                        <option value="" selected disabled hidden>Selectionnez une option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rf-form-group">
+                <fieldset class="rf-fieldset" role="group">
+                    <legend class="rf-fieldset__legend rf-text--regular" id='radio-legend'>
+                        Légende pour l’ensemble de champs
+                    </legend>
+                    <div class="rf-fieldset__content">
+	                    <div class="rf-radio-group">
+	                        <input type="radio" id="radio-1" name="radio">
+	                        <label class="rf-label" for="radio-1">Label radio
+	                        </label>
+	                    </div>
+	                    <div class="rf-radio-group">
+	                        <input type="radio" id="radio-2" name="radio">
+	                        <label class="rf-label" for="radio-2">Label radio
+	                        </label>
+	                    </div>
+	                    <div class="rf-radio-group">
+	                        <input type="radio" id="radio-3" name="radio">
+	                        <label class="rf-label" for="radio-3">Label radio
+	                        </label>
+	                    </div>
+                    </div>
+                </fieldset>
+            </div>
 
 			<div class="rf-form-group">
-			    <fieldset class="rf-fieldset">
-			        <legend class="rf-fieldset__legend" aria-describedby="radio-hint-desc-hint">Légende pour l’ensemble de champs</legend>
-			        <p class="rf-hint-text" id="radio-hint-desc-hint">Texte de description additionnel</p>
-			        <div class="rf-fieldset__content">
-			            <div class="rf-radio-group">
-			                <input type="radio" id="radio-hint-1" name="radio-hint">
-			                <label class="rf-label" for="radio-hint-1">Label radio</label>
-			            </div>
-			            <div class="rf-radio-group">
-			                <input type="radio" id="radio-hint-2" name="radio-hint">
-			                <label class="rf-label" for="radio-hint-2">Label radio</label>
-			            </div>
-			            <div class="rf-radio-group">
-			                <input type="radio" id="radio-hint-3" name="radio-hint">
-			                <label class="rf-label" for="radio-hint-3">Label radio</label>
-			            </div>
-			        </div>
-			    </fieldset>
-			</div>
-
-			<div class="rf-form-group">
-			    <fieldset class="rf-fieldset">
-			        <legend class="rf-fieldset__legend">Légende pour l’ensemble de champs</legend>
-			        <div class="rf-fieldset__content">
-			            <div class="rf-checkbox-group">
-						    <input type="checkbox" id="checkbox" name="checkbox">
-						    <label class="rf-label" for="checkbox">Label checkbox</label>
-						</div>
-			            <div class="rf-checkbox-group">
-			                <input type="checkbox" id="checkboxes-2" name="checkboxes-2">
-			                <label class="rf-label" for="checkboxes-2">Label checkbox</label>
-			            </div>
-			            <div class="rf-checkbox-group">
-			                <input type="checkbox" id="checkboxes-3" name="checkboxes-3">
-			                <label class="rf-label" for="checkboxes-3">Label checkbox</label>
-			            </div>
-			        </div>
-			    </fieldset>
+                <fieldset class="rf-fieldset" role="group">
+                    <legend class="rf-fieldset__legend rf-text--regular" id='checkboxes-hint-legend'>
+                        Légende pour l’ensemble de champs
+                        <span class="rf-hint-text" id="checkboxes-hint-desc-hint">Texte de description additionnel</span>
+                    </legend>
+                    <div class="rf-fieldset__content">
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-1" name="checkboxes-hint-1">
+                            <label class="rf-label" for="checkboxes-hint-1">Label checkbox
+                            </label>
+                        </div>
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-2" name="checkboxes-hint-2">
+                            <label class="rf-label" for="checkboxes-hint-2">Label checkbox
+                            </label>
+                        </div>
+                        <div class="rf-checkbox-group">
+                            <input type="checkbox" id="checkboxes-hint-3" name="checkboxes-hint-3">
+                            <label class="rf-label" for="checkboxes-hint-3">Label checkbox
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
 			</div>
 
             <div class="rf-input-group">

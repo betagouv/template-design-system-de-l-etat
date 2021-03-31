@@ -30,3 +30,10 @@ npm install
 npm run dev
 ```
 
+## Mettre à jour le Design System
+
+- Modifier la version de @gouvfr/dsfr dans package.json
+- Lancer la commande 
+```
+npm install
+```

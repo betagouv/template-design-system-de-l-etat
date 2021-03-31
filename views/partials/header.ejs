@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-rf-reset>
+<html lang="fr" data-rf-theme>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,99 +11,96 @@
     <% } %>
   </title>
   <!-- todo(estellecomment) : import min css and js -->
-  <link rel="stylesheet" href="/~/@gouvfr/all/dist/css/all.css">
+  <link rel="stylesheet" href="/~/@gouvfr/dsfr/dist/css/dsfr.css">
   <link rel="stylesheet" href="/static/css/custom.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/~/@gouvfr/dsfr/dist/favicons/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="icon" href="/~/@gouvfr/dsfr/dist/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/~/@gouvfr/dsfr/dist/favicons/favicon.ico" type="image/x-icon"><!-- 32×32 -->
 </head>
 <body>
   <div class="rf-skiplinks">
-    <div class="rf-container">
+    <nav class="rf-container" role="navigation" aria-label="Accès rapide">
         <ul class="rf-skiplinks__list">
             <li>
-                <a class="rf-link" href="#contenu">Contenu</a>
+                <a class="rf-nav__link" href="#contenu">Contenu</a>
             </li>
             <li>
-                <a class="rf-link" href="#header-navigation">Menu</a>
+                <a class="rf-nav__link" href="#header-navigation">Menu</a>
             </li>
             <li>
-                <a class="rf-link" href="#header-search">Recherche</a>
+                <a class="rf-nav__link" href="#header-search">Recherche</a>
             </li>
             <li>
-                <a class="rf-link" href="#footer">Footer</a>
+                <a class="rf-nav__link" href="#footer">Pied de page</a>
             </li>
         </ul>
-    </div>
+    </nav>
 </div>
-  <header class="rf-header">
-    <div class="rf-container">
-      <div class="rf-header__body">
-        <div class="rf-header__brand">
-          <a class="rf-logo"
-             href="/"
-             title="Retour à l’accueil">
-            <span class="rf-logo__title">
-              République
-              <br>française
-            </span>
-          </a>
+
+<header role="banner" class="rf-header">
+<div class="rf-container">
+    <div class="rf-header__body">
+        <div class="rf-header__brand rf-enlarge-link">
+            <div class="rf-header__logo">
+                <p class="rf-logo">
+                République
+                <br>française
+                </p>
+            </div>
+            <div class="rf-header__service">
+                <a href="/" title="Retour à l’accueil">
+                    <p class="rf-header__service-title"><%= appName %></p>
+                </a>
+                <p class="rf-header__service-tagline"><%= appDescription %></p>
+            </div>
         </div>
         <div class="rf-header__navbar">
-          <div class="rf-service">
-            <a class="rf-service__title" href="/" title="Retour à l’accueil">
-              <%= appName %>
-            </a>
-            <p class="rf-service__tagline">
-              <%= appDescription %>
-            </p>
-          </div>
+            <button class="rf-btn--menu rf-btn" data-rf-opened="false" aria-controls="navigation-733" aria-haspopup="menu" title="Ouvrir le menu">
+                Ouvrir le menu
+            </button>
         </div>
-
-
         <div class="rf-header__tools">
-                <div class="rf-search-bar" id="header-search">
-                    <label class="rf-label" for="header-search-input">Label de la barre de recherche</label>
-                    <input class="rf-input" placeholder="Rechercher" type="search" id="header-search-input" name="header-search-input">
-                    <button class="rf-btn" title="Rechercher">
-                        <span>
-                            Rechercher
-                        </span>
-                    </button>
-                </div>
+            <div class="rf-shortcuts">
+                <ul class="rf-shortcuts__list">
+                    <li class="rf-shortcuts__item">
+                        <a class="rf-link rf-fi-external-link-line rf-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/" title="documentation officielle - nouvelle fenêtre" target="_blank" rel="noopener">Documentation officielle</a>
+                    </li>
+                    <li class="rf-shortcuts__item">
+                        <button class="rf-link rf-fi-sun-fill-line rf-link--icon-left" aria-controls="rf-theme-modal" data-rf-opened="false">Paramètres d'affichage</button>
+                    </li>
+                </ul>
             </div>
-
-      </div>
+        </div>
     </div>
-
-    <div class="rf-container">
-      <nav  id="header-navigation" class="rf-nav" role="navigation" aria-label="Menu principal">
+    <nav class="rf-nav rf-modal" id="navigation-733" role="navigation" aria-label="Menu principal">
+        <button class="rf-link--close rf-link" aria-controls="navigation-733">Fermer</button>
          <ul class="rf-nav__list">
             <li class="rf-nav__item <% if (page === '/') { %> rf-nav__item--active <% } %>">
-               <a class="rf-link" href="/" target="_self">Accueil</a>
+               <a class="rf-nav__link" href="/" target="_self">Accueil</a>
             </li>
             <li class="rf-nav__item <% if (page === '/components') { %> rf-nav__item--active <% } %>">
-               <a class="rf-link" href="/components" target="_self">Des composants</a>
+               <a class="rf-nav__link" href="/components" target="_self">Des composants</a>
             </li>
             <li class="rf-nav__item <% if (page === '/formulaire') { %> rf-nav__item--active <% } %>">
-               <a class="rf-link" href="/formulaire" target="_self">Un formulaire</a>
+               <a class="rf-nav__link" href="/formulaire" target="_self">Un formulaire</a>
             </li>
             <li class="rf-nav__item <% if (page === '/typography') { %> rf-nav__item--active <% } %>">
-              <a class="rf-link" href="/typography" target="_self">La typographie</a>
+              <a class="rf-nav__link" href="/typography" target="_self">La typographie</a>
             </li>
             <li class="rf-nav__item <% if (page === '/colors') { %> rf-nav__item--active <% } %>">
-               <button class="rf-btn" aria-expanded="false" aria-controls="rf-nav-colors">Des couleurs</button>
+               <button class="rf-nav__btn" aria-expanded="false" aria-controls="rf-nav-colors">Des couleurs</button>
                 <div class="rf-menu rf-collapse" id="rf-nav-colors">
                   <ul class="rf-menu__list">
-                    <li class="rf-menu__item"><a class="rf-link" href="/colors" target="_self">Palette de couleur</a></li>
-                    <li class="rf-menu__item"><a class="rf-link" href="/colors#combinaisons" target="_self">Combinaisons accessibles</a></li>
-                    <li class="rf-menu__item"><a class="rf-link" href="/colors#variables" target="_self">Palette de couleur</a></li>
+                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors" target="_self">Palette de couleur</a></li>
+                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors#combinaisons" target="_self">Combinaisons accessibles</a></li>
+                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors#variables" target="_self">Palette de couleur</a></li>
                  </ul>
                 </div>
             </li>
             <li class="rf-nav__item <% if (page === '/ressources') { %> rf-nav__item--active <% } %>">
-              <a class="rf-link" href="/ressources" target="_self">Ressources</a>
+              <a class="rf-nav__link" href="/ressources" target="_self">Ressources</a>
             </li>
          </ul>
-      </nav>
-    </div>
-  </header>
+    </nav>
+</div>
+</header>

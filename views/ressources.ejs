@@ -3,16 +3,18 @@
 <div class="rf-container rf-pb-6w rf-pt-2w">
   <h1>Ressources utiles</h1>
   <ul>
-    <li><a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs">Documentation officielle du Design System</a></li>
+    <li><a class="rf-link rf-fi-external-link-line rf-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs">Documentation officielle du Design System</a></li>
 </ul>
 <h2>Sites utilisant le Design Sytem de l'État</h2>
 <!-- TODO le truc sans image -->
 
 <p>Liste est non exhaustive et maintenue manuellement.</p>
 <div class="rf-grid-row rf-grid-row--gutters">
+
     <%- include('partials/tile',
     {
       title: 'Santé Psy Étudiant',
+      desc:'Accompagnement psychologique pour les étudiants',
       url: 'https://www.santepsyetudiants.beta.gouv.fr/',
     })
     -%>
@@ -20,6 +22,7 @@
     <%- include('partials/tile',
     {
       title: 'Volontaires Fonction Publique',
+      desc:"Mise à disposition d'agents publics pour renforcer les équipes pendant la crise sanitaire",
       url: 'https://volontaires.fonction-publique.gouv.fr/',
     })
     -%>
@@ -27,13 +30,15 @@
     <%- include('partials/tile',
     {
       title: 'AudioConf',
+      desc:"Conférences téléphoniques pour les agents de l'État",
       url: 'https://audioconf.numerique.gouv.fr/',
     })
     -%>
 
     <%- include('partials/tile',
     {
-      title: 'deces.matchid.io',
+      title: 'Fichiers des décès',
+      desc:'Recherche libre parmi les 25 millions de décès depuis 1970',
       url: 'https://deces.matchid.io/',
     })
     -%>
@@ -41,6 +46,7 @@
     <%- include('partials/tile',
     {
       title: "L'Annuaire des Entreprises",
+      desc:'Informations publiques concernant les entreprises françaises',
       url: 'https://annuaire-entreprises.data.gouv.fr/',
     })
     -%>
@@ -48,6 +54,7 @@
     <%- include('partials/tile',
     {
       title: "France Relance",
+      desc:'Feuille de route pour la refondation économique, sociale et écologique du pays',
       url: 'https://www.gouvernement.fr/france-relance',
     })
     -%>
@@ -55,6 +62,7 @@
     <%- include('partials/tile',
     {
       title: "Conseiller Numérique",
+      desc:'Plateforme de financement et déploiement de conseillers numériques',
       url: 'https://www.conseiller-numerique.gouv.fr/',
     })
     -%>

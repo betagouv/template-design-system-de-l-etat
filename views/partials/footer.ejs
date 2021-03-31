@@ -1,19 +1,17 @@
 <!-- todo(estellecomment) : import min css and js -->
-<script src="/~/@gouvfr/all/dist/js/all.js"></script>
-<script src="/static/js/dark-mode-toggle-switch.js"></script>
+<script type="module" src="/~/@gouvfr/dsfr/dist/js/dsfr.module.js"></script>
+<script type="text/javascript" nomodule src="/~/@gouvfr/dsfr/dist/js/dsfr.nomodule.js"></script>
 
 <footer role="contentinfo" class="rf-footer" id="footer">
   <div class="rf-container">
     <div class="rf-footer__body">
-      <div class="rf-footer__brand">
-        <a class="rf-logo"
-          href="/"
-          title="République française">
-          <span class="rf-logo__title">
-            République
-            <br>française
-          </span>
-        </a>
+      <div class="rf-footer__brand rf-enlarge-link">
+          <a href="/" title="Retour à l’accueil">
+              <p class="rf-logo">
+                  République
+                  <br>française
+              </p>
+          </a>
       </div>
       <div class="rf-footer__content">
         <p class="rf-footer__content-desc">
@@ -59,18 +57,16 @@
           <a class="rf-footer__bottom-link" href="/contact">Contactez-nous</a>
         </li>
         <li class="rf-footer__bottom-item">
-          <a class="rf-footer__bottom-link" href="#">Données personnelles</a>
-        </li>
-        <li class="rf-footer__bottom-item">
-          <a class="rf-footer__bottom-link" href="#">Gestion des cookies</a>
+            <button class="rf-footer__bottom-link rf-fi-sun-fill-line rf-link--icon-left" aria-controls="rf-theme-modal" data-rf-opened="false">Paramètres d'affichage</button>
         </li>
       </ul>
       <div class="rf-footer__bottom-copy">
-        © République Française 2020
+        <p>Sauf mention contraire, tous les textes de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
+        </p>
       </div>
     </div>
   </div>
+  <%- include('dark-mode-modale') -%>
 </footer>
-
 </body>
 </html>

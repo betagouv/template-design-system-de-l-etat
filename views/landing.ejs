@@ -1,12 +1,12 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-  <div class="rf-container rf-py-6w rf-pt-2w">
+  <div class="rf-container rf-py-6w rf-px-2w">
   <h1>Démo du Design System de l'État</h1>
   <p>
     Ce site est un effort bénévole pour proposer une démo au design system de l'Etat. Il n'est pas maintenu par le SIG : pas de garantie qu'il soit complet, ni parfait !
   </p>
 
-<div class="rf-container">
+<div class="rf-container-fluid rf-my-6w">
   <div class="rf-grid-row rf-grid-row--gutters">
     <%- include('partials/card',
     {
@@ -61,27 +61,12 @@
   </div>
 </div>
 
-  <div class="sub-paragraph">
+  <div class="rf-container-fluid">
     <h2>Vous voulez participer ? </h2>
-    <div class="rf-grid-row rf-grid-row--gutters">
-      <%- include('partials/tile',
-      {
-        title: 'Voir les problèmes signalés',
-        url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues',
-      })
-      -%>
-      <%- include('partials/tile',
-      {
-        title: 'Signaler un problème',
-        url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues/new',
-      })
-      -%>
-      <%- include('partials/tile',
-      {
-        title: 'Contribuer au code source',
-        url: 'https://github.com/betagouv/template-design-system-de-l-etat/',
-      })
-      -%>
+    <ul>
+      <li><a class="rf-link rf-fi-external-link-line rf-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/issues">Voir les problèmes signalés</a></li>
+      <li><a class="rf-link rf-fi-external-link-line rf-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Signaler un problème</a></li>
+      <li><a class="rf-link rf-fi-external-link-line rf-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/">Contribuer au code source</a></li>
     </div>
   </div>
 </div>
