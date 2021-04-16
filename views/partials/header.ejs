@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-rf-theme>
+<html lang="fr" data-fr-theme>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,89 +18,102 @@
   <link rel="shortcut icon" href="/~/@gouvfr/dsfr/dist/favicons/favicon.ico" type="image/x-icon"><!-- 32×32 -->
 </head>
 <body>
-  <div class="rf-skiplinks">
-    <nav class="rf-container" role="navigation" aria-label="Accès rapide">
-        <ul class="rf-skiplinks__list">
+  <div class="fr-skiplinks">
+    <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+        <ul class="fr-skiplinks__list">
             <li>
-                <a class="rf-nav__link" href="#contenu">Contenu</a>
+                <a class="fr-nav__link" href="#contenu">Contenu</a>
             </li>
             <li>
-                <a class="rf-nav__link" href="#header-navigation">Menu</a>
+                <a class="fr-nav__link" href="#header-navigation">Menu</a>
             </li>
             <li>
-                <a class="rf-nav__link" href="#header-search">Recherche</a>
+                <a class="fr-nav__link" href="#header-search">Recherche</a>
             </li>
             <li>
-                <a class="rf-nav__link" href="#footer">Pied de page</a>
+                <a class="fr-nav__link" href="#footer">Pied de page</a>
             </li>
         </ul>
     </nav>
 </div>
 
-<header role="banner" class="rf-header">
-<div class="rf-container">
-    <div class="rf-header__body">
-        <div class="rf-header__brand rf-enlarge-link">
-            <div class="rf-header__logo">
-                <p class="rf-logo">
-                République
-                <br>française
-                </p>
+<header role="banner" class="fr-header">
+<div class="fr-header__body">
+    <div class="fr-container">
+        <div class="fr-header__body-row">
+            <div class="fr-header__brand fr-enlarge-link">
+
+                <div class="fr-header__brand-top">
+                    <div class="fr-header__logo">
+                        <p class="fr-logo">
+                        République
+                        <br>française
+                        </p>
+                    </div>
+
+                    <div class="fr-header__navbar">
+                        <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-833" aria-haspopup="menu" title="Menu">
+                            Menu
+                        </button>
+                    </div>
+                </div>
+
+                <div class="fr-header__service">
+                    <a href="/" title="Retour à l’accueil">
+                        <p class="fr-header__service-title"><%= appName %></p>
+                    </a>
+                    <p class="fr-header__service-tagline"><%= appDescription %></p>
+                </div>
             </div>
-            <div class="rf-header__service">
-                <a href="/" title="Retour à l’accueil">
-                    <p class="rf-header__service-title"><%= appName %></p>
-                </a>
-                <p class="rf-header__service-tagline"><%= appDescription %></p>
-            </div>
-        </div>
-        <div class="rf-header__navbar">
-            <button class="rf-btn--menu rf-btn" data-rf-opened="false" aria-controls="navigation-733" aria-haspopup="menu" title="Ouvrir le menu">
-                Ouvrir le menu
-            </button>
-        </div>
-        <div class="rf-header__tools">
-            <div class="rf-shortcuts">
-                <ul class="rf-shortcuts__list">
-                    <li class="rf-shortcuts__item">
-                        <a class="rf-link rf-fi-external-link-line rf-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/" title="documentation officielle - nouvelle fenêtre" target="_blank" rel="noopener">Documentation officielle</a>
-                    </li>
-                    <li class="rf-shortcuts__item">
-                        <button class="rf-link rf-fi-sun-fill-line rf-link--icon-left" aria-controls="rf-theme-modal" data-rf-opened="false">Paramètres d'affichage</button>
-                    </li>
-                </ul>
+            <div class="fr-header__tools">
+                <div class="fr-header__tools-links">
+                    <ul class="fr-links-group">
+                        <li>
+                            <a class="fr-link fr-fi-external-link-line fr-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/" title="documentation officielle - nouvelle fenêtre" target="_blank" rel="noopener">Documentation officielle</a>
+                        </li>
+                        <li>
+                            <button class="fr-link fr-fi-sun-fill-line fr-link--icon-left" aria-controls="fr-theme-modal" data-fr-opened="false">Paramètres d'affichage</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <nav class="rf-nav rf-modal" id="navigation-733" role="navigation" aria-label="Menu principal">
-        <button class="rf-link--close rf-link" aria-controls="navigation-733">Fermer</button>
-         <ul class="rf-nav__list">
-            <li class="rf-nav__item <% if (page === '/') { %> rf-nav__item--active <% } %>">
-               <a class="rf-nav__link" href="/" target="_self">Accueil</a>
-            </li>
-            <li class="rf-nav__item <% if (page === '/components') { %> rf-nav__item--active <% } %>">
-               <a class="rf-nav__link" href="/components" target="_self">Des composants</a>
-            </li>
-            <li class="rf-nav__item <% if (page === '/formulaire') { %> rf-nav__item--active <% } %>">
-               <a class="rf-nav__link" href="/formulaire" target="_self">Un formulaire</a>
-            </li>
-            <li class="rf-nav__item <% if (page === '/typography') { %> rf-nav__item--active <% } %>">
-              <a class="rf-nav__link" href="/typography" target="_self">La typographie</a>
-            </li>
-            <li class="rf-nav__item <% if (page === '/colors') { %> rf-nav__item--active <% } %>">
-               <button class="rf-nav__btn" aria-expanded="false" aria-controls="rf-nav-colors">Des couleurs</button>
-                <div class="rf-menu rf-collapse" id="rf-nav-colors">
-                  <ul class="rf-menu__list">
-                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors" target="_self">Palette de couleur</a></li>
-                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors#combinaisons" target="_self">Combinaisons accessibles</a></li>
-                    <li class="rf-menu__item"><a class="rf-nav__link" href="/colors#variables" target="_self">Palette de couleur</a></li>
-                 </ul>
-                </div>
-            </li>
-            <li class="rf-nav__item <% if (page === '/ressources') { %> rf-nav__item--active <% } %>">
-              <a class="rf-nav__link" href="/ressources" target="_self">Ressources</a>
-            </li>
-         </ul>
-    </nav>
+
+    <div class="fr-header__menu fr-modal" id="modal-833" aria-labelledby="button-834">
+        <div class="fr-container">
+            <button class="fr-link--close fr-link" aria-controls="modal-833">Fermer</button>
+            <div class="fr-header__menu-links"></div>
+            <nav class="fr-nav" id="navigation-832" role="navigation" aria-label="Menu principal">
+                <ul class="fr-nav__list">
+                    <li class="fr-nav__item <% if (page === '/') { %> fr-nav__item--active <% } %>">
+                        <a class="fr-nav__link" href="/" target="_self">Accueil</a>
+                     </li>
+                     <li class="fr-nav__item <% if (page === '/components') { %> fr-nav__item--active <% } %>">
+                        <a class="fr-nav__link" href="/components" target="_self">Des composants</a>
+                     </li>
+                     <li class="fr-nav__item <% if (page === '/formulaire') { %> fr-nav__item--active <% } %>">
+                        <a class="fr-nav__link" href="/formulaire" target="_self">Un formulaire</a>
+                     </li>
+                     <li class="fr-nav__item <% if (page === '/typography') { %> fr-nav__item--active <% } %>">
+                       <a class="fr-nav__link" href="/typography" target="_self">La typographie</a>
+                     </li>
+                     <li class="fr-nav__item <% if (page === '/colors') { %> fr-nav__item--active <% } %>">
+                        <button class="fr-nav__btn" aria-expanded="false" aria-controls="fr-nav-colors">Des couleurs</button>
+                         <div class="fr-menu fr-collapse" id="fr-nav-colors">
+                           <ul class="fr-menu__list">
+                             <li class="fr-menu__item"><a class="fr-nav__link" href="/colors" target="_self">Palette de couleur</a></li>
+                             <li class="fr-menu__item"><a class="fr-nav__link" href="/colors#combinaisons" target="_self">Combinaisons accessibles</a></li>
+                             <li class="fr-menu__item"><a class="fr-nav__link" href="/colors#variables" target="_self">Palette de couleur</a></li>
+                          </ul>
+                         </div>
+                     </li>
+                     <li class="fr-nav__item <% if (page === '/ressources') { %> fr-nav__item--active <% } %>">
+                       <a class="fr-nav__link" href="/ressources" target="_self">Ressources</a>
+                     </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>
 </header>

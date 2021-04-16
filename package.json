@@ -1,6 +1,6 @@
 {
   "name": "template-design-system-de-l-etat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ce site a pour but d'être un point de départ pour utiliser le Design System de l'Etat. N'hésitez pas à le copier!",
   "main": "index.js",
   "scripts": {
@@ -13,14 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/betagouv/template-design-system-de-l-etat.git"
   },
-  "author": "estelle.comment@beta.gouv.fr",
+  "author": "contact@beta.gouv.fr",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/betagouv/template-design-system-de-l-etat/issues"
   },
   "homepage": "https://github.com/betagouv/template-design-system-de-l-etat#readme",
   "dependencies": {
-    "@gouvfr/dsfr": "^0.6.0",
+    "@gouvfr/dsfr": "^1.0.0rc1",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },

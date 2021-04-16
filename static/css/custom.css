@@ -1,12 +1,12 @@
-.rf-centered {
+.fr-centered {
   text-align: center;
 }
 
-.rf-bg--alt, .rf-bg--alt h2 {
+.fr-bg--alt, .fr-bg--alt h2 {
   background-color: var(--bf500);
   color: var(--g100);
 }
-p.rf-hint-text {
+p.fr-hint-text {
   margin-bottom: 0;
 }
 .tofill {

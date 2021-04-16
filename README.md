@@ -37,3 +37,4 @@ npm run dev
 ```
 npm install
 ```
+- Vérifier les notes de version sur la documentation du DS et faire les modifications de code
