@@ -1,15 +1,15 @@
-<div class="rf-col-12">
-<div class="rf-tile rf-enlarge-link rf-tile--horizontal">
-    <div class="rf-tile__body">
-        <h4 class="rf-tile__title">
-            <a class="rf-tile__link" href="<%= url %>"><%= title %></a>
+<div class="fr-col-12">
+<div class="fr-tile fr-enlarge-link fr-tile--horizontal">
+    <div class="fr-tile__body">
+        <h4 class="fr-tile__title">
+            <a class="fr-tile__link" href="<%= url %>"><%= title %></a>
         </h4>
         <% if (locals.desc) { %>
-          <p class="rf-tile__desc"><%= desc %></p>
+          <p class="fr-tile__desc"><%= desc %></p>
 	     <% } %>
     </div>
     <% if (locals.img) { %>
-    <div class="rf-tile__img">
+    <div class="fr-tile__img">
         <img src="https://place-hold.it/80x80" alt="">
         <!-- L'alternative de l'image (attribut alt) doit rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance -->
     </div>
