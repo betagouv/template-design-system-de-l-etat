@@ -1,41 +1,41 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="rf-container rf-pb-6w rf-pt-2w">
+<div class="fr-container fr-pb-6w fr-pt-2w">
   <h1>Composants</h1>
 
   <h2>Boutons</h2>
 
-  <ul class="rf-btns-group rf-btns-group--inline">
-    <li><button class="rf-btn">Bouton primaire</button></li>
-    <li><button class="rf-btn" disabled>Bouton primaire désactivé</button></li>
-    <li><button class="rf-btn rf-btn--secondary">Bouton secondaire</button></li>
-    <li><button class="rf-btn rf-btn--secondary" disabled>Bouton secondaire désactivé</button></li>
+  <ul class="fr-btns-group fr-btns-group--inline">
+    <li><button class="fr-btn">Bouton primaire</button></li>
+    <li><button class="fr-btn" disabled>Bouton primaire désactivé</button></li>
+    <li><button class="fr-btn fr-btn--secondary">Bouton secondaire</button></li>
+    <li><button class="fr-btn fr-btn--secondary" disabled>Bouton secondaire désactivé</button></li>
   </ul>
 
   <h3>Plusieurs taille</h3>
-  <ul class="rf-btns-group rf-btns-group--inline rf-btns-group--sm">
-    <li><button class="rf-btn">Taille Small</button></li>
-    <li><button class="rf-btn" disabled>primaire désactivé</button></li>
-    <li><button class="rf-btn rf-btn--secondary">secondaire</button></li>
-    <li><button class="rf-btn rf-btn--secondary" disabled>secondaire désactivé</button></li>    
+  <ul class="fr-btns-group fr-btns-group--inline fr-btns-group--sm">
+    <li><button class="fr-btn">Taille Small</button></li>
+    <li><button class="fr-btn" disabled>primaire désactivé</button></li>
+    <li><button class="fr-btn fr-btn--secondary">secondaire</button></li>
+    <li><button class="fr-btn fr-btn--secondary" disabled>secondaire désactivé</button></li>    
   </ul>
-  <ul class="rf-btns-group rf-btns-group--inline rf-btns-group--md">
-    <li><button class="rf-btn">Taille médium</button></li>
-    <li><button class="rf-btn" disabled>primaire désactivé</button></li>
-    <li><button class="rf-btn rf-btn--secondary">secondaire</button></li>
-    <li><button class="rf-btn rf-btn--secondary" disabled>secondaire désactivé</button></li>    
+  <ul class="fr-btns-group fr-btns-group--inline fr-btns-group--md">
+    <li><button class="fr-btn">Taille médium</button></li>
+    <li><button class="fr-btn" disabled>primaire désactivé</button></li>
+    <li><button class="fr-btn fr-btn--secondary">secondaire</button></li>
+    <li><button class="fr-btn fr-btn--secondary" disabled>secondaire désactivé</button></li>    
   </ul>
-  <ul class="rf-btns-group rf-btns-group--inline rf-btns-group--lg"> 
-    <li><button class="rf-btn">Taille large</button></li>
-    <li><button class="rf-btn" disabled>primaire désactivé</button></li>
-    <li><button class="rf-btn rf-btn--secondary">secondaire</button></li>
-    <li><button class="rf-btn rf-btn--secondary" disabled>secondaire désactivé</button></li>    
+  <ul class="fr-btns-group fr-btns-group--inline fr-btns-group--lg"> 
+    <li><button class="fr-btn">Taille large</button></li>
+    <li><button class="fr-btn" disabled>primaire désactivé</button></li>
+    <li><button class="fr-btn fr-btn--secondary">secondaire</button></li>
+    <li><button class="fr-btn fr-btn--secondary" disabled>secondaire désactivé</button></li>    
   </ul>
 
   <h3>Avec ou sans icônes</h3>
-  <p><button class="rf-btn rf-fi-checkbox-line rf-btn--icon-left">Icône à gauche</button></p>
-  <p><button class="rf-btn rf-fi-checkbox-line rf-btn--icon-right">Icône à droite</button></p>
-  <p><button class="rf-btn rf-fi-checkbox-line" title="Icône seule"><span class="sr-only">Icône seule</span></button></p>
+  <p><button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left">Icône à gauche</button></p>
+  <p><button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right">Icône à droite</button></p>
+  <p><button class="fr-btn fr-fi-checkbox-line" title="Icône seule"><span class="sr-only">Icône seule</span></button></p>
 
 </div>
 
@@ -58,15 +58,15 @@
       text: 'Des détails de cette partie, afin d\'expliquer mieux la partie',
     },
     ],
-    cssClass: 'rf-bg--alt',
+    cssClass: 'fr-bg--alt',
   },
 })
 -%>
 
-<div class="rf-container rf-pb-6w rf-pt-2w">
+<div class="fr-container fr-pb-6w fr-pt-2w">
   <h2>Accordéons</h2>
 
-  <ul class="rf-accordions-group">
+  <ul class="fr-accordions-group">
     <%- include('partials/accordion-item',
     {
       i: 0,
@@ -91,13 +91,13 @@
   </ul>
 </div>
 
-<div class="rf-container">
-  <div class="rf-grid-row rf-grid-row--gutters">
-    <div class="rf-col">
+<div class="fr-container">
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col">
       <h2>Cartes</h2>
     </div>
   </div>
-  <div class="rf-grid-row rf-grid-row--gutters">
+  <div class="fr-grid-row fr-grid-row--gutters">
     <%- include('partials/card',
     {
       title: 'Titre',

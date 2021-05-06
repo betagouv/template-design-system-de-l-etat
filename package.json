@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/betagouv/template-design-system-de-l-etat#readme",
   "dependencies": {
-    "@gouvfr/dsfr": "^0.6.0",
+    "@gouvfr/dsfr": "^1.0.0-rc1.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },

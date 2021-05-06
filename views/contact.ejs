@@ -1,8 +1,8 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="rf-container rf-mb-3w">
-  <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutters">
-    <div class="rf-col rf-col-lg-8">
+<div class="fr-container fr-mb-3w">
+  <div class="fr-grid-row fr-grid-row--center fr-grid-row--gutters">
+    <div class="fr-col fr-col-lg-8">
 		<%- include('partials/ariane',
 		  {
 		    items: [
@@ -20,22 +20,22 @@
         <h1>Un exemple de formulaire de contact</h1>
 
 
-              <div class="rf-callout rf-callout--scheme-soft-blue-soft rf-mb-3w">
-				  <p class="rf-callout__text">Ne mentionnez pas de données personnelles (nom, adresse, numéros de téléphone, numéro de sécurité sociale, numéro fiscal, lieu et date de naissance...) à l'exception, bien sûr, de votre adresse électronique.</p>
+              <div class="fr-callout fr-callout--scheme-soft-blue-soft fr-mb-3w">
+				  <p class="fr-callout__text">Ne mentionnez pas de données personnelles (nom, adresse, numéros de téléphone, numéro de sécurité sociale, numéro fiscal, lieu et date de naissance...) à l'exception, bien sûr, de votre adresse électronique.</p>
 				</div>
 
           <form action="/" method="POST">
-            <div class="rf-input-group">
-			  <label class="rf-label" for="email" aria-describedby="format">Votre adresse électronique</label>
-			  <p class="rf-hint-text" id="format">L’adresse électronique doit être au format <em>nom@exemple.fr</em></p>
-              <input class="rf-input" type="email" id="email" name="email" required>
+            <div class="fr-input-group">
+			  <label class="fr-label" for="email" aria-describedby="format">Votre adresse électronique</label>
+			  <p class="fr-hint-text" id="format">L’adresse électronique doit être au format <em>nom@exemple.fr</em></p>
+              <input class="fr-input" type="email" id="email" name="email" required>
             </div>
-	        <div class="rf-input-group">
-				<label class="rf-label" for="message">Votre message</label>
-				<textarea required class="rf-input" id="message" rows="5"></textarea>
+	        <div class="fr-input-group">
+				<label class="fr-label" for="message">Votre message</label>
+				<textarea required class="fr-input" id="message" rows="5"></textarea>
 	        </div>
-            <div class="rf-input-group">
-              <button type="submit" class="rf-btn" >Envoyer mon message</button>
+            <div class="fr-input-group">
+              <button type="submit" class="fr-btn" >Envoyer mon message</button>
             </div>
           </form>
 

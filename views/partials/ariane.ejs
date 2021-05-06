@@ -1,16 +1,16 @@
-<nav role="navigation" class="rf-breadcrumb" aria-label="vous êtes ici :">
-    <button class="rf-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
-    <div class="rf-collapse" id="breadcrumb">
-    <ol class="rf-breadcrumb__list">
+<nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+    <ol class="fr-breadcrumb__list">
         <!-- Display the parent pages, except current page -->
         <% for (var i = 0; i < items.length -1; i++) { %>
-            <li class="rf-breadcrumb__item">
-                <a <% if (items[i].url) { %>href="<%= items[i].url %>"<% } %> class="rf-breadcrumb__link"><%= items[i].label %></a>
+            <li class="fr-breadcrumb__item">
+                <a <% if (items[i].url) { %>href="<%= items[i].url %>"<% } %> class="fr-breadcrumb__link"><%= items[i].label %></a>
             </li>
         <% } %>
         <!-- Display the current page-->
         <li>
-            <a class="rf-breadcrumb__link" aria-current="page"><%= items[items.length - 1].label %></a>
+            <a class="fr-breadcrumb__link" aria-current="page"><%= items[items.length - 1].label %></a>
         </li>
     </ol>
     </div>
