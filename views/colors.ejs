@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<main role="main" id="contenu">	
+<main role="main" id="contenu">
 	<div class="fr-container fr-pb-6w fr-pt-6w">
 		<div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
 
@@ -33,10 +33,14 @@
 
 				<!-- Section Palettes de couleurs -->
 				<h1 id="palette">Palettes de couleurs</h1>
-				
+
 				<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
-				
+
 				<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
+
+				<p>Plus de couleurs sont à venir dans de prochaines versions du Design System.</p>
+
+				<!-- Removing until colors are fixed in the DS. In 1.0.0, they are not defined yet.
 				<h2>Brun</h2>
 				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
 				<h2>Bleu</h2>
@@ -60,13 +64,14 @@
 				<h2>Jaune</h2>
 				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
 				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
-				
+        -->
+
 				<!-- Section Combinaisons accessibles -->
 				<div id="combinaisons">
 					<h1>Combinaisons accessibles</h1>
-					
+
 					<p>Ces combinaisons de couleurs utilisent les variables CSS du Design System.</p>
-					
+
 					<div class="fr-tabs">
                         <ul class="fr-tabs__list" role="tablist" aria-label="Combinaisons de couleurs accessibles">
 					        <li role="presentation">
@@ -81,7 +86,7 @@
 					    </ul>
 					    <div id="tabpanel-404-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tabpanel-404" tabindex="0">
 							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
-							
+
 							<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
 							<div class="fr-grid-row fr-grid-row--gutters">
 								<!-- 7+ -->
@@ -91,9 +96,9 @@
 							</div>
 					    </div>
 					    <div id="tabpanel-405-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-405" tabindex="0">
-							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>		
+							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
 							<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
-							
+
 							<div class="fr-grid-row fr-grid-row--gutters">
 								<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
@@ -101,6 +106,7 @@
 								<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
+								<!-- Removing until colors are fixed in DS
 								<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
@@ -117,24 +123,29 @@
 								<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
 								<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
+								-->
 							</div>
 					    </div>
 					    <div id="tabpanel-406-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-406" tabindex="0">
 							<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
 							<div class="fr-grid-row fr-grid-row--gutters">
 								<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
+								<!-- Removing until colors are fixed in DS
 								<%- include('partials/contrast-card', { color: 'gm500', card_type: 'title+button' }) -%>
 								<%- include('partials/contrast-card', { color: 'gw500', card_type: 'title+button' }) -%>
+								-->
 								<%- include('partials/contrast-card', { color: 'g600', card_type: 'title+button' }) -%>
+								<!-- Removing until colors are fixed in DS
 								<%- include('partials/contrast-card', { color: 'b500', card_type: 'title+button' }) -%>
 								<%- include('partials/contrast-card', { color: 'bs500', card_type: 'title+button' }) -%>
 								<%- include('partials/contrast-card', { color: 'bd500', card_type: 'title+button' }) -%>
 								<%- include('partials/contrast-card', { color: 'p500', card_type: 'title+button' }) -%>
+								-->
 								<%- include('partials/contrast-card', { color: 'rm500', card_type: 'title+button' }) -%>
 							</div>
 					    </div>
 					</div>
-					
+
 				</div>
 
 				<!-- Sections variables -->
@@ -151,7 +162,7 @@
 					<%- include('partials/color-card', { color_name: 'g200' }) -%>
 					<%- include('partials/color-card', { color_name: 'g100' }) -%>
 				</div>
-				
+
 				<h2>Bleu France</h2>
 				<div class="fr-grid-row fr-grid-row--gutters">
 					<%- include('partials/color-card', { color_name: 'bf500', comment: 'Bleu France' }) -%>
@@ -160,7 +171,7 @@
 					<%- include('partials/color-card', { color_name: 'bf100-g750' }) -%>
 					<%- include('partials/color-card', { color_name: 'w-bf500' }) -%>
 				</div>
-				
+
 				<h2>Rouge Marianne</h2>
 				<div class="fr-grid-row fr-grid-row--gutters">
 					<%- include('partials/color-card', { color_name: 'rm500' }) -%>
@@ -172,7 +183,8 @@
 					<%- include('partials/color-card', { color_name: 'success' }) -%>
 					<%- include('partials/color-card', { color_name: 'error' }) -%>
 				</div>
-				
+
+				<!-- Removing until colors are fixed in DS
 				<h2>Couleurs illustratives</h2>
 				<h3>Brun</h3>
 				<div class="fr-grid-row fr-grid-row--gutters">
@@ -226,13 +238,13 @@
 					<%- include('partials/color-card', { color_name: 'yd300' }) -%>
 					<%- include('partials/color-card', { color_name: 'ym500' }) -%>
 					<%- include('partials/color-card', { color_name: 'ym300' }) -%>
-				</div> 
-
+				</div>
+				-->
 			</div>
 			<!-- End content -->
 
 		</div>
 	</div>
 </main>
-	
+
 <%- include('partials/footer') -%>
