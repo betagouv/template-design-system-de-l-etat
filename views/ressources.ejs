@@ -1,73 +1,134 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="fr-container fr-pb-6w fr-pt-2w">
+
+<div class="fr-container fr-pb-6w fr-pt-6w">
+
   <h1>Ressources utiles</h1>
-  <ul>
-    <li><a class="fr-link fr-fi-external-link-line fr-link--icon-right" href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs">Documentation officielle du Design System</a></li>
-</ul>
-<h2>Sites utilisant le Design Sytem de l'État</h2>
-<!-- TODO le truc sans image -->
 
-<p>Liste est non exhaustive et maintenue manuellement.</p>
-<div class="fr-grid-row fr-grid-row--gutters">
-
-    <%- include('partials/tile',
+  <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+    <%- include('partials/card',
     {
-      title: 'Santé Psy Étudiant',
-      desc:'Accompagnement psychologique pour les étudiants',
-      url: 'https://www.santepsyetudiants.beta.gouv.fr/',
+      title: 'Site officiel',
+      description:"",
+      url: 'https://systeme-de-design.gouv.fr/',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
+    {
+      title: 'Documentation du Design System',
+      description:"",
+      url: 'https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019574/D+veloppeurs',
+    })
+    -%>
+  </div>
+
+<h1>Utilisation du Design System</h1>
+
+<p>Ces sites utilisent le Design Sytem de l'État. Cette liste est non exhaustive et maintenue manuellement.</p>
+
+<div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+
+    <%- include('partials/card',
+    {
+      title: 'beta.gouv.fr',
+      description:"Incubateur de service numérique de l'État",
+      url: 'https://beta.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Numérique écoresponsable',
+      description:'Mission interministérielle pour réduire les impacts environnementaux numériques',
+      url: 'https://ecoresponsable.numerique.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Open Collectivités',
+      description:"Portail qui rassemble des informations statistiques sur les collectivités locales",
+      url: 'https://www.open-collectivites.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Mission Transition',
+      description:"Service d'aide aux PME et ETI dans le financement de leur transition écologique",
+      url: 'https://mission-transition.beta.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Santé Psy Étudiant',
+      description:'Accompagnement psychologique pour les étudiants',
+      url: 'https://santepsy.etudiant.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
     {
       title: 'Volontaires Fonction Publique',
-      desc:"Mise à disposition d'agents publics pour renforcer les équipes pendant la crise sanitaire",
+      description:"Mise à disposition d'agents publics pour renforcer les équipes pendant la crise sanitaire",
       url: 'https://volontaires.fonction-publique.gouv.fr/',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
     {
       title: 'AudioConf',
-      desc:"Conférences téléphoniques pour les agents de l'État",
+      description:"Conférences téléphoniques pour les agents de l'État",
       url: 'https://audioconf.numerique.gouv.fr/',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
     {
       title: 'Fichiers des décès',
-      desc:'Recherche libre parmi les 25 millions de décès depuis 1970',
+      description:'Recherche libre parmi les 25 millions de décès depuis 1970',
       url: 'https://deces.matchid.io/',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
     {
       title: "L'Annuaire des Entreprises",
-      desc:'Informations publiques concernant les entreprises françaises',
+      description:'Informations publiques concernant les entreprises françaises',
       url: 'https://annuaire-entreprises.data.gouv.fr/',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
     {
       title: "France Relance",
-      desc:'Feuille de route pour la refondation économique, sociale et écologique du pays',
+      description:'Feuille de route pour la refondation économique, sociale et écologique du pays',
       url: 'https://www.gouvernement.fr/france-relance',
     })
     -%>
 
-    <%- include('partials/tile',
+    <%- include('partials/card',
     {
       title: "Conseiller Numérique",
-      desc:'Plateforme de financement et déploiement de conseillers numériques',
+      description:'Plateforme de financement et déploiement de conseillers numériques',
       url: 'https://www.conseiller-numerique.gouv.fr/',
     })
     -%>
-
 </div>
+
+  <h1>Librairies</h1>
+
+  <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+    <%- include('partials/card',
+    {
+      title: "Angular",
+      description:'',
+      url: 'https://github.com/lilletech/angular-template-design-system-de-l-etat',
+    })
+    -%>
+  </div>
 
 </div>
 </main>
