@@ -1,6 +1,6 @@
 import express from 'express'
 import * as path from 'path'
-const designSystemVersion = require('./package-lock.json').dependencies['@gouvfr/dsfr'].version
+const designSystemVersion = 'test'//require('./package-lock.json').dependencies['@gouvfr/dsfr'].version
 const appName = `Démo du Design System de l\'Etat - version ${designSystemVersion}`
 const appDescription = "Un site pour tester le Design System de l'État et s'inspirer."
 const appRepo = 'https://github.com/betagouv/template-design-system-de-l-etat'
