@@ -7,7 +7,8 @@
     "checkHTML": "site-validator --verbose --url",
     "checkHTMLLocal": "site-validator --verbose --local --url http://localhost:8080",
     "dev": "ts-node index.ts",
-    "start": "node index.js"
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.build.json"
   },
   "repository": {
     "type": "git",
