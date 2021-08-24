@@ -2,13 +2,10 @@
 <main role="main" id="contenu">	
 
 <div class="fr-container fr-pb-6w fr-pt-6w">
-  <!-- TODO toc -->
-
-
 
   <h1>Ressources utiles</h1>
 
-  <div class="fr-grid-row fr-grid-row--gutters fr-py-6w">
+  <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
     <%- include('partials/card',
     {
       title: 'Site officiel',
@@ -26,11 +23,11 @@
     -%>
   </div>
 
-<h2>Utilisation du Design System</h2>
+<h1>Utilisation du Design System</h1>
 
 <p>Ces sites utilisent le Design Sytem de l'État. Cette liste est non exhaustive et maintenue manuellement.</p>
 
-<div class="fr-grid-row fr-grid-row--gutters">
+<div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
 
     <%- include('partials/card',
     {
@@ -120,6 +117,18 @@
     })
     -%>
 </div>
+
+  <h1>Librairies</h1>
+
+  <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+    <%- include('partials/card',
+    {
+      title: "Angular",
+      description:'',
+      url: 'https://github.com/lilletech/angular-template-design-system-de-l-etat',
+    })
+    -%>
+  </div>
 
 </div>
 </main>
