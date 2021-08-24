@@ -3,7 +3,7 @@ import Header from './header'
 
 interface LayoutPageProps {
   pageTitle: string,
-  children: any,
+  children?: any,
   appName: string,
   appDescription: string 
 }
