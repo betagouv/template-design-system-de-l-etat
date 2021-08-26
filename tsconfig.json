@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "target": "es6",
+        "module": "commonjs",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "noUnusedLocals": true,
+        "declaration": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "node_modules",
+        "static",
+        "**/*.d.ts",
+        "knexfile.ts",
+        "migrations",
+        "dist",
+    ]
+}

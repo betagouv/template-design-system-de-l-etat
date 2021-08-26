@@ -1,16 +1,17 @@
-const express = require('express')
-const path = require('path')
-
-const designSystemVersion = require('./package-lock.json').dependencies['@gouvfr/dsfr'].version
+import express from 'express'
+import * as path from 'path'
+const designSystemVersion = 'test'//require('./package-lock.json').dependencies['@gouvfr/dsfr'].version
 const appName = `Démo du Design System de l\'Etat - version ${designSystemVersion}`
 const appDescription = "Un site pour tester le Design System de l'État et s'inspirer."
 const appRepo = 'https://github.com/betagouv/template-design-system-de-l-etat'
 const port = process.env.PORT || 8080
-
 const app = express()
+// app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, '/views'))
+app.set('view engine', 'tsx');
+app.engine('tsx', require('express-react-views').createEngine());
 
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views'))
+// app.set('views', path.join(__dirname, '../views')); // the code is running in directory "dist".
 
 app.use('/static', express.static('static'))
 // Hack for importing css from npm package
@@ -70,11 +71,9 @@ app.get('/typography', (req, res) => {
   })
 })
 
+
 app.get('/mentions-legales', (req, res) => {
-  res.render('legalNotice', {
-    pageTitle: "Mentions légales",
-    contactEmail: 'mon-produit@beta.gouv.fr',
-  })
+  res.render('legalNotice', { name: 'John' });
 })
 
 module.exports = app.listen(port, () => {

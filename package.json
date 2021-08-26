@@ -6,8 +6,9 @@
   "scripts": {
     "checkHTML": "site-validator --verbose --url",
     "checkHTMLLocal": "site-validator --verbose --local --url http://localhost:8080",
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "ts-node index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.build.json"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,11 @@
   "dependencies": {
     "@gouvfr/dsfr": "^1.0.0-rc1.0",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "ts-node": "^10.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
