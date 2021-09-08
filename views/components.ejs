@@ -12,13 +12,31 @@
               <div class="fr-sidemenu__title">Composants</div>
               <ul class="fr-sidemenu__list">
                 <li class="fr-sidemenu__item">
-                  <a class="fr-sidemenu__link" href="#boutons" target="_self">Boutons</a>
-                </li>
-                <li class="fr-sidemenu__item">
                   <a class="fr-sidemenu__link" href="#accordéons" target="_self">Accordéons</a>
                 </li>
                 <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#boutons" target="_self">Boutons</a>
+                </li>
+                <li class="fr-sidemenu__item">
                   <a class="fr-sidemenu__link" href="#cartes" target="_self">Cartes</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#links" target="_self">Liens</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#callout" target="_self">Mises en avant</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#highlight" target="_self">Mises en exergue</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#tables" target="_self">Tableaux</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#tags" target="_self">Tags</a>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#tiles" target="_self">Tuiles</a>
                 </li>
               </ul>
             </div>
@@ -33,117 +51,258 @@
 
         <div class="fr-mb-6v">
           <div class="fr-callout">
-            <h2 class="fr-callout__title">Liste des composants incomplète</h2>
-            <p class="fr-callout__text">Cette page est encore loin d'être exhaustive par rapport aux composants contenus dans le DSFR.</p>
+            <h2 class="fr-callout__title">Aperçu rapide</h2>
+            <p class="fr-callout__text">Cette page ne montre pas tous les composants du DSFR, ni toutes leurs variantes.</p>
           </div>
         </div>
 
 
         <div class="fr-col-md-8 fr-col-12">
-          <h2 id="boutons">Boutons</h2>
-          <h3>Bouton simple</h3>
-          <div class="fr-mb-6v">
-            <button class="fr-btn" title="Label bouton">
-              Bouton simple
-            </button>
-            <button class="fr-btn" disabled="" title="Label bouton">
-              Désactivé
-            </button>
-          </div>
 
-          <h3>Bouton icon</h3>
-          <div class="fr-mb-6v">
-            <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left" title="Label bouton">
-              Icône à gauche
-            </button>
-            <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right" title="Label bouton">
-              Icône à droite
-            </button>
-            <button class="fr-btn fr-fi-checkbox-line" title="Icône seule">
-              Icône seule
-            </button>
-          </div>                
-
-          <h3>Bouton secondaire</h3>
-          <div class="fr-mb-6v">
-            <button class="fr-btn fr-btn--secondary" title="Label bouton">
-              Bouton secondaire
-            </button>
-            <button class="fr-btn fr-btn--secondary" disabled="" title="Désactivé">
-              Désactivé
-            </button>
-          </div>
-          <div class="fr-mb-6v">
-            <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left fr-btn--secondary" title="Label bouton">
-              Icône à gauche
-            </button>
-            <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right fr-btn--secondary" title="Label bouton">
-              Icône à droite
-            </button>
-            <button class="fr-btn fr-fi-checkbox-line fr-btn--secondary" title="Icône seule">
-              Icône seule
-            </button>
-          </div>
+         <h2 id="accordéons">Accordéons</h2>
+         <div class="fr-mb-6v">
+           <ul class="fr-accordions-group">
+            <%- include('partials/accordion-item',
+            {
+              i: 0,
+              title: 'On peut afficher des accordéons',
+              content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
+            })
+            -%>
+            <%- include('partials/accordion-item',
+            {
+              i: 1,
+              title: 'Qui se déroulent',
+              content: "Là, on explique la deuxième étape."
+            })
+            -%>
+            <%- include('partials/accordion-item',
+            {
+              i: 2,
+              title: 'Quand on clique dessus',
+              content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
+            })
+            -%>
+          </ul>
         </div>
 
-        <h2 id="accordéons">Accordéons</h2>
+        <h2 id="boutons">Boutons</h2>
+        <h3>Bouton simple</h3>
+        <div class="fr-mb-6v">
+          <button class="fr-btn" title="Label bouton">
+            Bouton simple
+          </button>
+          <button class="fr-btn" disabled="" title="Label bouton">
+            Désactivé
+          </button>
+        </div>
 
-        <ul class="fr-accordions-group">
-          <%- include('partials/accordion-item',
-          {
-            i: 0,
-            title: 'On peut afficher des accordéons',
-            content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
-          })
-          -%>
-          <%- include('partials/accordion-item',
-          {
-            i: 1,
-            title: 'Qui se déroulent',
-            content: "Là, on explique la deuxième étape."
-          })
-          -%>
-          <%- include('partials/accordion-item',
-          {
-            i: 2,
-            title: 'Quand on clique dessus',
-            content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
-          })
-          -%>
-        </ul>
+        <h3>Bouton icon</h3>
+        <div class="fr-mb-6v">
+          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left" title="Label bouton">
+            Icône à gauche
+          </button>
+          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right" title="Label bouton">
+            Icône à droite
+          </button>
+          <button class="fr-btn fr-fi-checkbox-line" title="Icône seule">
+            Icône seule
+          </button>
+        </div>                
 
-        <h2 id="cartes">Cartes</h2>
-
-        <div class="fr-grid-row fr-grid-row--gutters">
-          <%- include('partials/card',
-          {
-            title: 'Titre',
-            description: "Description",
-            url: '#',
-            img: '',
-          })
-          -%>
-
-          <%- include('partials/card',
-          {
-            title: 'Titre',
-            description: "Description",
-            url: '#',
-            img: '',
-          })
-          -%>
-
-          <%- include('partials/card',
-          {
-            title: 'Titre',
-            description: "Description",
-            url: '#',
-            img: '',
-          })
-          -%>
+        <h3>Bouton secondaire</h3>
+        <div class="fr-mb-6v">
+          <button class="fr-btn fr-btn--secondary" title="Label bouton">
+            Bouton secondaire
+          </button>
+          <button class="fr-btn fr-btn--secondary" disabled="" title="Désactivé">
+            Désactivé
+          </button>
+        </div>
+        <div class="fr-mb-6v">
+          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left fr-btn--secondary" title="Label bouton">
+            Icône à gauche
+          </button>
+          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right fr-btn--secondary" title="Label bouton">
+            Icône à droite
+          </button>
+          <button class="fr-btn fr-fi-checkbox-line fr-btn--secondary" title="Icône seule">
+            Icône seule
+          </button>
         </div>
       </div>
+
+
+
+      <h2 id="cartes">Cartes</h2>
+
+      <div class="fr-grid-row fr-grid-row--gutters">
+        <%- include('partials/card',
+        {
+          title: 'Titre',
+          description: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/card',
+        {
+          title: 'Titre',
+          description: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/card',
+        {
+          title: 'Titre',
+          description: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+      </div>
+
+      <h2 id="links">Liens</h2>
+      <div class="fr-mb-6v">
+        <a class="fr-link" href="#">Lien seul</a>
+      </div>
+      <div class="fr-mb-6v">      
+        <a class="fr-link fr-fi-arrow-left-line fr-link--icon-left" href="#">Lien icône à gauche</a>
+      </div>
+      <div class="fr-mb-6v">      
+        <a class="fr-link fr-fi-arrow-right-line fr-link--icon-right" href="#">Lien icône à droite</a>
+      </div>
+
+      <h2 id="callout">Mises en avant</h2>
+      <h3>Avec texte seul</h3>
+      <div class="fr-mb-6v">
+        <div class="fr-callout">
+          <p class="fr-callout__text">Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        </div>
+      </div>
+      <h3>Avec titre</h3>
+      <div class="fr-mb-6v">
+        <div class="fr-callout">
+          <h4 class="fr-callout__title">Mises en avant</h4>
+          <p class="fr-callout__text">Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        </div>
+      </div>
+      <h3>Avec bouton</h3>
+      <div class="fr-callout">
+        <h4 class="fr-callout__title">Titre mise en avant</h4>
+        <p class="fr-callout__text">Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        <button class="fr-btn" title="Label bouton">
+          Label bouton
+        </button>
+      </div>
+
+      <h2 id="highlight">Mises en exergue</h2>
+      <div class="fr-mb-6v">
+        <div class="fr-highlight">
+            <p class="fr-text--sm">Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        </div>
+      </div>
+      <div class="fr-mb-6v">
+        <div class="fr-highlight">
+            <p>Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        </div>
+      </div>
+      <div class="fr-mb-6v">
+        <div class="fr-highlight">
+            <p class="fr-text--lg">Les parents d’enfants de 11 à 14 ans n’ont aucune démarche à accomplir : les CAF versent automatiquement l’ARS aux familles déjà allocataires qui remplissent les conditions.</p>
+        </div>
+      </div>
+
+
+      <h2 id="links">Tableaux</h2>
+      <h3>Liens</h3>
+      <div class="fr-mb-6v">
+<div class="fr-table">
+    <table>
+        <caption>Caption du tableau</caption>
+        <thead>
+            <tr>
+                <th scope="col"> th0 </th>
+                <th scope="col"> th1 </th>
+                <th scope="col"> th2 </th>
+                <th scope="col"> th3 </th>
+                <th scope="col"> th4 </th>
+                <th scope="col"> th5 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem el</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem elit u</td>
+                <td>Lorem elit ut.</td>
+            </tr>
+            <tr>
+                <td>Lorem elit ut.</td>
+                <td>Lorem e</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem.</td>
+                <td>Lorem  </td>
+                <td>Lorem.</td>
+            </tr>
+            <tr>
+                <td>Lorem elit ut.</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem</td>
+                <td>Lorem elit ut.</td>
+                <td>Lorem elit ut.</td>
+                <td>L</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+      </div>
+
+      <h2 id="links">Tags</h2>
+      <div class="fr-mb-6v">
+        <a class="fr-tag" href="#">Texte seul</a>
+        <a class="fr-tag fr-fi-arrow-left-line fr-tag--icon-left" href="#">Icône à gauche</a>
+        <a class="fr-tag fr-fi-arrow-right-line fr-tag--icon-right" href="#">Icône à gauche</a>
+        <p class="fr-tag">Label sans lien</p>
+      </div>            
+
+      <h2 id="links">Tuiles</h2>
+      <div class="fr-grid-row fr-grid-row--gutters">
+        <%- include('partials/tile',
+        {
+          title: 'Titre',
+          desc: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/tile',
+        {
+          title: 'Titre',
+          desc: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/tile',
+        {
+          title: 'Titre',
+          desc: "Description",
+          url: '#',
+          img: '',
+        })
+        -%>
+      </div>
+
     </div>
   </div>
+</div>
 </main>
 <%- include('partials/footer') -%>
