@@ -1,7 +1,7 @@
 {
   "name": "template-design-system-de-l-etat",
   "version": "1.0.0",
-  "description": "Ce site a pour but d'être un point de départ pour utiliser le Design System de l'Etat. N'hésitez pas à le copier!",
+  "description": "Démonstration du Design System de l'Etat.",
   "main": "index.js",
   "scripts": {
     "checkHTML": "site-validator --verbose --url",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/betagouv/template-design-system-de-l-etat#readme",
   "dependencies": {
-    "@gouvfr/dsfr": "^1.0.0-rc1.0",
+    "@gouvfr/dsfr": "1.1.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },
