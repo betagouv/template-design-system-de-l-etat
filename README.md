@@ -37,3 +37,9 @@ npm run dev
 ```
 npm install
 ```
+
+## Voir la démo du DSFR
+
+````
+cd node_modules/@gouvfr/dsfr && npx http-server -o
+````
