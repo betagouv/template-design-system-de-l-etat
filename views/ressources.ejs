@@ -30,6 +30,16 @@
 <p><a class="fr-link fr-fi-add-line fr-link--icon-plus" href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Référencer un autre site</a></p>
 
 <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+
+
+    <%- include('partials/card',
+    {
+      title: 'Apilos',
+      description:"Plateforme de relation entre bailleurs de logements sociaux et services de l'État",
+      url: 'https://apilos.beta.gouv.fr',
+    })
+    -%>
+
     <%- include('partials/card',
     {
       title: 'AudioConf',
@@ -51,6 +61,14 @@
       title: 'Civils de la Défense',
       description:"Portail d'information autour du recrutement de civils par le Ministère des Armées",
       url: 'https://www.civils.defense.gouv.fr/',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
+      title: 'Code.gouv.fr',
+      description:"Code sources du service public",
+      url: 'https://code.gouv.fr/',
     })
     -%>
 
