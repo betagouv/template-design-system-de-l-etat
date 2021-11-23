@@ -32,11 +32,12 @@ npm run dev
 
 ## Mettre à jour le Design System
 
-- Modifier la version de @gouvfr/dsfr dans package.json
+- Modifier la version de `@gouvfr/dsfr` dans `package.json`
 - Lancer la commande 
 ```
 npm install
 ```
+- Modifier les templates selon la note de version
 
 ## Voir la démo du DSFR
 
