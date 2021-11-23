@@ -1,9 +1,7 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="fr-container">
-  <div class="fr-grid-row fr-grid-row--center fr-grid-row--gutters">
-    <div class="fr-col fr-col-lg-8">
-		<%- include('partials/ariane',
+<div class="fr-container fr-mb-8w">
+	<%- include('partials/ariane',
 		  {
 		    items: [
 		      	{
@@ -11,11 +9,12 @@
 			        url: '/'
 				},
 				{
-			        label: 'Accessibilité',
+			        label: "Déclaration d'accessibilité",
 				},
 		    ],
 		  })
 		-%>
+		
 
         <h1>Déclaration d’accessibilité</h1>
 		<section><p><span class="tofill">Nom de l’entité</span> s’engage à rendre ses sites internet, intranet, extranet et ses progiciels accessibles (et ses applications mobiles et mobilier urbain numérique) conformément à l’article 47 de la loi n°2005-102 du 11 février 2005.</p><p>À cette fin, elle met en œuvre la stratégie et les actions suivantes :</p><ul><li>Schéma pluriannuel de mise en accessibilité 2020-2022 <span class="tofill">url</span></li><li>Actions réalisées en 2019-2020 <span class="tofill">url</span></li><li>Plan d’actions 2020-2021 <span class="tofill">url</span></li></ul><p>Cette déclaration d’accessibilité s’applique à <span class="tofill">www.nomdusite.gouv.fr</span>.</p><h2>État de conformité</h2><p><span class="tofill">Nom du site, url</span> est <span class="tofill">non/partiellement/totalement</span> conforme avec le référentiel général d’amélioration de l’accessibilité (RGAA), version 4 en raison des non-conformités et des dérogations énumérées ci-dessous.</p><h3>Résultats des tests</h3><p>L’audit de conformité réalisé par <span class="tofill">nom de l’entité qui a réalisé l’audit</span> révèle que :</p><ul><li><span class="tofill">nn%</span> des critères du RGAA version 4 sont respectés</li><li>(Facultatif) Le taux moyen de conformité du site s’élève à <span class="tofill">nn%</span></li><li>(Facultatif) Accès à la grille d’audit RGAA <span class="tofill">url pour télécharger la grille d’audit</span></li></ul><h2>Contenus non accessibles</h2><h3><span class="tofill">Non-conformités</span></h3><ul><li>Ex. : La vidéo de présentation de la demande d’aide n’a pas de transcription. Pour toute question
@@ -30,8 +29,6 @@
 				Libre réponse 71120<br>
 				75342 Paris CEDEX 07<br></li></ul></section>
 
-    </div>
-  </div>
 </div>
 </main>
 <%- include('partials/footer') -%>

@@ -1,24 +1,17 @@
 <%- include('partials/header') -%>
-<main role="main" id="contenu">	
+<main role="main" id="contenu">
 <div class="fr-container fr-mb-8w">
+    <%- include('partials/ariane', { items: [
+            { label: 'Accueil', url: '/' },
+            { label: 'Formulaire' },
+        ],})
+    -%>
   <div class="fr-grid-row fr-grid-row--center fr-grid-row--gutters">
     <div class="fr-col fr-col-lg-8">
-      <div id="je-cree-une-conf" class="main-paragraph">
-		<%- include('partials/ariane',
-		  {
-		    items: [
-		      	{
-			        label: 'Accueil',
-			        url: '/'
-				},
-				{
-			        label: 'Un formulaire',
-				},
-		    ],
-		  })
-		-%>
+      <div class="main-paragraph">
+		
 
-        <h1>Un formulaire</h1>
+        <h1>Exemple de formulaire</h1>
 
           <div class="fr-callout fr-fi-information-line fr-callout--scheme-soft-blue-soft fr-mb-3w">
 			  <p class="fr-callout__text">On peut afficher des messages d'informations.</p>

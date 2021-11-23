@@ -1,7 +1,12 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
 
-<div class="fr-container fr-pb-6w fr-pt-6w">
+<div class="fr-container fr-mb-8w">
+    <%- include('partials/ariane', { items: [
+            { label: 'Accueil', url: '/' },
+            { label: 'Ressources' },
+        ],})
+    -%>
 
   <h1>Ressources utiles</h1>
 

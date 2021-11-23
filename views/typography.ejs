@@ -1,6 +1,13 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">
-<div class="fr-container fr-my-5w">
+<div class="fr-container fr-mb-8w">
+  <%- include('partials/ariane', { items: [
+        { label: 'Accueil', url: '/' },
+        { label: 'Typographie' },
+    ],})
+-%>
+
+
   <h1>Typographie</h1>
 
   <p>Les typographies Marianne® et Spectral sont les <a href="https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/la-typographie">typographies officielles de la charte de l'État</a>. Elles sont disponibles au téléchargement sur la <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019527/Typographie+-+Typography">documentation officielle du Design System de l'État</a>.</p>
