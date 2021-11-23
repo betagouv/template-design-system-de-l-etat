@@ -1,257 +1,219 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">
-	<div class="fr-container fr-pb-6w fr-pt-6w">
-		<div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
+	<div class="fr-container fr-mb-8w">
+		<%- include('partials/ariane', { items: [
+			{ label: 'Accueil', url: '/' },
+			{ label: 'Couleurs' },
+			],})
+			-%>
+			<div class="fr-grid-row fr-grid-row--gutters">
 
-			<!-- Menu -->
-			<div class="fr-col-xs-12 fr-col-md-3">
-                <nav class="fr-sidemenu fr-sidemenu--sticky" role="navigation" aria-label="Menu latéral">
-                    <div class="fr-sidemenu__inner">
-                        <button class="fr-sidemenu__btn" aria-controls="sidemenu-254" aria-expanded="false">Dans cette rubrique</button>
-                        <div class="fr-collapse" id="sidemenu-254">
-                            <div class="fr-sidemenu__title">Couleurs</div>
-                            <ul class="fr-sidemenu__list">
-                                <li class="fr-sidemenu__item">
-                                    <a class="fr-sidemenu__link" href="#palette" target="_self">Palette de couleurs</a>
-                                </li>
-                                <li class="fr-sidemenu__item">
-                                    <a class="fr-sidemenu__link" href="#combinaisons" target="_self">Combinaisons accessibles</a>
-                                </li>
-                                <li class="fr-sidemenu__item">
-                                    <a class="fr-sidemenu__link" href="#variables" target="_self">Variables de couleurs</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-	                <%- include('partials/dark-mode-switch') -%>
-                </nav>
-			</div>
-
-
-			<!-- Content -->
-			<div class="fr-col-xs-12 fr-col-md-9 fr-py-6w">
-
-				<div class="fr-mb-6v">
-					<div class="fr-callout">
-				    <h4 class="fr-callout__title">Évolutions à venir</h4>
-				    <p class="fr-callout__text">L'équipe du SIG travaille actuellement sur un nouveau système de couleur. Son lancement est prévu pour la version 1.2. Cette section est vouée à être grandement modifiée.</p>
-					</div>
-				</div>
-
-				<!-- Section Palettes de couleurs -->
-				<h1 id="palette">Palettes de couleurs</h1>
-
-				<p>Certains composants possèdent plusieurs variantes de couleurs : <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/222331196/Mise+en+avant+-+Call-out">mise en avant</a>, <a href="https://gouvfr.atlassian.net/wiki/spaces/DB/pages/223019199/Mise+en+exergue+-+Highlight">mise en exergue</a> (à venir), notifications (à venir).</p>
-
-				<p>Ces variantes s'adaptent au mode clair et au mode nuit.</p>
-
-				<p>Plus de couleurs sont à venir dans de prochaines versions du Design System.</p>
-
-				<!-- Removing until colors are fixed in the DS. In 1.0.0, they are not defined yet.
-				<h2>Brun</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-brown', scheme_desc: 'Brun' }) -%>
-				<h2>Bleu</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-blue-soft', scheme_desc: 'Bleu clair' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-blue-dark', scheme_desc: 'Bleu foncé' }) -%>
-				<h2>Vert</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-green-light', scheme_desc: 'Vert clair' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-green-medium', scheme_desc: 'Vert moyen' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-green-soft', scheme_desc: 'Vert doux' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-green-warm', scheme_desc: 'Vert chaleureux' }) -%>
-				<h2>Orange</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-orange-dark', scheme_desc: 'Orange foncé' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-orange-medium', scheme_desc: 'Orange moyen' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-orange-soft', scheme_desc: 'Orange doux' }) -%>
-				<h2>Violet</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-purple', scheme_desc: 'Violet' }) -%>
-				<h2>Rose</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-pink-dark', scheme_desc: 'Rose foncé' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-pink-light', scheme_desc: 'Rose clair' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-pink-soft', scheme_desc: 'Rose doux' }) -%>
-				<h2>Jaune</h2>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-yellow-dark', scheme_desc: 'Jaune foncé' }) -%>
-				<%- include('partials/scheme-cards', { scheme_classname: 'fr-scheme-soft-yellow-medium', scheme_desc: 'Jaune moyen' }) -%>
-        -->
-
-				<!-- Section Combinaisons accessibles -->
-				<div id="combinaisons">
-					<h1>Combinaisons accessibles</h1>
-
-					<p>Ces combinaisons de couleurs utilisent les variables CSS du Design System.</p>
-
-					<div class="fr-tabs">
-                        <ul class="fr-tabs__list" role="tablist" aria-label="Combinaisons de couleurs accessibles">
-					        <li role="presentation">
-					            <button id="tabpanel-404" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-404-panel">Fonds alternatifs sombres</button>
-					        </li>
-					        <li role="presentation">
-					            <button id="tabpanel-405" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-405-panel">Fonds alternatifs clairs</button>
-					        </li>
-					        <li role="presentation">
-					            <button id="tabpanel-406" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-406-panel">Couleurs accents contrastés</button>
-					        </li>
-					    </ul>
-					    <div id="tabpanel-404-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tabpanel-404" tabindex="0">
-							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte blanc. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
-
-							<p>En mode nuit, le fond sera clair, et le texte foncé.</p>
-							<div class="fr-grid-row fr-grid-row--gutters">
-								<!-- 7+ -->
-								<%- include('partials/contrast-card', { bg_color: 'g800', fg_color: 'w' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'g700', fg_color: 'w' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'bf500', fg_color: 'w' }) -%>
+				<div class="fr-col-xs-12 fr-col-md-3">
+					<nav class="fr-sidemenu fr-sidemenu--sticky" role="navigation" aria-label="Menu latéral">
+						<div class="fr-sidemenu__inner">
+							<button class="fr-sidemenu__btn" aria-controls="sidemenu-254" aria-expanded="false">Dans cette rubrique</button>
+							<div class="fr-collapse" id="sidemenu-254">
+								<div class="fr-sidemenu__title">Couleurs</div>
+								<ul class="fr-sidemenu__list">
+									<li class="fr-sidemenu__item">
+										<a class="fr-sidemenu__link" href="#background" target="_self">Fond</a>
+									</li>
+									<li class="fr-sidemenu__item">
+										<a class="fr-sidemenu__link" href="#illustratives" target="_self">Illustrations</a>
+									</li>
+									<li class="fr-sidemenu__item">
+										<a class="fr-sidemenu__link" href="#custom" target="_self">Personnalisations</a>
+									</li>
+								</ul>
 							</div>
-					    </div>
-					    <div id="tabpanel-405-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-405" tabindex="0">
-							<p>Ces couleurs peuvent être utilisées comme fond alternatif avec du texte foncé. Leur contraste est supérieur à 4.5 : elles peuvent être utilisées pour tout type de textes (titres et corps de page).</p>
-							<p>En mode nuit, les fonds colorés seront dans une teinte de gris. La couleur ne devra pas être le seul moyen de transmettre une information (une erreur sera symbolisée par une icône et le texte Erreur par exemple).</p>
+						</div>
+						<%- include('partials/dark-mode-switch') -%>
+					</nav>
+				</div>
 
-							<div class="fr-grid-row fr-grid-row--gutters">
-								<%- include('partials/contrast-card', { bg_color: 'g300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'g200', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'g100', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'bf100-g750', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'w-bf500', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'rm300', fg_color: 'g800' }) -%>
-								<!-- Removing until colors are fixed in DS
-								<%- include('partials/contrast-card', { bg_color: 'b300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'bs300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'bd300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'gl300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'gm300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'gs300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'gw300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'od300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'om300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'os300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'p300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'pd300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'pl300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'ps300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'yd300', fg_color: 'g800' }) -%>
-								<%- include('partials/contrast-card', { bg_color: 'ym300', fg_color: 'g800' }) -%>
-								-->
+				<div class="fr-col-xs-12 fr-col-md-9">
+					<div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
+						<div class="fr-col-md-12 fr-pb-6w">
+							<!-- Sections variables -->
+							<h1 id="variables">Variables de couleurs</h1>
+
+							<p>La palette de couleurs du système de design de l’État est définie par <a href="https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs">la charte graphique de l'État</a>.</p>
+
+							<p>Le DSFR propose des token (un nom transverse aux bibliothèques Sketch et Figma et au code) pour différents cas d'usage.</p>
+
+							<div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
+								<%- include('partials/card',
+								{
+									title: 'Couleurs',
+									description: "Documentation officielle",
+									url: 'https://gouvfr.atlassian.net/wiki/spaces/DB/pages/217186370/Couleurs+-+palette+-+Color',
+									size: '3',
+									img: '',
+								})
+								-%>
+
+								<%- include('partials/card',
+								{
+									title: 'Usage',
+									description: "Documentation du choix des tokens",
+									url: 'https://gouvfr.atlassian.net/wiki/spaces/DB/pages/910950417/Couleurs+-+utilisation+dans+le+DSFR',
+									size: '3',
+									img: '',
+								})
+								-%>
 							</div>
-					    </div>
-					    <div id="tabpanel-406-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-406" tabindex="0">
-							<p>Ces combinaisons de couleurs peuvent servir pour afficher des titres ou des éléments graphiques (comme des boutons). Elles ne peuvent pas servir à afficher du texte normal.</p>
-							<div class="fr-grid-row fr-grid-row--gutters">
-								<%- include('partials/contrast-card', { color: 'bf500', card_type: 'title+button' }) -%>
-								<!-- Removing until colors are fixed in DS
-								<%- include('partials/contrast-card', { color: 'gm500', card_type: 'title+button' }) -%>
-								<%- include('partials/contrast-card', { color: 'gw500', card_type: 'title+button' }) -%>
-								-->
-								<%- include('partials/contrast-card', { color: 'g600', card_type: 'title+button' }) -%>
-								<!-- Removing until colors are fixed in DS
-								<%- include('partials/contrast-card', { color: 'b500', card_type: 'title+button' }) -%>
-								<%- include('partials/contrast-card', { color: 'bs500', card_type: 'title+button' }) -%>
-								<%- include('partials/contrast-card', { color: 'bd500', card_type: 'title+button' }) -%>
-								<%- include('partials/contrast-card', { color: 'p500', card_type: 'title+button' }) -%>
-								-->
-								<%- include('partials/contrast-card', { color: 'rm500', card_type: 'title+button' }) -%>
+
+							<h2 id="background">Couleurs de fond</h2>
+
+							<h3>Fond de page alternatifs</h3>
+
+							<p> Exemple : bloc « lettre d’information et réseaux sociaux ».</p>
+
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+								<%- include('partials/color-card', { color_name: 'background-alt-grey' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-green-tilleul-verveine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-green-bourgeon' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-green-emeraude' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-green-menthe' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-green-archipel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-blue-ecume' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-blue-cumulus' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-purple-glycine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-pink-macaron' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-pink-tuile' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-yellow-tournesol' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-yellow-moutarde' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-orange-terre-battue' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-brown-caramel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-brown-cafe-creme' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-brown-opera' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-alt-beige-gris-galet' }) -%>
 							</div>
-					    </div>
-					</div>
 
-				</div>
+							<h3>Fond de composant contrastant </h3>
 
-				<!-- Sections variables -->
-				<h1 id="variables">Variables de couleurs</h1>
+							<p>Exemple : composant « mise en avant »</p>
 
-				<h2>Échelle de gris</h2>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'g800' }) -%>
-					<%- include('partials/color-card', { color_name: 'g700' }) -%>
-					<%- include('partials/color-card', { color_name: 'g600' }) -%>
-					<%- include('partials/color-card', { color_name: 'g500' }) -%>
-					<%- include('partials/color-card', { color_name: 'g400' }) -%>
-					<%- include('partials/color-card', { color_name: 'g300' }) -%>
-					<%- include('partials/color-card', { color_name: 'g200' }) -%>
-					<%- include('partials/color-card', { color_name: 'g100' }) -%>
-				</div>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+								<%- include('partials/color-card', { color_name: 'background-contrast-grey' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-green-tilleul-verveine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-green-bourgeon' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-green-emeraude' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-green-menthe' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-green-archipel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-blue-ecume' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-blue-cumulus' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-purple-glycine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-pink-macaron' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-pink-tuile' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-yellow-tournesol' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-yellow-moutarde' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-orange-terre-battue' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-brown-caramel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-brown-cafe-creme' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-brown-opera' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-contrast-beige-gris-galet' }) -%>
+							</div>
 
-				<h2>Bleu France</h2>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'bf500', comment: 'Bleu France' }) -%>
-					<%- include('partials/color-card', { color_name: 'bf300-plain' }) -%>
-					<%- include('partials/color-card', { color_name: 'bf200-bf300' }) -%>
-					<%- include('partials/color-card', { color_name: 'bf100-g750' }) -%>
-					<%- include('partials/color-card', { color_name: 'w-bf500' }) -%>
-				</div>
+							<!-- 
+							<h3>Système</h3>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<%- include('partials/color-card', { color_name: 'background-flat-grey' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-info' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-warning' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-success' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-error' }) -%>
+							</div> -->
 
-				<h2>Rouge Marianne</h2>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'rm500' }) -%>
-					<%- include('partials/color-card', { color_name: 'rm300' }) -%>
-				</div>
-				<h2>Couleurs fonctionnelles</h2>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'info' }) -%>
-					<%- include('partials/color-card', { color_name: 'success' }) -%>
-					<%- include('partials/color-card', { color_name: 'error' }) -%>
-				</div>
+							<h3>Fond de composant cliquable important</h3>
 
-				<!-- Removing until colors are fixed in DS
-				<h2>Couleurs illustratives</h2>
-				<h3>Brun</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'b500' }) -%>
-					<%- include('partials/color-card', { color_name: 'b300' }) -%>
-				</div>
-				<h3>Bleu</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'bs500' }) -%>
-					<%- include('partials/color-card', { color_name: 'bs300' }) -%>
-					<%- include('partials/color-card', { color_name: 'bd500' }) -%>
-					<%- include('partials/color-card', { color_name: 'bd300' }) -%>
-				</div>
-				<h3>Vert</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'gl500' }) -%>
-					<%- include('partials/color-card', { color_name: 'gl300' }) -%>
-					<%- include('partials/color-card', { color_name: 'gm500' }) -%>
-					<%- include('partials/color-card', { color_name: 'gm300' }) -%>
-					<%- include('partials/color-card', { color_name: 'gs500' }) -%>
-					<%- include('partials/color-card', { color_name: 'gs300' }) -%>
-					<%- include('partials/color-card', { color_name: 'gw500' }) -%>
-					<%- include('partials/color-card', { color_name: 'gw300' }) -%>
-				</div>
-				<h3>Orange</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'od500' }) -%>
-					<%- include('partials/color-card', { color_name: 'od300' }) -%>
-					<%- include('partials/color-card', { color_name: 'om500' }) -%>
-					<%- include('partials/color-card', { color_name: 'om300' }) -%>
-					<%- include('partials/color-card', { color_name: 'os500' }) -%>
-					<%- include('partials/color-card', { color_name: 'os300' }) -%>
-				</div>
-				<h3>Violet</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'p500' }) -%>
-					<%- include('partials/color-card', { color_name: 'p300' }) -%>
-				</div>
-				<h3>Rose</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'pd500' }) -%>
-					<%- include('partials/color-card', { color_name: 'pd300' }) -%>
-					<%- include('partials/color-card', { color_name: 'pl500' }) -%>
-					<%- include('partials/color-card', { color_name: 'pl300' }) -%>
-					<%- include('partials/color-card', { color_name: 'ps500' }) -%>
-					<%- include('partials/color-card', { color_name: 'ps300' }) -%>
-				</div>
-				<h3>Jaune</h3>
-				<div class="fr-grid-row fr-grid-row--gutters">
-					<%- include('partials/color-card', { color_name: 'yd500' }) -%>
-					<%- include('partials/color-card', { color_name: 'yd300' }) -%>
-					<%- include('partials/color-card', { color_name: 'ym500' }) -%>
-					<%- include('partials/color-card', { color_name: 'ym300' }) -%>
-				</div>
-				-->
-			</div>
-			<!-- End content -->
+							<p>Exemple : composant « bouton »</p>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-france' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-red-marianne' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-tilleul-verveine' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-bourgeon' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-emeraude' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-menthe' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-archipel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-ecume' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-cumulus' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-purple-glycine' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-pink-macaron' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-pink-tuile' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-tournesol' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-moutarde' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-orange-terre-battue' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-opera' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-beige-gris-galet' }) -%>
+							</div>
 
-		</div>
-	</div>
+							<h3>Fond de composant cliquable mineur</h3>
+
+							<p>Exemple : composant « bouton »</p>
+
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-bourgeon' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-tilleul-verveine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-emeraude' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-menthe' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-archipel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-ecume' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-cumulus' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-purple-glycine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-pink-macaron' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-pink-tuile' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-tournesol' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-moutarde' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-orange-terre-battue' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-caramel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-cafe-creme' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-opera' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-beige-gris-galet' }) -%>
+							</div>
+
+							<h2 id="illustratives">Couleurs illustratives</h2>
+
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+								<%- include('partials/color-card', { color_name: 'artwork-major-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-decorative-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-decorative-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-green-tilleul-verveine' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-green-bourgeon' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-green-emeraude' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-green-menthe' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-green-archipel' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-blue-ecume' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-blue-cumulus' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-purple-glycine' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-pink-macaron' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-pink-tuile' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-yellow-tournesol' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-yellow-moutarde' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-orange-terre-battue' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-brown-cafe-creme' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-brown-opera' }) -%>
+								<%- include('partials/color-card', { color_name: 'artwork-minor-beige-gris-galet' }) -%>
+							</div>
+
+							<h2 id="custom">Exemple de personnalisation</h2>
+
+							<p>À venir</p>
+<!-- End content -->
+</div>
+</div>
+</div>
+</div>
 </main>
 
 <%- include('partials/footer') -%>
