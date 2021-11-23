@@ -3,95 +3,121 @@
   <div class="fr-container fr-py-6w fr-px-2w">
 
     <h1>Démo du DSFR</h1>
-  
-<div class="fr-container-fluid fr-my-6w">
-  <div class="fr-grid-row fr-grid-row--gutters">
-    <%- include('partials/card',
-    {
-      title: 'Composants',
-      description: "Cartes, boutons...",
-      url: '/components',
-      size: '3',
-      img: '',
-    })
-    -%>
+
+    <div class="fr-container-fluid fr-my-6w">
+      <div class="fr-grid-row fr-grid-row--gutters">
+        <%- include('partials/card',
+        {
+          title: 'Composants',
+          description: "Cartes, boutons...",
+          url: '/components',
+          size: '3',
+          img: '',
+        })
+        -%>
 
 
-    <%- include('partials/card',
-    {
-      title: 'Formulaire',
-      description: "Input, textarea...",
-      url: '/formulaire',
-      size: '3',
-      img: '',
-    })
-    -%>
+        <%- include('partials/card',
+        {
+          title: 'Formulaire',
+          description: "Input, textarea...",
+          url: '/formulaire',
+          size: '3',
+          img: '',
+        })
+        -%>
 
-    <%- include('partials/card',
-    {
-      title: 'Typographie',
-      description: "Titres, paragraphes...",
-      url: '/typography',
-      size: '3',
-      img: '',
-    })
-    -%>
+        <%- include('partials/card',
+        {
+          title: 'Typographie',
+          description: "Titres, paragraphes...",
+          url: '/typography',
+          size: '3',
+          img: '',
+        })
+        -%>
 
-    <%- include('partials/card',
-    {
-      title: 'Couleurs',
-      description: "Palettes de couleurs, token d'utilisation...",
-      url: '/colors',
-      size: '3',
-      img: '',
-    })
-    -%>
-
-    <%- include('partials/card',
-    {
-      title: 'Ressources',
-      description: "Documentation et lien vers des sites exemples en production",
-      url: '/ressources',
-      size: '3',
-      img: '',
-    })
-    -%>
-  </div>
-
-</div>
-
-  <div class="fr-container-fluid">
-    <h2>Participer</h2>
-    <p>
-      Ce site est un effort bénévole des membres de <a href="https://beta.gouv.fr/">beta.gouv</a> et de la communauté utilisant le DSFR. Il n'est pas maintenu par le SIG.
-    </p>
-
-    <div class="fr-grid-row fr-grid-row--gutters">
-    <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
-    <%- include('partials/tile',
-    {
-      title: 'Signaler un problème',
-      description: "",
-      url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues/new',
-      size: '3',
-      img: '',
-    })
-    -%>
+        <%- include('partials/card',
+        {
+          title: 'Couleurs',
+          description: "Palettes de couleurs, token d'utilisation...",
+          url: '/colors',
+          size: '3',
+          img: '',
+        })
+        -%>
+      </div>
     </div>
-    <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
-    <%- include('partials/tile',
-    {
-      title: 'Contribuer au code source',
-      description: "",
-      url: 'https://github.com/betagouv/template-design-system-de-l-etat/',
-      size: '3',
-      img: '',
-    })
-    -%>
+
+    <h2>Ressource</h2>
+
+    <div class="fr-container-fluid fr-my-6w">
+      <div class="fr-grid-row fr-grid-row--gutters">
+
+        <%- include('partials/card',
+        {
+          title: "Documentation",
+          description: "",
+          url: '/ressources',
+          size: '3',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/card',
+        {
+          title: "Exemples d'utilisation",
+          description: "",
+          url: '/ressources#examples',
+          size: '3',
+          img: '',
+        })
+        -%>
+
+        <%- include('partials/card',
+        {
+          title: "Librairies",
+          description: "",
+          url: '/ressources#librairies',
+          size: '3',
+          img: '',
+        })
+        -%>
+      </div>
+    </div>
+
+    <div class="fr-container-fluid">
+      <h2>Participer</h2>
+      <p>
+        Ce site est un effort bénévole des membres de <a href="https://beta.gouv.fr/">beta.gouv</a> et de la communauté utilisant le DSFR. Il n'est pas maintenu par le SIG.
+      </p>
+
+      <div class="fr-grid-row fr-grid-row--gutters">
+        <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
+          <%- include('partials/tile',
+          {
+            title: 'Signaler un problème',
+            description: "",
+            url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues/new',
+            size: '3',
+            img: '',
+          })
+          -%>
+        </div>
+        <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
+          <%- include('partials/tile',
+          {
+            title: 'Contribuer au code source',
+            description: "",
+            url: 'https://github.com/betagouv/template-design-system-de-l-etat/',
+            size: '3',
+            img: '',
+          })
+          -%>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  </div>
-</div>
 </main>
 <%- include('partials/footer') -%>
