@@ -1,10 +1,9 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">
   <div class="fr-container fr-py-6w fr-px-2w">
-  <p>
-    Ce site est un effort bénévole pour proposer une démo au Design System de l'État. Il n'est pas maintenu par le SIG : pas de garantie qu'il soit complet, ni parfait.
-  </p>
 
+    <h1>Démo du DSFR</h1>
+  
 <div class="fr-container-fluid fr-my-6w">
   <div class="fr-grid-row fr-grid-row--gutters">
     <%- include('partials/card',
@@ -40,16 +39,6 @@
 
     <%- include('partials/card',
     {
-      title: 'Couleurs',
-      description: "Palettes, combinaisons accessibles...",
-      url: '/colors',
-      size: '3',
-      img: '',
-    })
-    -%>
-
-    <%- include('partials/card',
-    {
       title: 'Ressources',
       description: "Documentation et lien vers des sites exemples en production",
       url: '/ressources',
@@ -58,15 +47,37 @@
     })
     -%>
   </div>
+
 </div>
 
   <div class="fr-container-fluid">
-    <h2>Vous voulez participer ? </h2>
-    <ul>
-      <li><a class="fr-link fr-fi-external-link-line fr-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/issues">Voir les problèmes signalés</a></li>
-      <li><a class="fr-link fr-fi-external-link-line fr-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Signaler un problème</a></li>
-      <li><a class="fr-link fr-fi-external-link-line fr-link--icon-right" target="blank" href="https://github.com/betagouv/template-design-system-de-l-etat/">Contribuer au code source</a></li>
-    </ul>
+    <h2>Participer</h2>
+    <p>
+      Ce site est un effort bénévole des membres de <a href="https://beta.gouv.fr/">beta.gouv</a> et de la communauté utilisant le DSFR. Il n'est pas maintenu par le SIG.
+    </p>
+
+    <div class="fr-grid-row fr-grid-row--gutters">
+    <%- include('partials/tile',
+    {
+      title: 'Signaler un problème',
+      description: "",
+      url: 'https://github.com/betagouv/template-design-system-de-l-etat/issues/new',
+      size: '3',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/tile',
+    {
+      title: 'Contribuer au code source',
+      description: "",
+      url: 'https://github.com/betagouv/template-design-system-de-l-etat/',
+      size: '3',
+      img: '',
+    })
+    -%>
+    </div>
+
   </div>
 </div>
 </main>
