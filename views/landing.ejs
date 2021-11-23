@@ -39,6 +39,16 @@
 
     <%- include('partials/card',
     {
+      title: 'Couleurs',
+      description: "Palettes de couleurs, token d'utilisation...",
+      url: '/colors',
+      size: '3',
+      img: '',
+    })
+    -%>
+
+    <%- include('partials/card',
+    {
       title: 'Ressources',
       description: "Documentation et lien vers des sites exemples en production",
       url: '/ressources',
@@ -57,6 +67,7 @@
     </p>
 
     <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
     <%- include('partials/tile',
     {
       title: 'Signaler un problème',
@@ -66,7 +77,8 @@
       img: '',
     })
     -%>
-
+    </div>
+    <div class="fr-col-6 fr-col-md-4 fr-col-lg-3">
     <%- include('partials/tile',
     {
       title: 'Contribuer au code source',
@@ -77,6 +89,7 @@
     })
     -%>
     </div>
+  </div>
 
   </div>
 </div>
