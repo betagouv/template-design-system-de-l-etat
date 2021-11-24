@@ -16,13 +16,13 @@
 								<div class="fr-sidemenu__title">Couleurs</div>
 								<ul class="fr-sidemenu__list">
 									<li class="fr-sidemenu__item">
-										<a class="fr-sidemenu__link" href="#background" target="_self">Fond</a>
+										<a class="fr-sidemenu__link" href="#background" target="_self">Fonds</a>
 									</li>
 									<li class="fr-sidemenu__item">
-										<a class="fr-sidemenu__link" href="#illustratives" target="_self">Illustrations</a>
+										<a class="fr-sidemenu__link" href="#components" target="_self">Composants</a>
 									</li>
 									<li class="fr-sidemenu__item">
-										<a class="fr-sidemenu__link" href="#custom" target="_self">Personnalisations</a>
+										<a class="fr-sidemenu__link" href="#illustrations" target="_self">Illustrations</a>
 									</li>
 								</ul>
 							</div>
@@ -37,9 +37,7 @@
 							<!-- Sections variables -->
 							<h1 id="variables">Variables de couleurs</h1>
 
-							<p>La palette de couleurs du système de design de l’État est définie par <a href="https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs">la charte graphique de l'État</a>.</p>
-
-							<p>Le DSFR propose des token (un nom transverse aux bibliothèques Sketch et Figma et au code) pour différents cas d'usage.</p>
+							<p>La palette de couleurs du système de design de l’État est définie par <a href="https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/les-couleurs">la charte graphique de l'État</a>. Cette page montre des exemples de déclinaisons de couleurs. Se référer à la documentation officielle pour comprendre les conditions d'usage.</p>
 
 							<div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
 								<%- include('partials/card',
@@ -61,15 +59,27 @@
 									img: '',
 								})
 								-%>
+
+								<%- include('partials/card',
+								{
+									title: 'Tokens',
+									description: "Arbre des tokens de décision",
+									url: 'https://www.figma.com/file/yo9dg7nZb69TAd2Hh9N1xK/Tokens---v2?node-id=0%3A1',
+									size: '3',
+									img: '',
+								})
+								-%>
 							</div>
 
-							<h2 id="background">Couleurs de fond</h2>
+							<h2 id="background">Couleurs de fonds</h2>
 
-							<h3>Fond de page alternatifs</h3>
+							<p> Ces couleurs peuvent être utilisées comme fond dans :</p>
+							<ul>
+								<li>des sections de pages</li>
+								<li>certains composants comme le bloc « lettre d’information et réseaux sociaux ».</li>
+							</ul>
 
-							<p> Exemple : bloc « lettre d’information et réseaux sociaux ».</p>
-
-							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<div class="fr-grid-row fr-grid-row--gutters fr-my-4w">
 								<%- include('partials/color-card', { color_name: 'background-alt-grey' }) -%>
 								<%- include('partials/color-card', { color_name: 'background-alt-blue-france' }) -%>
 								<%- include('partials/color-card', { color_name: 'background-alt-red-marianne' }) -%>
@@ -92,11 +102,17 @@
 								<%- include('partials/color-card', { color_name: 'background-alt-beige-gris-galet' }) -%>
 							</div>
 
-							<h3>Fond de composant contrastant </h3>
+							<h2 id="components">Composants</h2>
 
-							<p>Exemple : composant « mise en avant »</p>
+							<p> Ces couleurs peuvent être utilisées pour certains composants :</p>
+							<ul>
+								<li>Mise en avant</li>
+								<li>Call-out</li>
+								<li>Tags</li>
+								<li>...</li>
+							</ul>
 
-							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<div class="fr-grid-row fr-grid-row--gutters fr-my-4w">
 								<%- include('partials/color-card', { color_name: 'background-contrast-grey' }) -%>
 								<%- include('partials/color-card', { color_name: 'background-contrast-blue-france' }) -%>
 								<%- include('partials/color-card', { color_name: 'background-contrast-red-marianne' }) -%>
@@ -119,68 +135,11 @@
 								<%- include('partials/color-card', { color_name: 'background-contrast-beige-gris-galet' }) -%>
 							</div>
 
-							<!-- 
-							<h3>Système</h3>
-							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
-							<%- include('partials/color-card', { color_name: 'background-flat-grey' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-flat-info' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-flat-warning' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-flat-success' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-flat-error' }) -%>
-							</div> -->
+							<!-- TODO : intégrer des exemples de composants -->
 
-							<h3>Fond de composant cliquable important</h3>
+							<h2 id="illustrations">Illustrations</h2>
 
-							<p>Exemple : composant « bouton »</p>
-							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
-							<%- include('partials/color-card', { color_name: 'background-action-high-blue-france' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-red-marianne' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-green-tilleul-verveine' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-green-bourgeon' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-green-emeraude' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-green-menthe' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-green-archipel' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-blue-ecume' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-blue-cumulus' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-purple-glycine' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-pink-macaron' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-pink-tuile' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-tournesol' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-moutarde' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-orange-terre-battue' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-brown-opera' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
-							<%- include('partials/color-card', { color_name: 'background-action-high-beige-gris-galet' }) -%>
-							</div>
-
-							<h3>Fond de composant cliquable mineur</h3>
-
-							<p>Exemple : composant « bouton »</p>
-
-							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
-								<%- include('partials/color-card', { color_name: 'background-action-low-blue-france' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-red-marianne' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-green-bourgeon' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-green-tilleul-verveine' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-green-emeraude' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-green-menthe' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-green-archipel' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-blue-ecume' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-blue-cumulus' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-purple-glycine' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-pink-macaron' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-pink-tuile' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-tournesol' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-moutarde' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-orange-terre-battue' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-brown-caramel' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-brown-cafe-creme' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-brown-opera' }) -%>
-								<%- include('partials/color-card', { color_name: 'background-action-low-beige-gris-galet' }) -%>
-							</div>
-
-							<h2 id="illustratives">Couleurs illustratives</h2>
+							<p>Ces couleurs font partie de la charte de l'État. Elles peuvent servir à la composition d’illustration ou de pictogrammes.</p>
 
 							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
 								<%- include('partials/color-card', { color_name: 'artwork-major-blue-france' }) -%>
@@ -206,9 +165,67 @@
 								<%- include('partials/color-card', { color_name: 'artwork-minor-beige-gris-galet' }) -%>
 							</div>
 
-							<h2 id="custom">Exemple de personnalisation</h2>
+							<!-- 
+							<h3>Système</h3>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<%- include('partials/color-card', { color_name: 'background-flat-grey' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-info' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-warning' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-success' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-flat-error' }) -%>
+							</div> 
+							-->
 
-							<p>À venir</p>
+							<!--
+							<h3>Fond de composant cliquable important</h3>
+							<p>Exemple : composant « bouton »</p>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-france' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-red-marianne' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-tilleul-verveine' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-bourgeon' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-emeraude' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-menthe' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-green-archipel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-ecume' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-blue-cumulus' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-purple-glycine' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-pink-macaron' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-pink-tuile' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-tournesol' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-yellow-moutarde' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-orange-terre-battue' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-opera' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-brown-caramel' }) -%>
+							<%- include('partials/color-card', { color_name: 'background-action-high-beige-gris-galet' }) -%>
+							</div>
+
+							<h3>Fond de composant cliquable mineur</h3>
+							<p>Exemple : composant « bouton »</p>
+							<div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-france' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-red-marianne' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-bourgeon' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-tilleul-verveine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-emeraude' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-menthe' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-green-archipel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-ecume' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-blue-cumulus' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-purple-glycine' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-pink-macaron' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-pink-tuile' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-tournesol' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-yellow-moutarde' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-orange-terre-battue' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-caramel' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-cafe-creme' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-brown-opera' }) -%>
+								<%- include('partials/color-card', { color_name: 'background-action-low-beige-gris-galet' }) -%>
+							</div>
+							-->
+
 <!-- End content -->
 </div>
 </div>
