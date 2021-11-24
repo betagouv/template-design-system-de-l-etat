@@ -1,23 +1,22 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-<div class="fr-container fr-mb-3w">
-  <div class="fr-grid-row fr-grid-row--center fr-grid-row--gutters">
-    <div class="fr-col fr-col-lg-8">
-		<%- include('partials/ariane',
-		  {
-		    items: [
-		      	{
-			        label: 'Accueil',
-			        url: '/'
-				},
-				{
-			        label: 'Contact',
-				},
-		    ],
-		  })
-		-%>
+<div class="fr-container fr-mb-8w">
+	<%- include('partials/ariane',
+	  {
+	    items: [
+	      	{
+		        label: 'Accueil',
+		        url: '/'
+			},
+			{
+		        label: 'Contact',
+			},
+	    ],
+	  })
+	-%>
 
-        <h1>Un exemple de formulaire de contact</h1>
+
+        <h1>Exemple de formulaire de contact</h1>
 
 
               <div class="fr-callout fr-callout--scheme-soft-blue-soft fr-mb-3w">
@@ -40,8 +39,6 @@
           </form>
 
 
-    </div>
-  </div>
 </div>
 </main>
 <%- include('partials/footer') -%>

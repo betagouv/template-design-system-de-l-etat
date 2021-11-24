@@ -1,15 +1,24 @@
-<!-- todo(estellecomment) : import min css and js -->
-<script type="module" src="/~/@gouvfr/dsfr/dist/js/dsfr.module.js"></script>
-<script type="text/javascript" nomodule src="/~/@gouvfr/dsfr/dist/js/dsfr.nomodule.js"></script>
+<script>
+  // Options disponibles à l'initialisation du DSFR
+  window.dsfr = {
+    verbose: true,
+    mode: 'runtime'
+  };
+</script>
+<script type="module" src="/~/@gouvfr/dsfr/dist/dsfr/dsfr.module.min.js"></script>
+<script type="text/javascript" nomodule src="/~/@gouvfr/dsfr/dist/dsfr/dsfr.nomodule.min.js"></script>
 
 <div class="fr-follow">
     <div class="fr-container">
         <div class="fr-grid-row">
             <div class="fr-col-12">
                 <div class="fr-follow__social">
-                    <p class="fr-h5 fr-mb-3v fr-mb-3v">Suivez-nous
+                    <p class="fr-h5 fr-mb-3v fr-mb-3v">Suivez beta.gouv.fr
                         <br> sur les réseaux sociaux</p>
                     <ul class="fr-links-group fr-links-group--lg">
+                        <li>
+                            <a class="fr-link--github fr-link" title="Github betagouv - ouvre une nouvelle fenêtre" href="https://www.github.com/betagouv//" target="_blank">github</a>
+                        </li>
                         <li>
                             <a class="fr-link--twitter fr-link" title="Twitter @betagouv - ouvre une nouvelle fenêtre" href="https://twitter.com/betagouv?lang=fr" target="_blank">twitter</a>
                         </li>
@@ -81,8 +90,7 @@
         </li>
       </ul>
       <div class="fr-footer__bottom-copy">
-        <p>Sauf mention contraire, tous les textes de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
-        </p>
+        <p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a></p>
       </div>
     </div>
   </div>

@@ -1,9 +1,14 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
 
-<div class="fr-container fr-pb-6w fr-pt-6w">
+<div class="fr-container fr-mb-8w">
+    <%- include('partials/ariane', { items: [
+            { label: 'Accueil', url: '/' },
+            { label: 'Ressources' },
+        ],})
+    -%>
 
-  <h1>Ressources utiles</h1>
+  <h1 id="ressources">Ressources utiles</h1>
 
   <div class="fr-grid-row fr-grid-row--gutters fr-pb-6w">
     <%- include('partials/card',
@@ -23,7 +28,7 @@
     -%>
   </div>
 
-<h1>Utilisation du Design System</h1>
+<h1 id="examples">Utilisation du Design System</h1>
 
 <p>Ces sites utilisent le Design Sytem de l'État. Cette liste est non exhaustive et maintenue manuellement.</p>
 
@@ -164,7 +169,7 @@
 <p><a class="fr-link fr-fi-add-line fr-link--icon-plus" href="https://github.com/betagouv/template-design-system-de-l-etat/issues/new">Référencer un autre site</a></p>
 
 
-  <h1>Librairies</h1>
+  <h1 id="librairies">Librairies</h1>
 
   <p>Le Design System FR a été porté par des équipes sous forme de librairie ou bibliothèque de composants.</p>
 
@@ -178,16 +183,16 @@
     -%>
     <%- include('partials/card',
     {
-      title: "React",
+      title: "Django",
       description:'',
-      url: 'https://github.com/dataesr/react-dsfr',
+      url: 'https://github.com/entrepreneur-interet-general/django-dsfr',
     })
     -%>
     <%- include('partials/card',
     {
-      title: "Django",
+      title: "React",
       description:'',
-      url: 'https://github.com/entrepreneur-interet-general/django-dsfr',
+      url: 'https://github.com/dataesr/react-dsfr',
     })
     -%>
     <%- include('partials/card',

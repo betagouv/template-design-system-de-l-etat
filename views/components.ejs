@@ -1,6 +1,13 @@
 <%- include('partials/header') -%>
 <main role="main" id="contenu">	
-  <div class="fr-container fr-pb-6w fr-pt-6w">
+  <div class="fr-container fr-mb-8w">
+        <%- include('partials/ariane', { items: [
+            { label: 'Accueil', url: '/' },
+            { label: 'Composants' },
+        ],})
+    -%>
+
+
     <div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
 
       <!-- Menu -->
@@ -50,7 +57,7 @@
 
       <!-- Content -->
       <div class="fr-col-xs-12 fr-col-md-9 fr-py-2w">
-        <h1>Composants</h1>
+        <h1>Exemple de composants</h1>
 
         <div class="fr-mb-6v">
           <div class="fr-callout">
@@ -108,7 +115,7 @@
           <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right" title="Label bouton">
             Icône à droite
           </button>
-          <button class="fr-btn fr-fi-checkbox-line" title="Icône seule">
+          <button class="fr-btn fr-fi-checkbox-circle-line" title="Icône seule">
             Icône seule
           </button>
         </div>                
@@ -129,7 +136,7 @@
           <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right fr-btn--secondary" title="Label bouton">
             Icône à droite
           </button>
-          <button class="fr-btn fr-fi-checkbox-line fr-btn--secondary" title="Icône seule">
+          <button class="fr-btn fr-fi-checkbox-circle-line fr-btn--secondary" title="Icône seule">
             Icône seule
           </button>
         </div>
