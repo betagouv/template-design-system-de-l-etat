@@ -103,13 +103,59 @@
 							</div>
 
 							<h2 id="components">Composants</h2>
+							
+							<h3>Tags</h3>
 
-							<p> Ces couleurs peuvent être utilisées pour certains composants :</p>
+							<ul class="fr-tags-group fr-mb-4w">
+								<li><a class="fr-tag" href="#">default</a></li>
+								<li><a class="fr-tag fr-tag--green-tilleul-verveine" href="#">green-tilleul-verveine</a></li>
+								<li><a class="fr-tag fr-tag--green-bourgeon" href="#">green-bourgeon</a></li>
+								<li><a class="fr-tag fr-tag--green-emeraude" href="#">green-emeraude</a></li>
+								<li><a class="fr-tag fr-tag--green-menthe" href="#">green-menthe</a></li>
+								<li><a class="fr-tag fr-tag--green-archipel" href="#">green-archipel</a></li>
+								<li><a class="fr-tag fr-tag--blue-ecume" href="#">blue-ecume</a></li>
+								<li><a class="fr-tag fr-tag--blue-cumulus" href="#">blue-cumulus</a></li>
+								<li><a class="fr-tag fr-tag--purple-glycine" href="#">purple-glycine</a></li>
+								<li><a class="fr-tag fr-tag--pink-macaron" href="#">pink-macaron</a></li>
+								<li><a class="fr-tag fr-tag--pink-tuile" href="#">pink-tuile</a></li>
+								<li><a class="fr-tag fr-tag--yellow-tournesol" href="#">yellow-tournesol</a></li>
+								<li><a class="fr-tag fr-tag--yellow-moutarde" href="#">yellow-moutarde</a></li>
+								<li><a class="fr-tag fr-tag--orange-terre-battue" href="#">orange-terre-battue</a></li>
+								<li><a class="fr-tag fr-tag--brown-caramel" href="#">brown-caramel</a></li>
+								<li><a class="fr-tag fr-tag--brown-cafe-creme" href="#">brown-cafe-creme</a></li>
+								<li><a class="fr-tag fr-tag--brown-opera" href="#">brown-opera</a></li>
+								<li><a class="fr-tag fr-tag--beige-gris-galet" href="#">beige-gris-galet</a></li>
+							</ul>
+
+							<h3>Mise en avant</h3>
+
+							<div class="fr-my-4w">
+							<%- include('partials/call-out', {title: '', text:'Couleur green-tilleul-verveine', accent:'green-tilleul-verveine'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur green-bourgeon', accent:'green-bourgeon'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur green-emeraude', accent:'green-emeraude'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur green-menthe', accent:'green-menthe'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur green-archipel', accent:'green-archipel'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur blue-ecume', accent:'blue-ecume'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur blue-cumulus', accent:'blue-cumulus'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur purple-glycine', accent:'purple-glycine'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur pink-macaron', accent:'pink-macaron'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur pink-tuile', accent:'pink-tuile'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur yellow-tournesol', accent:'yellow-tournesol'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur yellow-moutarde', accent:'yellow-moutarde'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur orange-terre-battue', accent:'orange-terre-battue'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur brown-cafe-creme', accent:'brown-cafe-creme'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur brown-caramel', accent:'brown-caramel'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur brown-opera', accent:'brown-opera'}) -%>
+							<%- include('partials/call-out', {title: '', text:'Couleur beige-gris-galet', accent:'beige-gris-galet'}) -%>
+						</div>
+
+							<h3>Gamme de couleur</h3>
+
+							<p>D'autres composants sont personnalisables :</p>
 							<ul>
-								<li>Mise en avant</li>
-								<li>Call-out</li>
-								<li>Tags</li>
-								<li>...</li>
+								<li>Mise en exergue</li>
+								<li>Tableaux</li>
+								<li>d'autres à venir...</li>
 							</ul>
 
 							<div class="fr-grid-row fr-grid-row--gutters fr-my-4w">
@@ -135,7 +181,6 @@
 								<%- include('partials/color-card', { color_name: 'background-contrast-beige-gris-galet' }) -%>
 							</div>
 
-							<!-- TODO : intégrer des exemples de composants -->
 
 							<h2 id="illustrations">Illustrations</h2>
 
@@ -174,7 +219,7 @@
 							<%- include('partials/color-card', { color_name: 'background-flat-success' }) -%>
 							<%- include('partials/color-card', { color_name: 'background-flat-error' }) -%>
 							</div> 
-							-->
+						-->
 
 							<!--
 							<h3>Fond de composant cliquable important</h3>
@@ -224,13 +269,13 @@
 								<%- include('partials/color-card', { color_name: 'background-action-low-brown-opera' }) -%>
 								<%- include('partials/color-card', { color_name: 'background-action-low-beige-gris-galet' }) -%>
 							</div>
-							-->
+						-->
 
-<!-- End content -->
-</div>
-</div>
-</div>
-</div>
-</main>
+						<!-- End content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-<%- include('partials/footer') -%>
+	<%- include('partials/footer') -%>

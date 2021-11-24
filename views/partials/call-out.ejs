@@ -1,0 +1,17 @@
+<%
+ let prefix = 'fr';
+ let callout = locals || {};
+ let classes = callout.classes || [];
+ classes.push(prefix + '-callout');
+
+ let accent = ''
+ if (callout.accent !== undefined) accent = 'fr-callout--' + callout.accent;
+
+%>
+<div class="fr-callout <%= accent %> fr-my-2w">
+  <% if(callout.title !== undefined) { %>
+    <h4 class="<%= prefix%>-callout__title"><%= callout.title %></h4>
+  <% } %>
+
+  <p class="fr-callout__text"><%= callout.text %></p>
+</div>
