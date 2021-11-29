@@ -1,4 +1,12 @@
 <%- include('partials/header') -%>
+<%- include('../node_modules/@gouvfr/dsfr/src/component/accordion/template/ejs/accordion.ejs', {
+    prefix: 'fr',
+    accordion: {
+        label: 'Ceci est un test',
+        content: "Ceci est un autre test"
+    }
+}) -%>
+
 <main role="main" id="contenu">
     <div class="fr-container fr-mb-8w">
         <%- include('partials/ariane', { items: [
