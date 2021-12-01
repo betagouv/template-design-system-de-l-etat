@@ -6,46 +6,50 @@
 
     <div class="fr-container-fluid fr-my-6w">
       <div class="fr-grid-row fr-grid-row--gutters">
-        <%- include('partials/card',
-        {
-          title: 'Composants',
-          description: "Cartes, boutons...",
-          url: '/components',
-          size: '3',
-          img: '',
-        })
-        -%>
 
+        <div class="fr-col-12 fr-col-md-3">
+        <%- include(component_path('card'), {
+            card: {
+              title: 'Composants',
+              description: "Cartes, boutons...",
+              url: '/components',
+            }
+        }) -%>
+        </div>
 
-        <%- include('partials/card',
-        {
-          title: 'Formulaire',
-          description: "Input, textarea...",
-          url: '/formulaire',
-          size: '3',
-          img: '',
-        })
-        -%>
+        <div class="fr-col-12 fr-col-md-3">
+        <%- include(component_path('card'), {
+            card: {
+              title: 'Formulaire',
+              description: "Input, textarea...",
+              url: '/formulaire',
+              enlarge: true,
+            }
+        }) -%>
+        </div>
 
-        <%- include('partials/card',
-        {
-          title: 'Typographie',
-          description: "Titres, paragraphes...",
-          url: '/typography',
-          size: '3',
-          img: '',
-        })
-        -%>
+        <div class="fr-col-12 fr-col-md-3">
+        <%- include(component_path('card'), {
+            card: {
+            title: 'Typographie',
+            description: "Titres, paragraphes...",
+            url: '/typography',
+            enlarge: true,
+            }
+        }) -%>
+        </div>
 
-        <%- include('partials/card',
-        {
-          title: 'Couleurs',
-          description: "Palettes de couleurs, token d'utilisation...",
-          url: '/colors',
-          size: '3',
-          img: '',
-        })
-        -%>
+        <div class="fr-col-12 fr-col-md-3">
+        <%- include(component_path('card'), {
+            card: {
+            title: 'Couleurs',
+            description: "Palettes de couleurs, token d'utilisation...",
+            url: '/colors',
+            enlarge: true,
+            }
+        }) -%>
+        </div>
+
       </div>
     </div>
 
