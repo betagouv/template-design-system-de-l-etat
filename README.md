@@ -39,7 +39,7 @@ npm install
 ```
 - Modifier les templates selon la note de version
 
-## Voir la démo du DSFR
+## Voir la documentation locale du DSFR
 
 ````
 cd node_modules/@gouvfr/dsfr && npx http-server -o
