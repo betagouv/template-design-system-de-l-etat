@@ -21,6 +21,9 @@ app.use(function(req, res, next){
   res.locals.appDescription = appDescription
   res.locals.appRepo = appRepo
   res.locals.page = req.url
+  res.locals.prefix = "fr"
+  res.locals.namespace = "dsfr"
+  res.locals.organisation = "@gouvfr"
   next()
 })
 
@@ -80,3 +83,8 @@ app.get('/mentions-legales', (req, res) => {
 module.exports = app.listen(port, () => {
   console.log(`${appName} listening at http://localhost:${port}`)
 })
+
+
+component_path = function(component_name) {
+  return "../node_modules/@gouvfr/dsfr/src/component/"+component_name+"/template/ejs/"+component_name+".ejs";
+}
