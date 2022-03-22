@@ -322,11 +322,20 @@
 
       <h2 id="tags">Tags</h2>
       <div class="fr-mb-6v">
-        <a class="fr-tag" href="#">Texte seul</a>
-        <a class="fr-tag fr-fi-arrow-left-line fr-tag--icon-left" href="#">Icône à gauche</a>
-        <a class="fr-tag fr-fi-arrow-right-line fr-tag--icon-right" href="#">Icône à gauche</a>
-        <p class="fr-tag">Label sans lien</p>
-      </div>            
+        <ul class="fr-tags-group">
+          <li><a class="fr-tag" href="#">Texte seul</a></li>
+          <li><a class="fr-tag fr-fi-arrow-left-line fr-tag--icon-left" href="#">Icône à gauche</a></li>
+          <li><a class="fr-tag fr-fi-arrow-right-line fr-tag--icon-right" href="#">Icône à gauche</a></li>
+          <li><p class="fr-tag">Label sans lien</p></li>
+      </div>
+
+      <h3>Tags actionnables</h3>
+      <div class="fr-mb-6v">
+        <ul class="fr-tags-group">
+          <li><button class="fr-tag" aria-pressed="false">Tag sélectionnable</button></li>
+          <li><button class="fr-tag fr-fi-information-line fr-tag--icon-left" aria-pressed="false">Tag avec icône sélectionnable</button></li>
+          <li><button class="fr-tag fr-tag--dismiss" onclick="event.preventDefault(); this.parentNode.removeChild(this);" aria-label="Retirer le tag supprimable">Tag supprimable</button></li>
+      </div>
 
       <h2 id="tiles">Tuiles</h2>
       <div class="fr-grid-row fr-grid-row--gutters">
