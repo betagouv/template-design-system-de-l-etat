@@ -10,6 +10,18 @@
 
     <div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
 
+      <!-- FIX: doesn't work right know because the link cannot be configured in node_modules/@gouvfr/dsfr/src/component/sidemenu/template/ejs/link.ejs -->
+      <!-- <%- include(component_path('sidemenu'), {
+        sidemenu: {
+          items: [
+            {label: "Accordéons", type: "link" },
+            {label: "Badges", type: "link" },
+          ],
+          title: "Composants",
+          collapseId: "menu-composant" 
+        }
+      }) -%> -->
+
       <!-- Menu -->
       <div class="fr-col-xs-12 fr-col-md-3">
         <nav class="fr-sidemenu fr-sidemenu--sticky" role="navigation" aria-label="Menu latéral">
