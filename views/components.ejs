@@ -22,6 +22,9 @@
                   <a class="fr-sidemenu__link" href="#accordéons" target="_self">Accordéons</a>
                 </li>
                 <li class="fr-sidemenu__item">
+                  <a class="fr-sidemenu__link" href="#badge" target="_self">Badge</a>
+                </li>
+                <li class="fr-sidemenu__item">
                   <a class="fr-sidemenu__link" href="#boutons" target="_self">Boutons</a>
                 </li>
                 <li class="fr-sidemenu__item">
@@ -96,56 +99,55 @@
           </ul>
         </div>
 
-        <h2 id="boutons">Boutons</h2>
-        <h3>Bouton simple</h3>
-        <div class="fr-mb-6v">
-          <button class="fr-btn" title="Label bouton">
-            Bouton simple
-          </button>
-          <button class="fr-btn" disabled="" title="Label bouton">
-            Désactivé
-          </button>
+        <div class="fr-col-md-8 fr-col-12">
+
+         <h2 id="badges">Badges</h2>
+         <div class="fr-mb-6v">
+
+          <ul class="fr-badge-group">
+            <li><p class="fr-badge">Badge simple</p></li>
+            <li><p class="fr-badge">
+              <span class="fr-ellipsis">Label badge très long, coupé par des points de suspensions lorsque le label dépasse la largeur du conteneur</span>
+              </p></li>
+            <li><p class="fr-badge fr-badge--success">Succès</p></li>
+            <li><p class="fr-badge fr-badge--error">Erreur</p></li>
+            <li><p class="fr-badge fr-badge--info">Information</p></li>
+            <li><p class="fr-badge fr-badge--warning">Avertissement</p></li>
+            <li><p class="fr-badge fr-badge--new">Nouveauté</p></li>
+          </ul>
         </div>
 
-        <h3>Bouton icon</h3>
+          <h3>Badge taille SM</h3>
+         <div class="fr-mb-6v">
+
+          <ul class="fr-badge-group">
+            <li><p class="fr-badge fr-badge--sm">Badge taille SM</p></li>
+            <li><p class="fr-badge fr-badge--sm fr-badge--new">Petite nouveauté</p></li>
+          </ul>
+        </div>
+
+        <h2 id="boutons">Boutons</h2>
         <div class="fr-mb-6v">
-          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left" title="Label bouton">
+          <ul class="fr-btns-group fr-btns-group--inline">
+            <li><button class="fr-btn">Bouton primaire</button></li>
+            <li><button class="fr-btn fr-btn--secondary">Bouton secondaire</button></li>
+            <li><button class="fr-btn fr-btn--tertiary">Bouton tertiaire</button></li>
+            <li><button class="fr-btn fr-btn--tertiary-no-outline">Bouton tertiaire sans contour</button></li>
+          </ul>
+        </div>
+
+        <h3>Bouton avec icônes</h3>
+        <div class="fr-mb-6v">
+          <button class="fr-btn fr-fi-checkbox-circle-line fr-btn--icon-left">
             Icône à gauche
           </button>
-          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right" title="Label bouton">
-            Icône à droite
-          </button>
-          <button class="fr-btn fr-fi-checkbox-circle-line" title="Icône seule">
-            Icône seule
+          <button class="fr-btn fr-fi-checkbox-circle-line fr-btn--icon-right">
+              Icône à droite
           </button>
         </div>                
 
-        <h3>Bouton secondaire</h3>
-        <div class="fr-mb-6v">
-          <button class="fr-btn fr-btn--secondary" title="Label bouton">
-            Bouton secondaire
-          </button>
-          <button class="fr-btn fr-btn--secondary" disabled="" title="Désactivé">
-            Désactivé
-          </button>
-        </div>
-        <div class="fr-mb-6v">
-          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-left fr-btn--secondary" title="Label bouton">
-            Icône à gauche
-          </button>
-          <button class="fr-btn fr-fi-checkbox-line fr-btn--icon-right fr-btn--secondary" title="Label bouton">
-            Icône à droite
-          </button>
-          <button class="fr-btn fr-fi-checkbox-circle-line fr-btn--secondary" title="Icône seule">
-            Icône seule
-          </button>
-        </div>
-      </div>
-
-
-
       <h2 id="cartes">Cartes</h2>
-
+        <div class="fr-mb-6v">
       <div class="fr-grid-row fr-grid-row--gutters">
         <%- include('partials/card',
         {
@@ -174,6 +176,7 @@
         })
         -%>
       </div>
+    </div>
 
       <h2 id="quotes">Citations</h2>
       <div class="fr-mb-6v">
@@ -201,6 +204,11 @@
       </div>
       <div class="fr-mb-6v">      
         <a class="fr-link fr-fi-arrow-right-line fr-link--icon-right" href="#">Lien icône à droite</a>
+      </div>
+      <div class="fr-mb-6v">      
+      <a class="fr-link fr-fi-arrow-up-fill fr-link--icon-left" href="#top">
+          Haut de page
+      </a>
       </div>
 
       <h2 id="callout">Mises en avant</h2>
@@ -292,11 +300,20 @@
 
       <h2 id="tags">Tags</h2>
       <div class="fr-mb-6v">
-        <a class="fr-tag" href="#">Texte seul</a>
-        <a class="fr-tag fr-fi-arrow-left-line fr-tag--icon-left" href="#">Icône à gauche</a>
-        <a class="fr-tag fr-fi-arrow-right-line fr-tag--icon-right" href="#">Icône à gauche</a>
-        <p class="fr-tag">Label sans lien</p>
-      </div>            
+        <ul class="fr-tags-group">
+          <li><a class="fr-tag" href="#">Texte seul</a></li>
+          <li><a class="fr-tag fr-fi-arrow-left-line fr-tag--icon-left" href="#">Icône à gauche</a></li>
+          <li><a class="fr-tag fr-fi-arrow-right-line fr-tag--icon-right" href="#">Icône à gauche</a></li>
+          <li><p class="fr-tag">Label sans lien</p></li>
+      </div>
+
+      <h3>Tags actionnables</h3>
+      <div class="fr-mb-6v">
+        <ul class="fr-tags-group">
+          <li><button class="fr-tag" aria-pressed="false">Tag sélectionnable</button></li>
+          <li><button class="fr-tag fr-fi-information-line fr-tag--icon-left" aria-pressed="false">Tag avec icône sélectionnable</button></li>
+          <li><button class="fr-tag fr-tag--dismiss" onclick="event.preventDefault(); this.parentNode.removeChild(this);" aria-label="Retirer le tag supprimable">Tag supprimable</button></li>
+      </div>
 
       <h2 id="tiles">Tuiles</h2>
       <div class="fr-grid-row fr-grid-row--gutters">
