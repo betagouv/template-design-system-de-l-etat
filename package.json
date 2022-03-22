@@ -1,6 +1,6 @@
 {
   "name": "template-design-system-de-l-etat",
-  "version": "1.2.1",
+  "version": "1.4",
   "description": "Démonstration du Design System de l'Etat.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/betagouv/template-design-system-de-l-etat#readme",
   "dependencies": {
-    "@gouvfr/dsfr": "^1.2.1",
+    "@gouvfr/dsfr": "^1.4",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },
