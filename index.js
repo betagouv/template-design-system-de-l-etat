@@ -88,3 +88,7 @@ module.exports = app.listen(port, () => {
 component_path = function(component_name) {
   return "../node_modules/@gouvfr/dsfr/src/component/"+component_name+"/template/ejs/"+component_name+".ejs";
 }
+
+group_component_path = function(component_name) {
+  return "../node_modules/@gouvfr/dsfr/src/component/"+component_name+"/template/ejs/"+component_name+"s-group.ejs";
+}

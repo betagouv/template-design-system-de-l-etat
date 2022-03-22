@@ -75,41 +75,30 @@
         <h1>Exemple de composants</h1>
 
         <div class="fr-mb-6v">
-          <div class="fr-callout">
-            <h2 class="fr-callout__title">Aperçu rapide</h2>
-            <p class="fr-callout__text">Cette page ne montre pas tous les composants du DSFR, ni toutes leurs variantes.</p>
-          </div>
+        <%- include(component_path('callout'), {
+          callout:{
+            title: "Aperçu rapide du DSFR",
+            text: "Cette page illustre certains composants. Toutes les variantes possibles ne sont pas affichées ici."
+          }
+        }) -%>
         </div>
-
 
         <div class="fr-col-md-8 fr-col-12">
 
          <h2 id="accordéons">Accordéons</h2>
+           
          <div class="fr-mb-6v">
-           <ul class="fr-accordions-group">
-            <%- include('partials/accordion-item',
-            {
-              i: 0,
-              title: 'On peut afficher des accordéons',
-              content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
-            })
-            -%>
-            <%- include('partials/accordion-item',
-            {
-              i: 1,
-              title: 'Qui se déroulent',
-              content: "Là, on explique la deuxième étape."
-            })
-            -%>
-            <%- include('partials/accordion-item',
-            {
-              i: 2,
-              title: 'Quand on clique dessus',
-              content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
-            })
-            -%>
-          </ul>
-        </div>
+          <%- include(group_component_path('accordion'), {
+          accordionsGroup: {
+            accordions: [
+              { id: 0, label: "On peut afficher des accordéons", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." },
+              { id: 1, label: "Qui se déroulent", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." },
+              { id: 2, label: "Quand on les actionne", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." }
+            ]
+            }
+          }) -%>
+          </div>
+
 
         <div class="fr-col-md-8 fr-col-12">
 
