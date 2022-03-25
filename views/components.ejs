@@ -105,16 +105,15 @@
          <h2 id="badges">Badges</h2>
          <div class="fr-mb-6v">
 
+          <!-- FIX : badge and accordions don't have the same way of grouping -->
           <ul class="fr-badge-group">
-            <li><p class="fr-badge">Badge simple</p></li>
-            <li><p class="fr-badge">
-              <span class="fr-ellipsis">Label badge très long, coupé par des points de suspensions lorsque le label dépasse la largeur du conteneur</span>
-              </p></li>
-            <li><p class="fr-badge fr-badge--success">Succès</p></li>
-            <li><p class="fr-badge fr-badge--error">Erreur</p></li>
-            <li><p class="fr-badge fr-badge--info">Information</p></li>
-            <li><p class="fr-badge fr-badge--warning">Avertissement</p></li>
-            <li><p class="fr-badge fr-badge--new">Nouveauté</p></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Badge simple" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Label badge très long, coupé par des points de suspensions lorsque le label dépasse la largeur du conteneur", ellipsis: true }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Succès", type: "success" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Erreur", type: "error" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Information", type: "info" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Avertissement", type: "warning" }}) -%></li></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Nouveauté", type: "new" }}) -%></li>
           </ul>
         </div>
 
@@ -122,8 +121,8 @@
          <div class="fr-mb-6v">
 
           <ul class="fr-badge-group">
-            <li><p class="fr-badge fr-badge--sm">Badge taille SM</p></li>
-            <li><p class="fr-badge fr-badge--sm fr-badge--new">Petite nouveauté</p></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Petit badge", classes: ["fr-badge--sm"]}}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Petite nouveauté", type:"new",classes: ["fr-badge--sm"]}}) -%></li>
           </ul>
         </div>
 
