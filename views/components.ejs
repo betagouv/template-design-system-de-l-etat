@@ -10,6 +10,18 @@
 
     <div class="fr-grid-row fr-grid-row--gutters fr-b__two-col">
 
+      <!-- FIX: doesn't work right know because the link cannot be configured in node_modules/@gouvfr/dsfr/src/component/sidemenu/template/ejs/link.ejs -->
+      <!-- <%- include(component_path('sidemenu'), {
+        sidemenu: {
+          items: [
+            {label: "Accordéons", type: "link" },
+            {label: "Badges", type: "link" },
+          ],
+          title: "Composants",
+          collapseId: "menu-composant" 
+        }
+      }) -%> -->
+
       <!-- Menu -->
       <div class="fr-col-xs-12 fr-col-md-3">
         <nav class="fr-sidemenu fr-sidemenu--sticky" role="navigation" aria-label="Menu latéral">
@@ -63,57 +75,45 @@
         <h1>Exemple de composants</h1>
 
         <div class="fr-mb-6v">
-          <div class="fr-callout">
-            <h2 class="fr-callout__title">Aperçu rapide</h2>
-            <p class="fr-callout__text">Cette page ne montre pas tous les composants du DSFR, ni toutes leurs variantes.</p>
-          </div>
+        <%- include(component_path('callout'), {
+          callout:{
+            title: "Aperçu rapide du DSFR",
+            text: "Cette page illustre certains composants. Toutes les variantes possibles ne sont pas affichées ici."
+          }
+        }) -%>
         </div>
-
 
         <div class="fr-col-md-8 fr-col-12">
 
          <h2 id="accordéons">Accordéons</h2>
+           
          <div class="fr-mb-6v">
-           <ul class="fr-accordions-group">
-            <%- include('partials/accordion-item',
-            {
-              i: 0,
-              title: 'On peut afficher des accordéons',
-              content: 'Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor.'
-            })
-            -%>
-            <%- include('partials/accordion-item',
-            {
-              i: 1,
-              title: 'Qui se déroulent',
-              content: "Là, on explique la deuxième étape."
-            })
-            -%>
-            <%- include('partials/accordion-item',
-            {
-              i: 2,
-              title: 'Quand on clique dessus',
-              content: "Sans surprise, c'est ici la troisième étape. Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor."
-            })
-            -%>
-          </ul>
-        </div>
+          <%- include(group_component_path('accordion'), {
+          accordionsGroup: {
+            accordions: [
+              { id: 0, label: "On peut afficher des accordéons", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." },
+              { id: 1, label: "Qui se déroulent", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." },
+              { id: 2, label: "Quand on les actionne", content: "Qui elit in aliqua exercitation. Sint exercitation incididunt duis eu mollit sunt id dolor ullamco excepteur adipisicing deserunt. Dolore mollit ullamco laboris nulla qui ad officia. Ad deserunt ex magna esse culpa ea occaecat sit tempor." }
+            ]
+            }
+          }) -%>
+          </div>
+
 
         <div class="fr-col-md-8 fr-col-12">
 
          <h2 id="badges">Badges</h2>
          <div class="fr-mb-6v">
 
+          <!-- FIX : badge and accordions don't have the same way of grouping -->
           <ul class="fr-badge-group">
-            <li><p class="fr-badge">Badge simple</p></li>
-            <li><p class="fr-badge">
-              <span class="fr-ellipsis">Label badge très long, coupé par des points de suspensions lorsque le label dépasse la largeur du conteneur</span>
-              </p></li>
-            <li><p class="fr-badge fr-badge--success">Succès</p></li>
-            <li><p class="fr-badge fr-badge--error">Erreur</p></li>
-            <li><p class="fr-badge fr-badge--info">Information</p></li>
-            <li><p class="fr-badge fr-badge--warning">Avertissement</p></li>
-            <li><p class="fr-badge fr-badge--new">Nouveauté</p></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Badge simple" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Label badge très long, coupé par des points de suspensions lorsque le label dépasse la largeur du conteneur", ellipsis: true }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Succès", type: "success" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Erreur", type: "error" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Information", type: "info" }}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Avertissement", type: "warning" }}) -%></li></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Nouveauté", type: "new" }}) -%></li>
           </ul>
         </div>
 
@@ -121,8 +121,8 @@
          <div class="fr-mb-6v">
 
           <ul class="fr-badge-group">
-            <li><p class="fr-badge fr-badge--sm">Badge taille SM</p></li>
-            <li><p class="fr-badge fr-badge--sm fr-badge--new">Petite nouveauté</p></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Petit badge", classes: ["fr-badge--sm"]}}) -%></li>
+            <li><%- include(component_path('badge'), {badge: { label: "Petite nouveauté", type:"new",classes: ["fr-badge--sm"]}}) -%></li>
           </ul>
         </div>
 
